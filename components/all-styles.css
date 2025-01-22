@@ -126,7 +126,7 @@ body{
     padding: 12px 32px;
     align-items: center;
     text-align: center;
-    color: #000;
+    color: #000 !important;
     background-color: #fff;
     font-size: 18px;
     border-radius: 2rem;
