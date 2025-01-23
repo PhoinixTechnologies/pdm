@@ -22,15 +22,15 @@ export default function Register() {
         
           <form className="form-group" id="form" method="POST" action="#">
             <div className="input email-address-input">
-              <label for="email"> Email </label>
+              <label htmlFor="email"> Email </label>
               <input type="email" name="email" id="email" className="form-control" required />
               <br />
 
-              <label for="pwd"> Password </label>
+              <label htmlFor="pwd"> Password </label>
               <input type="password" name="password" id="password1" className="form-control" required />
 
               <br />
-              <label for="pwds"> Confirm Password </label>
+              <label htmlFor="pwds"> Confirm Password </label>
               <input type="password" name="cpassword" id="password2" className="form-control" required />
             </div>
 
