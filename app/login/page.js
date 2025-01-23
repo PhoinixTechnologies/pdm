@@ -16,7 +16,7 @@ export default function Login() {
               My PDM Tutor 
           </div>
           <div>
-          <Link href={'#'} className="signin-header"> Sign up  </Link>
+          <Link href={'register'} className="signin-header"> Sign up  </Link>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ export default function Login() {
           </div>    
         </form>
         </div>
-    </div>
+      </div>
     </div> 
   );
 }

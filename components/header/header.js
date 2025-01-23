@@ -26,7 +26,7 @@ export default function Header() {
                 
                 <div className="nav-buttons">
                     <Link className="btn-login" href={'login'}> Login </Link>
-                    <Link className="btn-reg" href={'#'}> Register </Link>
+                    <Link className="btn-reg" href={'register'}> Register </Link>
                 </div>
                 
                 <span className="active-nav"></span>
