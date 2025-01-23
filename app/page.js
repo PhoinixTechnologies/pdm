@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+import bg from '../public/assets/images/bg.png';
 
 export default function Home() {
   return (
     <div className="pdm">
        {/* The First Section */}
-         <section className="fs-sec" style="background-image: url('../static/images/bg.png')" id="home">
+         <section className="fs-sec" style={{ backgroundImage: URL(bg) }} id="home">
             <div className="sec-div">
                 <div className="hd-line-tg"> Empowering Learners in Python, <br /> Data Analytics & Machine Learning </div>
                 <br />
@@ -16,7 +18,7 @@ export default function Home() {
 
                 <div className="div-btn">
                     <div className="link-container">
-                        <a href="{{ url_for('auth.signup') }}">Get Started 🔥</a>
+                        <Link href={'#'}>Get Started 🔥</Link>
                     </div>
 
                      {/* Arrow & tilted text  */}
@@ -54,7 +56,7 @@ export default function Home() {
                  </div>
 
                   {/* third rectangle  */}
-                 <div classNameName="rectangle rec3">
+                 <div className="rectangle rec3">
                     <p>Data Analysis - Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x</p>
                  </div>
               </div>
