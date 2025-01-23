@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import about_course from '../public/assets/images/course_about.png';
 
 
 export default function Home() {
   return (
     <div className="pdm">
-       {/* The First Section */}
+
+      {/* First Section */}
          <section className="fs-sec" id="home">
             <div className="sec-div">
                 <div className="hd-line-tg"> Empowering Learners in Python, <br /> Data Analytics & Machine Learning </div>
@@ -61,7 +62,45 @@ export default function Home() {
                  </div>
               </div>
          </section>
-        {/* The first Section ends */}
+      {/*Ffirst Section ends */}
+
+      {/* Second Section */}
+        <section className="seco-sec" id="about">
+          <div className="sec-sec-div">
+            <div className="hd-line-tgs">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <g opacity="0.9">
+                  <g opacity="0.9"> <path d="M4.11749 16.7822H16.7827V4.117" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/> </g>
+                  <g opacity="0.9"> <path d="M4.11749 4.117L15.5165 15.516" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/> </g>
+                </g>
+              </svg>
+              <p> OUTLINE </p>
+            </div>
+
+            <div className="abt-txt"> <p>About Us</p> </div>
+
+            <div className="sub-line-abt-txt">
+              <p> As a dedicated tutor, I am passionate about helping students and professionals unlock 
+                <br /> their true potential in Python programming, data science, and machine learning. With a 
+                <br /> hands-on, personalized approach, I strive to make complex concepts accessible and 
+                <br /> engaging for learners at all levels. My goal is to empower you with the knowledge and 
+                <br /> practical skills needed to thrive in the fast-growing fields of data analytics and AI. 
+                <br /> Whether you’re starting from scratch or looking to advance your expertise, I am here to 
+                <br /> guide you every step of the way, ensuring your learning journey is both fulfilling and 
+                <br /> impactful.
+              </p>
+
+              <div className="abt-img"> <Image src={about_course} alt="about course logo" /> </div>
+            </div>
+
+            <div className="abt-links">
+              <Link href={'#'} className="get-started"> Get Started </Link>
+              <Link href={'#learn-more'} className="learn-more"> Learn more </Link>
+            </div>
+          </div>
+        </section>
+      {/* Second Section ends */}
+
     </div>
   );
 }
