@@ -5,14 +5,16 @@ import pythonImage from '../public/assets/images/py.png';
 import dataAnalyst from '../public/assets/images/da.png';
 import machingLearning from '../public/assets/images/ml.png';
 import loginImage from '../public/assets/images/login.png';
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 
 
 export default function Home() {
 
-  return (
+  return (<>
+    <Header />
     <div className="pdm">
-
       {/* First Section */}
          <section className="fs-sec" id="home">
             <div className="sec-div">
@@ -289,7 +291,7 @@ export default function Home() {
             </div>
           </section>
       {/* Sixth Section ends */}
-
     </div>
-  );
+    <Footer />
+  </>);
 }

@@ -25,7 +25,7 @@ export default function Header() {
                 <Link href={'connect'}> Connect with Us </Link>
                 
                 <div className="nav-buttons">
-                    <Link className="btn-login" href={'#'}> Login </Link>
+                    <Link className="btn-login" href={'login'}> Login </Link>
                     <Link className="btn-reg" href={'#'}> Register </Link>
                 </div>
                 
