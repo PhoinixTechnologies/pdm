@@ -718,6 +718,10 @@ textarea::placeholder{
     border-radius: 2rem;
     padding: 12px 30px;
     font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 5px;
 }
 
 .leave-a-message a:hover{
