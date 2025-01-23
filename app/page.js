@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import bg from '../public/assets/images/bg.png';
+
+
 
 export default function Home() {
   return (
     <div className="pdm">
        {/* The First Section */}
-         <section className="fs-sec" style={{ backgroundImage: URL(bg) }} id="home">
+         <section className="fs-sec" id="home">
             <div className="sec-div">
                 <div className="hd-line-tg"> Empowering Learners in Python, <br /> Data Analytics & Machine Learning </div>
                 <br />
@@ -14,7 +15,6 @@ export default function Home() {
                   <br /> students and professionals unlock their true potential 
                   <br /> in Python programming, data science and machine learning.
                 </div>
-
 
                 <div className="div-btn">
                     <div className="link-container">

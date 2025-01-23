@@ -151,7 +151,7 @@ body{
 .fs-sec{
     padding: 12% 8%;
     color: white;
-    background-image: url('/tutorboard/static/images/bg.png');
+    background-image: url('../public/assets/images/bg.png');
 }
 
 .fs-sec .sec-div{
