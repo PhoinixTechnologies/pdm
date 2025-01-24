@@ -303,3 +303,6 @@ export default function Dashboard() {
       </div> 
   );
 }
+
+
+export const metadata = { title: 'PDM - Dashboard' }

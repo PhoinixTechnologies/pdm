@@ -295,3 +295,6 @@ export default function Home() {
     <Footer />
   </>);
 }
+
+
+export const metadata = { title: 'PDM - Tutor Home' };
