@@ -21,17 +21,21 @@ export default function Register() {
           <h2> Create Your Profile </h2>
         
           <form className="form-group" id="form" method="POST" action="#">
-            <div className="input email-address-input">
-              <label htmlFor="email"> Email </label>
-              <input type="email" name="email" id="email" className="form-control" required />
-              <br />
+            <div className="inputs">
+              <div>
+                <label htmlFor="email"> Email </label>
+                <input type="email" name="email" id="email" className="form-control" required />
+              </div>
 
-              <label htmlFor="pwd"> Password </label>
-              <input type="password" name="password" id="password1" className="form-control" required />
-
-              <br />
-              <label htmlFor="pwds"> Confirm Password </label>
-              <input type="password" name="cpassword" id="password2" className="form-control" required />
+              <div>
+                <label htmlFor="pwd"> Password </label>
+                <input type="password" name="password" id="password1" className="form-control" required />
+              </div>
+              
+              <div>
+                <label htmlFor="pwds"> Confirm Password </label>
+                <input type="password" name="cpassword" id="password2" className="form-control" required />
+              </div>
             </div>
 
             <div className="input submit-button">

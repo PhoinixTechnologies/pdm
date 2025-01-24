@@ -220,6 +220,19 @@ input:focus{
     justify-content: center;
 }
 
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input {
+            margin: unset;
+        }
+    }
+}
 
 
 @media (width >= 1200px) {
