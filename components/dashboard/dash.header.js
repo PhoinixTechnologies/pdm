@@ -1,20 +1,32 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
+import '../../app/dashboard/dashboard.styles.scss';
+import { usePathname } from 'next/navigation';
 
 
 export default function DashboardHeader() {
+
+    const pathname = usePathname();
+
     return (
         <header>
             
             {/* Navigation plane which includes links to pages and notification bell and profile  */}
             <div id="nav">
                 <div style={{ padding: '10px' }}> <div id="logo"> </div> </div>
-                <Link href={'dashboard'} className="navigate active"> Home </Link>
-                <Link href={'courses'} className="navigate"> Courses </Link>
-                <Link href={'#'} className="navigate"> Workspace </Link>
-                <Link href={'#'} className="navigate"> Groups </Link>
-                <Link href={'#'} className="navigate"> Certificates </Link>
+                
+                <Link href={'/dashboard'} className={`navigate ${pathname === '/dashboard' ? 'active' : ''}`}> Home </Link>
+
+                <Link href={'/course'} className={`navigate ${pathname === '/course' ? 'active' : ''}`}> Courses </Link>
+
+                <Link href={'#'} className={`navigate ${pathname === '#workspace' ? 'active' : ''}`}> Workspace </Link>
+
+                <Link href={'#'} className={`navigate ${pathname === '#groups' ? 'active' : ''}`}> Groups </Link>
+
+                <Link href={'#'} className={`navigate ${pathname === '#certificates' ? 'active' : ''}`}> Certificates </Link>
             </div>
+
 
             {/* notification bell and profile */}
             <div id="notify">
