@@ -17,4 +17,4 @@ export default function WatchCourse() {
 }
 
 
-export const metadata = { title: 'PDM - Watch Course' }
+export const metadata = { title: 'PDM - Watch Courses' }

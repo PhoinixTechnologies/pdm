@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 export default function DashboardHeader() {
 
     const pathname = usePathname();
+    const id = 4444;
 
     return (
         <header>
@@ -18,7 +19,7 @@ export default function DashboardHeader() {
                 
                 <Link href={'/dashboard'} className={`navigate ${pathname === '/dashboard' ? 'active' : ''}`}> Home </Link>
 
-                <Link href={'/course'} className={`navigate ${pathname === '/course' ? 'active' : ''}`}> Courses </Link>
+                <Link href={'/course'} className={`navigate ${pathname === '/course' || pathname === `/course/watch/${id}` ? 'active' : ''}`}> Courses </Link>
 
                 <Link href={'/workshop'} className={`navigate ${pathname === '/workshop' ? 'active' : ''}`}> Workshops </Link>
 
