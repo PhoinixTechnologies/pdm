@@ -1,3 +1,83 @@
 main.watch-courses {
-    
+    display: flex;
+    flex-direction: column;
+    color: #1D2026;
+    div.top {
+        padding: 15px 30px;
+        background: #F5F7FA;
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        button {
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 15px;
+            border: none;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .details {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h5 {
+                    font: 500 18px 'Space Grotesk';
+                    margin: unset;
+                }
+                div {
+                    display: flex;
+                    gap: 25px;
+                    p {
+                        font: 400 14px 'Space Grotesk';
+                        color: #4E5566;
+                        display: flex;
+                        gap: 5px;
+                        margin: unset;
+                        svg {
+                            color: #3935FF;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            .btns {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                button {
+                    border-radius: unset;
+                    font: 700 16px 'Space Grotesk';
+                    padding: 15px 20px;
+                    &:first-child {
+                        color: #3935FF;
+                    }
+                    &:last-child {
+                        color: #fff;
+                        background: #3935FF;
+                    }
+                } 
+                button:hover {
+                    padding: 14px 19px;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    &:first-child {
+                        color: #fff;
+                        background: #3935FF;
+                    }
+                    &:last-child {
+                        background: #fff;
+                        color: #3935FF;
+                    }
+                }
+            }
+        }
+    }
 }
