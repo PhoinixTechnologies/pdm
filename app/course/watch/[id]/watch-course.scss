@@ -80,4 +80,64 @@ main.watch-courses {
             }
         }
     }
+
+    div.bottom {
+        padding: 50px 60px;
+        display: flex;
+        gap: 40px;
+        .video-title {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h3 {
+                margin: unset;
+                font: 700 32px 'Space Grotesk';
+            }
+            .statistics {
+                display: flex;
+                justify-content: space-between;
+                .left {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .photos {
+                        h6 {
+                            margin: unset;
+                            font: 700 14px 'Space Grotesk';
+                        }
+                        p {
+                            margin: unset;
+                            font: 400 12px 'Space Grotesk';
+                            color: #6E7485;
+                        }
+                    }
+                    .icons {
+                        direction: ltr; 
+                        padding-left: 25px;
+                        display: flex;
+                        gap: 15px;                        
+                        img {
+                            position: relative;
+                            left: -5px;
+                            margin-left: -25px;
+                            z-index: 1;
+                            width: 40px;
+                            height: 40px;
+                            cursor: pointer;
+                            &:not(:first-child) {
+                                margin-left: -35px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    display: flex;
+                    gap: 20px;
+                    p {
+                        margin: unset;
+                    }
+                }
+            }
+        }
+    }
 }
