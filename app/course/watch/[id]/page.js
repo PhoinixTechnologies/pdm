@@ -67,6 +67,12 @@ export default function WatchCourse() {
                 </div>
               </div>
             </div>
+
+            <section className='rest'>
+              <div className='rest-btns'>
+                <button type='button'> Description </button>
+              </div>
+            </section>
           </div>
         </main>
       </div> 

@@ -84,6 +84,7 @@ main.watch-courses {
     div.bottom {
         padding: 50px 60px;
         display: flex;
+        flex-direction: column;
         gap: 40px;
         .video-title {
             display: flex;
