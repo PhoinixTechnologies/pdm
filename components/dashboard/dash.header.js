@@ -20,7 +20,7 @@ export default function DashboardHeader() {
 
                 <Link href={'/course'} className={`navigate ${pathname === '/course' ? 'active' : ''}`}> Courses </Link>
 
-                <Link href={'#'} className={`navigate ${pathname === '#workspace' ? 'active' : ''}`}> Workspace </Link>
+                <Link href={'/workshop'} className={`navigate ${pathname === '/workshop' ? 'active' : ''}`}> Workshops </Link>
 
                 <Link href={'#'} className={`navigate ${pathname === '#groups' ? 'active' : ''}`}> Groups </Link>
 
