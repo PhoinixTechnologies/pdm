@@ -19,7 +19,7 @@ export default function Header() {
             
             <nav className="navbar">
                 <Link href={'home'} className="active"> Home </Link>
-                <Link href={'aboutt'}> About </Link>
+                <Link href={'about'}> About </Link>
                 <Link href={'agenda'}> Agenda </Link>
                 <Link href={'contact-us'}> Contact Us </Link>
                 <Link href={'connect'}> Connect with Us </Link>
