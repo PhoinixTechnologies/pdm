@@ -1,15 +1,65 @@
 main.gift-course {
-
-    h3 {
+    display: flex;
+    flex-direction: column;
+    h2 {
+        padding: 30px;
         font: 700 24px 'Space Grotesk';
         text-align: center;
         color: #1D2026;
+        background-color: #F5F7FA;
     }
 
     section {
-        padding: 50px 60px;
+        padding: 40px 60px;
         display: flex;
-        flex-direction: column;
         gap: 40px;
+        div.left {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            flex: 0 0 60%;
+            h3 {
+                font: 700 24px 'Space Grotesk';
+                color: #1D2026;
+                margin: unset;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                div.recipient-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    h4 {
+                        margin: unset;
+                        font: 500 18px 'Space Grotesk';
+                    }
+                    .all {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 18px;
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            label {
+                                font: 400 14px 'Space Grotesk';
+                            }
+                            input, textarea {
+                                border: 1px solid #E9EAF0;
+                                padding: 12px ;
+                            }
+                            input:focus, textarea:focus {
+                                border-color: #86b7fe;
+                                outline: 0;
+                                box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }
