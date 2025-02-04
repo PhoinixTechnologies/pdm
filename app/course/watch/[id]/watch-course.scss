@@ -81,6 +81,11 @@ main.watch-courses {
         }
     }
 
+    h3 {
+        font: 700 24px 'Space Grotesk';
+        color: #1D2026;
+    }
+
     div.bottom {
         padding: 50px 60px;
         display: flex;
@@ -137,6 +142,115 @@ main.watch-courses {
                     p {
                         margin: unset;
                     }
+                }
+            }
+        }
+
+        section.rest {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .rest-btns {
+                border-top: 1px solid #E9EAF0;
+                border-bottom: 1px solid #E9EAF0;
+                display: flex;
+                gap: 25px;
+                align-items: center;
+                button {
+                    font: 500 16px 'Space Grotesk';
+                    color: #4E5566;
+                    padding: 20px;
+                    border: none;
+                    span {
+                        color: #3935FF;
+                        padding: 4px 6px;
+                        background-color: #FFEEE8;
+                        font-size: 12px;
+                    }
+                }
+                button.description-btn, button.lecture-btn, button.attachment-btn, button.comment-btn {
+                    border-bottom: 1px solid red;
+                    color: #1D2026;
+                }
+            }
+            .description {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 75%;
+                div {
+                    h3 {
+                        display: flex;
+                        justify-content: space-between;
+                        button {
+                            color: #3935FF;
+                            padding: 10px 25px;
+                            background-color: #FFEEE8;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            svg {height: 20px;width: 20px;}
+                        }
+                    } 
+                    p{
+                        font: 400 14px 'Space Grotesk';
+                        color: #4E5566;
+                    }
+                }
+            }
+            .comments {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 75%;
+                div.combine {
+                    display: flex;
+                    gap: 12px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        width: 100%;
+                        h6 {
+                            font: 500 14px 'Space Grotesk';
+                            color: #1D2026;
+                            margin: unset;
+                            span, small {
+                                color: #6E7485;
+                                margin-left: 5px;
+                                font: 400 12px 'Space Grotesk';
+                            }
+                        } 
+                        p{
+                            font: 400 14px 'Space Grotesk';
+                            color: #4E5566;
+                            margin: unset;
+                        }
+                        input {
+                            font: 500 14px 'Space Grotesk';
+                            color: #8C94A3;
+
+                        }
+                    }
+                }
+            }
+            button#load-more {
+                padding: 25px;
+                font: 700 16px 'Space Grotesk';
+                color: #3935FF;
+                background-color: #3935FF1A;
+                align-self: flex-start;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                svg {
+                    width: 24px;
+                    height: 24px;
                 }
             }
         }
