@@ -9,6 +9,10 @@ main.gift-course {
         background-color: #F5F7FA;
     }
 
+    span {
+        font: 400 14px 'Space Grotesk';
+    }
+
     section {
         padding: 40px 60px;
         display: flex;
@@ -27,7 +31,7 @@ main.gift-course {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
-                div.recipient-info {
+                div.recipient-info, .payment-mthd {
                     display: flex;
                     flex-direction: column;
                     gap: 15px;

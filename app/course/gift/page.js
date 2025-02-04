@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './gift-course.styles.scss';
 import DashboardHeader from '@/components/dashboard/dash.header';
+import { Checkbox } from 'antd';
 
 
 
@@ -10,6 +11,8 @@ export default function GiftCourse() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [card_name, setCardName] = useState("");
+  const [card_number, setCardNumber] = useState("");
 
 
   return (
@@ -38,8 +41,24 @@ export default function GiftCourse() {
                     </div> 
                     <div>
                       <label htmlFor='message'> Gift Message </label>
-                      <textarea name="message" id="" cols="30" rows="10" placeholder="Add your personal message here..." value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                      <textarea name="message" id="" cols="20" rows="7" placeholder="Add your personal message here..." value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                     </div>
+                  </div>
+                </div>
+                
+                <div className='payment-mthd'>
+                  <h4> Payment Method </h4>
+
+                  <div className='all'>
+                    <div>
+                      <label htmlFor='card_name'> Name </label>
+                      <input type='text' name='card_name' placeholder='Name on card' value={card_name} onChange={(e) => setCardName(e.target.value)}  />
+                    </div> 
+                    <div>
+                      <label htmlFor='card_number'> Card Number </label>
+                      <input type='number' name='card_number' placeholder='Label' value={card_number} onChange={(e) => setCardNumber(e.target.value)}  />
+                    </div>
+                    <Checkbox> Remember this card, save it on my card list </Checkbox>
                   </div>
                 </div>
               </form>
