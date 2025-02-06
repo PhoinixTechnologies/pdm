@@ -18,18 +18,19 @@ const PaymentMethods = () => {
   return (
     <div className="cards">
       {[
-        { icon: visa, text: "4855 **** **** ****", subText: "04/24", name: "Vako Shvili" },
-        { icon: mastercard, text: "5795 **** **** ****", subText: "04/24", name: "Vako Shvili" },
-        { icon: paypal, text: "You will be redirected to the PayPal site after reviewing your order." },
-        { icon: faCreditCard, text: "New Payment Cards", isFontAwesome: true }
+        { icon: visa, text: "4855 **** **** ****", subText: "04/24", name: "Vako Shvili", last: "visa-card" },
+        { icon: mastercard, text: "5795 **** **** ****", subText: "04/24", name: "Vako Shvili", last: "master-card" },
+        { icon: paypal, text: "You will be redirected to the PayPal site after reviewing your order.", last: "paypal-card" },
+        { icon: faCreditCard, text: "New Payment Cards", isFontAwesome: true, last: "credit-card" }
       ].map((item, index) => (
         <div key={index} className={`each ${selected === index ? "selected" : ""}`} onClick={() => radioInputBox(index)}>
           {item.isFontAwesome ? ( <FontAwesomeIcon icon={item.icon} /> ) : ( <Image src={item.icon} alt="payment method icon" /> )}
-          
+
           <p> {item.text} </p>
           {item.subText && <p> {item.subText} </p>}
           {item.name && <p> {item.name} </p>}
-          {index < 2 && <input type="radio" name="visa-card-payment-methd" checked={selected === index} readOnly />}
+          {item.last && <p style={{ display: 'none' }}> {item.last} </p>}
+          <input type="radio" name={`${item.last}-payment-method`} checked={selected === index} readOnly />
         </div>
       ))}
       <style jsx>
