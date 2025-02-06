@@ -22,11 +22,11 @@ export default function GiftCourse() {
         <main className='gift-course'>
           <h2> Gift Course </h2>
 
-          <section>
+          <form action={'#'} method='POST'>
             <div className='left'>
               <h3> Gift Course </h3>
 
-              <form action={'#'} method='POST'>
+              <section>
                 <div className='recipient-info'>
                   <h4> Recipient`s Information </h4>
 
@@ -58,16 +58,21 @@ export default function GiftCourse() {
                       <label htmlFor='card_number'> Card Number </label>
                       <input type='number' name='card_number' placeholder='Label' value={card_number} onChange={(e) => setCardNumber(e.target.value)}  />
                     </div>
+                    <div>
+                      <label htmlFor='card_number'> Card Number </label>
+                      <input type='number' name='card_number' placeholder='Label' value={card_number} onChange={(e) => setCardNumber(e.target.value)}  />
+                    </div>
+
                     <Checkbox> Remember this card, save it on my card list </Checkbox>
                   </div>
                 </div>
-              </form>
+              </section>
             </div>
 
             <div className='right'>
 
             </div>
-          </section>
+          </form>
         </main>
       </div> 
   );

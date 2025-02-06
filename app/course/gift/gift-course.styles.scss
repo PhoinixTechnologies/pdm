@@ -13,7 +13,7 @@ main.gift-course {
         font: 400 14px 'Space Grotesk';
     }
 
-    section {
+    form {
         padding: 40px 60px;
         display: flex;
         gap: 40px;
@@ -27,7 +27,7 @@ main.gift-course {
                 color: #1D2026;
                 margin: unset;
             }
-            form {
+            section {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
