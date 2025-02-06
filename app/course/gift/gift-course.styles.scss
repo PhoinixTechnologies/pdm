@@ -39,25 +39,6 @@ main.gift-course {
                         margin: unset;
                         font: 500 18px 'Space Grotesk';
                     }
-                    .cards {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 30px;
-                        .each {
-                            padding: 15px;
-                            border: 1px solid #E9EAF0;
-                            display: flex;
-                            align-items: center;
-                            gap: 24px;
-                            justify-content: space-between;
-                            cursor: pointer;
-                            p {
-                                font: 400 15px 'Space Grotesk';
-                                color: #4E5566;
-                                margin: unset;
-                            }
-                        }
-                    }
                     .all {
                         display: flex;
                         flex-direction: column;

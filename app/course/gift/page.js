@@ -3,12 +3,8 @@ import { useState } from 'react';
 import './gift-course.styles.scss';
 import DashboardHeader from '@/components/dashboard/dash.header';
 import { Checkbox } from 'antd';
-import visa from '../../../public/assets/icons/visa_card_icon.png';
-import mastercard from '../../../public/assets/icons/visa_card_icon.png';
-import paypal from '../../../public/assets/icons/paypal_card_icon.png';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
+import { notificationAlert } from '@/utils/utils';
+import PaymentMethods from '@/components/payment-method/page';
 
 
 
@@ -33,6 +29,8 @@ export default function GiftCourse() {
           lastCheckedRadio = event.target;
       }
     }
+
+    notificationAlert('success', 'Congratulations!', 'Hi there, your download process have started :)');
   }
 
 
@@ -70,30 +68,7 @@ export default function GiftCourse() {
                 <div className='payment-mthd'>
                   <h4> Payment Method </h4>
 
-                  <div className='cards'>
-                    <div className='each' onClick={radioInputBox}>
-                      <Image src={visa} alt='payment methds icon' />
-                      <p> 4855 **** **** **** </p>
-                      <p> 04/24 </p>
-                      <p> Vako Shvili </p>
-                      <input  type='radio' name='visa-card-payment-methd' />
-                    </div>
-                    <div className='each' onClick={radioInputBox}>
-                      <Image src={mastercard} alt='payment methds icon' />
-                      <p> 5795 **** **** **** </p>
-                      <p> 04/24 </p>
-                      <p> Vako Shvili </p>
-                      <input  type='radio' name='visa-card-payment-methd' />
-                    </div>
-                    <div className='each' onClick={radioInputBox}>
-                      <Image src={paypal} alt='payment methds icon' />
-                      <p> You will be redirected to the PayPal site after reviewing your order. </p>
-                    </div>
-                    <div className='each' onClick={radioInputBox}>
-                      <FontAwesomeIcon icon={faCreditCard} />
-                      <p> New Payment Cards </p>
-                    </div>
-                  </div>
+                  <PaymentMethods />
 
                   <div className='all'>
                     <div>
