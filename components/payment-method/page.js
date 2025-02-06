@@ -23,14 +23,9 @@ const PaymentMethods = () => {
         { icon: paypal, text: "You will be redirected to the PayPal site after reviewing your order." },
         { icon: faCreditCard, text: "New Payment Cards", isFontAwesome: true }
       ].map((item, index) => (
-        <div key={index} className={`each ${selected === index ? "selected" : ""}`}
-          onClick={() => radioInputBox(index)}
-        >
-          {item.isFontAwesome ? (
-            <FontAwesomeIcon icon={item.icon} />
-          ) : (
-            <Image src={item.icon} alt="payment method icon" />
-          )}
+        <div key={index} className={`each ${selected === index ? "selected" : ""}`} onClick={() => radioInputBox(index)}>
+          {item.isFontAwesome ? ( <FontAwesomeIcon icon={item.icon} /> ) : ( <Image src={item.icon} alt="payment method icon" /> )}
+          
           <p> {item.text} </p>
           {item.subText && <p> {item.subText} </p>}
           {item.name && <p> {item.name} </p>}
