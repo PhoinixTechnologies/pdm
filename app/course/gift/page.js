@@ -3,6 +3,12 @@ import { useState } from 'react';
 import './gift-course.styles.scss';
 import DashboardHeader from '@/components/dashboard/dash.header';
 import { Checkbox } from 'antd';
+import visa from '../../../public/assets/icons/visa_card_icon.png';
+import mastercard from '../../../public/assets/icons/visa_card_icon.png';
+import paypal from '../../../public/assets/icons/paypal_card_icon.png';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -13,6 +19,21 @@ export default function GiftCourse() {
   const [message, setMessage] = useState("");
   const [card_name, setCardName] = useState("");
   const [card_number, setCardNumber] = useState("");
+  const [expiration_date, setExpirationDate] = useState("");
+  const [cvv, setCVV] = useState("");
+
+  const radioInputBox = function () {
+    let lastCheckedRadio = null;
+
+    if (event.target.type === "radio") {
+      if (lastCheckedRadio === event.target) {
+          event.target.checked = false; 
+          lastCheckedRadio = null;
+      } else {
+          lastCheckedRadio = event.target;
+      }
+    }
+  }
 
 
   return (
@@ -49,6 +70,31 @@ export default function GiftCourse() {
                 <div className='payment-mthd'>
                   <h4> Payment Method </h4>
 
+                  <div className='cards'>
+                    <div className='each' onClick={radioInputBox}>
+                      <Image src={visa} alt='payment methds icon' />
+                      <p> 4855 **** **** **** </p>
+                      <p> 04/24 </p>
+                      <p> Vako Shvili </p>
+                      <input  type='radio' name='visa-card-payment-methd' />
+                    </div>
+                    <div className='each' onClick={radioInputBox}>
+                      <Image src={mastercard} alt='payment methds icon' />
+                      <p> 5795 **** **** **** </p>
+                      <p> 04/24 </p>
+                      <p> Vako Shvili </p>
+                      <input  type='radio' name='visa-card-payment-methd' />
+                    </div>
+                    <div className='each' onClick={radioInputBox}>
+                      <Image src={paypal} alt='payment methds icon' />
+                      <p> You will be redirected to the PayPal site after reviewing your order. </p>
+                    </div>
+                    <div className='each' onClick={radioInputBox}>
+                      <FontAwesomeIcon icon={faCreditCard} />
+                      <p> New Payment Cards </p>
+                    </div>
+                  </div>
+
                   <div className='all'>
                     <div>
                       <label htmlFor='card_name'> Name </label>
@@ -58,9 +104,15 @@ export default function GiftCourse() {
                       <label htmlFor='card_number'> Card Number </label>
                       <input type='number' name='card_number' placeholder='Label' value={card_number} onChange={(e) => setCardNumber(e.target.value)}  />
                     </div>
-                    <div>
-                      <label htmlFor='card_number'> Card Number </label>
-                      <input type='number' name='card_number' placeholder='Label' value={card_number} onChange={(e) => setCardNumber(e.target.value)}  />
+                    <div id='duplicate'>
+                      <div>
+                        <label htmlFor='expiration_date'> MM / YY </label>
+                        <input type='date' name='expiration_date' value={expiration_date} onChange={(e) => setExpirationDate(e.target.value)}  />
+                      </div>
+                      <div>
+                        <label htmlFor='cvv'> CVV </label>
+                        <input type='number' name='cvv' placeholder='Security Code' value={cvv} onChange={(e) => setCVV(e.target.value)}  />
+                      </div>
                     </div>
 
                     <Checkbox> Remember this card, save it on my card list </Checkbox>
