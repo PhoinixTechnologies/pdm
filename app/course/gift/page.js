@@ -5,6 +5,8 @@ import DashboardHeader from '@/components/dashboard/dash.header';
 import { Checkbox } from 'antd';
 import { notificationAlert } from '@/utils/utils';
 import PaymentMethods from '@/components/payment-method/page';
+import Image from 'next/image';
+import course_icon from '../../../public/assets/images/course/Course Images1.png'
 
 
 
@@ -97,7 +99,36 @@ export default function GiftCourse() {
             </div>
 
             <div className='right'>
+              <div className='title'>
+                <h5> Course </h5>
 
+                <div className='inner'>
+                  <Image src={course_icon} alt='course icon' />
+
+                  <div>
+                    <p> <span> Course by: </span> Somoye Eniola </p>
+                    <p> Python Programming </p>
+                    <p> $13.00 </p>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+
+              <div className='summarize'>
+                <h5> Order Summary </h5>
+
+                <div>
+                  <p> Subtotal <span> $61.97 USD </span> </p>
+                  <p> Coupon Discount <span> 8% </span> </p>
+                </div>
+
+                <hr />
+
+                <p> Total: <span> $75.00 USD </span> </p>
+
+                <button type='submit'> Complete Payment </button>
+              </div>
             </div>
           </form>
         </main>

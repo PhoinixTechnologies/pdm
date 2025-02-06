@@ -69,5 +69,113 @@ main.gift-course {
             }
 
         }
+        div.right {
+            width: 100%;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #E9EAF0;
+            hr {
+                margin: 2rem 0;
+                border: 0.2px solid #1D2026;
+            }
+            .title {
+                .inner {
+                    display: flex;
+                    gap: 15px;
+                    img {
+                        width: 10rem;
+                        height: 7rem;
+                    }
+                    div {
+                        p {
+                            font: 400 12px 'Space Grotesk';
+                            color: #4E5566;
+                            span {
+                                font: 400 12px 'Space Grotesk';
+                                color: #A1A5B3;
+                            }
+                            &:nth-child(2) {
+                                font-size: 14px;
+                                color: #1D2026;
+                            }
+                            &:last-child {
+                                font: 500 14px 'Space Grotesk';
+                                color: #3935FF;
+                            }
+                        }
+                    }
+                }
+            }
+            .summarize {
+                h5 {
+                    font: 500 18px 'Space Grotesk';
+                    color: #1D2026;
+                }
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    margin-top: 15px;
+                    p {
+                        font: 400 14px 'Space Grotesk';
+                        display: flex;
+                        justify-content: space-between;
+                        color: #6E7485;
+                        margin: unset;
+                        span { 
+                            font: 500 14px 'Space Grotesk';
+                            color: #1D2026;
+                        }
+                    }
+                }
+                p {
+                    font: 500 18px 'Space Grotesk';
+                    color: #202029;
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        font: 700 24px 'Space Grotesk';
+                        color: #202029;
+                    }
+                }
+                button {
+                    margin-top: 20px;
+                    font: 700 18px 'Space Grotesk';
+                    width: 100%;
+                    padding: 30px;
+                    color: #fff;
+                    background-color: #3935FF;
+                    border: none;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    main.gift-course {
+        form {
+            padding: 20px 30px;
+            div.left {
+                flex: 0 0 55%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    main.gift-course {
+        h2 {
+            padding: 15px;
+            margin: unset;
+        }
+        form {
+            flex-direction: column;
+            gap: 80px;
+        }
     }
 }
