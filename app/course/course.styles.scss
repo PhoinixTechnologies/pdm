@@ -1,3 +1,18 @@
 .pdm-course {
-    
+    section.both {
+        display: flex;
+        div.main {
+            padding: 40px 60px;
+            border-right: 1px solid red;
+            .each {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                img {
+                    width: 312px;
+                    height: 234px;
+                }
+            }
+        }
+    }
 }
