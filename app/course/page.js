@@ -7,8 +7,8 @@ import courseTwoPreview from '../../public/assets/images/course/Image2.png'
 import courseThreePreview from '../../public/assets/images/course/Image3.png'
 import courseFourPreview from '../../public/assets/images/course/Image4.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import DatePicker from '@/components/datepicker';
 import { faStar, faUser } from '@fortawesome/free-solid-svg-icons';
+import SummaryndDatePicker from '@/components/summary';
 
 
 
@@ -93,7 +93,7 @@ export default function Course() {
             </div>
           </div>
 
-          <DatePicker />
+          <SummaryndDatePicker />
         </section>
       </div> 
   );

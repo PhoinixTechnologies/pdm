@@ -6,10 +6,12 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { useSwipeable } from "react-swipeable";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faEllipsis, faTowerCell } from '@fortawesome/free-solid-svg-icons';
+import { DatePicker, Modal } from 'antd';
 
-const DatePicker = () => {
+const SummaryndDatePicker = () => {
   const today = dayjs();
   const [selectedDate, setSelectedDate] = useState(today);
+  const [isDatePickerVisible, setIsDatePickerVisible] = useState(false);
 
   // Generate 7 days from current date
   const generateDates = (startDate: any) => {
@@ -37,6 +39,25 @@ const DatePicker = () => {
   });
 
 
+  // Handle date selection from DatePicker modal
+  const handleDateChange = (date: any) => {
+    if (date) {
+      setSelectedDate(date);
+      setDates(generateDates(date.startOf("month"))); // Regenerate dates from the selected month
+    }
+    setIsDatePickerVisible(false);
+  };
+
+  const dateListRef = useRef<HTMLDivElement>(null);
+  const selectedDateRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (dateListRef.current && selectedDateRef.current) {
+      const parent = dateListRef.current;
+      const child = selectedDateRef.current;
+      parent.scrollLeft = child.offsetLeft - parent.clientWidth / 2 + child.clientWidth / 2;
+    }
+  }, [selectedDate, dates]);
   
   
 
@@ -45,15 +66,18 @@ const DatePicker = () => {
             <div className="date-picker-container" {...swipeHandlers}>
                 <div className='cursors-nd-month'>
                     <button className="nav-button" onClick={handlePrev}> <LeftOutlined /> </button>
-                    <p> {dates[0].format("MMMM YYYY")} </p>
+                    {/* <p> {dates[0].format("MMMM YYYY")} </p> */}
+                    <p className="month-year" onClick={() => setIsDatePickerVisible(true)}>
+                        {selectedDate.format("MMMM YYYY")}
+                    </p>
                     <button className="nav-button" onClick={handleNext}> <RightOutlined /> </button>
                 </div>
 
-                <div className="date-list">
+                <div className="date-list" ref={dateListRef}>
                     {dates.map((date, index) => {
                         const isDot2 = index >= 2 && index <= 4;
                         return (
-                        <div  key={date.format("DD-MM-YYYY")}  className={`date-item ${date.isSame(selectedDate, "day") ? "selected" : ""}`}  onClick={() => setSelectedDate(date)}>
+                        <div  key={date.format("DD-MM-YYYY")}  className={`date-item ${date.isSame(selectedDate, "day") ? "selected" : ""}`}  onClick={() => setSelectedDate(date)} ref={date.isSame(today, "day") ? selectedDateRef : null}>
                             <span className="day"> {date.format("DD")} </span>
                             <span className="weekday"> {date.format("ddd")} </span>
                             {date.isSame(today, "day") && <div className="dot"></div>}
@@ -62,6 +86,12 @@ const DatePicker = () => {
                         );
                     })}
                 </div>
+
+                {/* Ant Design DatePicker in a Modal */}
+                  <Modal title="Select Month & Year" open={isDatePickerVisible} onCancel={() => setIsDatePickerVisible(false)} footer={null}>
+                      <DatePicker picker="month" onChange={handleDateChange} value={selectedDate} />
+                  </Modal>
+                {/* Ant Design DatePicker in a Modal ends */}
             </div>
 
             <div className='reviews'>
@@ -114,4 +144,4 @@ const DatePicker = () => {
   );
 };
 
-export default DatePicker;
+export default SummaryndDatePicker;
