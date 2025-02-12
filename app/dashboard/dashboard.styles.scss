@@ -86,9 +86,10 @@ header{
     font-weight: 600;
     color:#3935FF;
     cursor: pointer;
-    text-decoration: underline;
-    text-decoration-thickness: 2.5px;
-    text-decoration-color: #3935FF;
+    border-bottom: 1px solid #3935ff;
+    // text-decoration: underline;
+    // text-decoration-thickness: 2.5px;
+    // text-decoration-color: #3935FF;
 }
 
 
