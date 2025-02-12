@@ -1,258 +1,95 @@
 main.course-overview {
+    padding: 20px 60px;
     display: flex;
-    flex-direction: column;
     color: #1D2026;
-    div.top {
-        padding: 15px 30px;
-        background: #F5F7FA;
-        width: 100%;
-        display: flex;
-        gap: 15px;
-        button {
-            background-color: #fff;
-            border-radius: 50%;
-            padding: 15px;
-            border: none;
-            svg {
-                width: 24px;
-                height: 24px;
-            }
-        }
-        .middle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            .details {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                h5 {
-                    font: 500 18px 'Space Grotesk';
-                    margin: unset;
-                }
-                div {
-                    display: flex;
-                    gap: 25px;
-                    p {
-                        font: 400 14px 'Space Grotesk';
-                        color: #4E5566;
-                        display: flex;
-                        gap: 5px;
-                        margin: unset;
-                        svg {
-                            color: #3935FF;
-                            width: 20px;
-                            height: 20px;
-                        }
-                    }
-                }
-            }
-            .btns {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                button {
-                    border-radius: unset;
-                    font: 700 16px 'Space Grotesk';
-                    padding: 15px 20px;
-                    &:first-child {
-                        color: #3935FF;
-                    }
-                    &:last-child {
-                        color: #fff;
-                        background: #3935FF;
-                    }
-                } 
-                button:hover {
-                    padding: 14px 19px;
-                    border-radius: 10px;
-                    font-size: 14px;
-                    &:first-child {
-                        color: #fff;
-                        background: #3935FF;
-                    }
-                    &:last-child {
-                        background: #fff;
-                        color: #3935FF;
-                    }
-                }
-            }
-        }
-    }
-
     h3 {
         font: 700 24px 'Space Grotesk';
         color: #1D2026;
     }
 
-    div.bottom {
-        padding: 50px 60px;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        .video-title {
+    div.left {
+        flex: 0 0 70%;
+        .brief {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            h3 {
-                margin: unset;
-                font: 700 32px 'Space Grotesk';
-            }
-            .statistics {
+            .head {
                 display: flex;
-                justify-content: space-between;
-                .left {
+                flex-direction: column;
+                gap: 15px;
+                .upper {
+                    ul {
+                        margin-bottom: 5px;
+                        padding: unset;
+                        display: flex;
+                        gap: 15px;
+                        li {
+                            cursor: pointer;
+                            a {
+                                display: flex;
+                                align-items: center;
+                                color: #6E7485;
+                                text-decoration: none;
+                                font: 400 14px 'Space Grotesk';
+                                svg {
+                                    width: 14px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .title {
                     display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    .photos {
-                        h6 {
-                            margin: unset;
-                            font: 700 14px 'Space Grotesk';
+                    justify-content: space-between;
+                    div.l, div.r {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50px;
+                        }
+                        div {
+                            p {
+                                margin: unset;
+                                color: #1D2026;
+                                font: 500 16px 'Space Grotesk';
+                                &:first-child {
+                                    color: #6E7485;
+                                    font: 400 14px 'Space Grotesk';
+
+                                }
+                            }
+                        }
+                    }
+                    div.r {
+                        gap: 5px;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: #3935FF;
                         }
                         p {
                             margin: unset;
-                            font: 400 12px 'Space Grotesk';
-                            color: #6E7485;
-                        }
-                    }
-                    .icons {
-                        direction: ltr; 
-                        padding-left: 25px;
-                        display: flex;
-                        gap: 15px;                        
-                        img {
-                            position: relative;
-                            left: -5px;
-                            margin-left: -25px;
-                            z-index: 1;
-                            width: 40px;
-                            height: 40px;
-                            cursor: pointer;
-                            &:not(:first-child) {
-                                margin-left: -35px;
-                            }
-                        }
-                    }
-                }
-                .right {
-                    display: flex;
-                    gap: 20px;
-                    p {
-                        margin: unset;
-                    }
-                }
-            }
-        }
-
-        section.rest {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            .rest-btns {
-                border-top: 1px solid #E9EAF0;
-                border-bottom: 1px solid #E9EAF0;
-                display: flex;
-                gap: 25px;
-                align-items: center;
-                button {
-                    font: 500 16px 'Space Grotesk';
-                    color: #4E5566;
-                    padding: 20px;
-                    border: none;
-                    span {
-                        color: #3935FF;
-                        padding: 4px 6px;
-                        background-color: #FFEEE8;
-                        font-size: 12px;
-                    }
-                }
-                button.description-btn, button.lecture-btn, button.attachment-btn, button.comment-btn {
-                    border-bottom: 1px solid red;
-                    color: #1D2026;
-                }
-            }
-            .description {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                width: 75%;
-                div {
-                    h3 {
-                        display: flex;
-                        justify-content: space-between;
-                        button {
-                            color: #3935FF;
-                            padding: 10px 25px;
-                            background-color: #FFEEE8;
-                            display: flex;
-                            align-items: center;
-                            gap: 10px;
-                            svg {height: 20px;width: 20px;}
-                        }
-                    } 
-                    p{
-                        font: 400 14px 'Space Grotesk';
-                        color: #4E5566;
-                    }
-                }
-            }
-            .comments {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                width: 75%;
-                div.combine {
-                    display: flex;
-                    gap: 12px;
-                    img {
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 50%;
-                    }
-                    form {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 10px;
-                        width: 100%;
-                        h6 {
-                            font: 500 14px 'Space Grotesk';
                             color: #1D2026;
-                            margin: unset;
-                            span, small {
+                            font: 500 16px 'Space Grotesk';
+                            &:last-child {
                                 color: #6E7485;
-                                margin-left: 5px;
-                                font: 400 12px 'Space Grotesk';
-                            }
-                        } 
-                        p{
-                            font: 400 14px 'Space Grotesk';
-                            color: #4E5566;
-                            margin: unset;
-                        }
-                        input {
-                            font: 500 14px 'Space Grotesk';
-                            color: #8C94A3;
+                                font: 400 14px 'Space Grotesk';
 
+                            }
                         }
                     }
                 }
             }
-            button#load-more {
-                padding: 25px;
-                font: 700 16px 'Space Grotesk';
-                color: #3935FF;
-                background-color: #3935FF1A;
-                align-self: flex-start;
-                display: flex;
-                gap: 10px;
-                align-items: center;
-                svg {
-                    width: 24px;
-                    height: 24px;
+            .video {
+                img {
+                    width: 100%;
+                    height: 492px;
                 }
             }
         }
-    }
+    }    
 }
