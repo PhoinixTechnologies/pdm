@@ -49,6 +49,18 @@ export default function CourseOverview() {
               <div className='video'>
                 <Image src={videoImg} alt='course play button'/>
               </div>  
+
+              <div className='describe'>
+                <h4> Description </h4>
+                <p> This Python Programming course is designed to take you from a beginner to an advanced level of proficiency in Python. It covers fundamental concepts, intermediate programming techniques, and advanced topics for real-world applications. </p>
+                <p style={{ margin: 'unset' }}> <b> Basic Section </b> </p>
+                <p> Start with an introduction to Python, its installation, and configuration. Learn the fundamentals of programming, including variables, operators, expressions, and data types. You’ll also dive deep into Python’s data structures: strings, lists, tuples, sets, and dictionaries. </p>
+                <p style={{ margin: 'unset' }}> <b> Intermediate Section </b> </p>
+                <p> Explore control flow with if, for, and while statements, and master functions, modules, and file handling. You’ll learn to work with CSV, JSON, PDF, and Excel files, followed by an introduction to object-oriented programming (OOP) and creating classes. </p>
+                <p style={{ margin: 'unset' }}> <b> Advanced Section </b> </p>
+                <p> Delve into advanced Python topics such as web scraping, creating GUIs with Tkinter, using regular expressions, and network programming. You’ll also learn how to develop web apps using Flask, interact with MySQL databases, and build scalable applications. </p>
+                <p> This course is ideal for anyone looking to gain a comprehensive understanding of Python, with practical tests and exercises at each stage to solidify your skills. </p>
+              </div>
             </div>
 
             <div className='therest'>

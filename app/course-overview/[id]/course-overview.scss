@@ -90,6 +90,11 @@ main.course-overview {
                     height: 492px;
                 }
             }
+            .therest {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
         }
     }    
 }
