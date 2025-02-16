@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './course-overview.scss';
 import DashboardHeader from '@/components/dashboard/dash.header';
-import { faAngleRight, faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faArrowRight, faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import videoImg from '../../../public/assets/images/course/Course Images1.png'
 import Link from 'next/link';
@@ -21,7 +21,7 @@ export default function CourseOverview() {
       
         <main className='course-overview'>
           <div className='left'>
-            <div className='brief'>
+            <div className='all'>
               <div className='head'>
                 <div className='upper'>
                   <ul>
@@ -92,10 +92,29 @@ export default function CourseOverview() {
                   <p> <FontAwesomeIcon icon={faCheckCircle} /> My SQL Database in Python </p>
                 </div>
               </div>
-            </div>
 
-            <div className='therest'>
+              <div className='who-the-course-is-for'>
+                <h4> Who this course is for: </h4>
+                <div>
+                  <p> <FontAwesomeIcon icon={faArrowRight} /> Beginners: Individuals with no prior programming experience who want to learn Python from scratch. </p>
+                  <p> <FontAwesomeIcon icon={faArrowRight} /> Intermediate Learners: Those with basic Python knowledge looking to deepen their understanding and tackle more complex topics. </p>
+                  <p> <FontAwesomeIcon icon={faArrowRight} /> Aspiring Data Scientists: Anyone interested in data science and machine learning, as Python is the go-to language in these fields. </p>
+                  <p> <FontAwesomeIcon icon={faArrowRight} /> Web Developers: Developers who want to build dynamic web applications using Python frameworks like Flask. </p>
+                  <p> <FontAwesomeIcon icon={faArrowRight} /> IT Professionals: Individuals aiming to automate tasks, manage files, and perform network programming. </p>
+                  <p> <FontAwesomeIcon icon={faArrowRight} /> Students & Hobbyists: Anyone curious about learning a versatile and powerful language for both career advancement and personal projects. </p>
+                </div>
+              </div>
 
+              <div className='course-reqs'>
+                <h4> Course requirements </h4>
+
+                <ul>
+                  <li> Basic Computer Literacy: Familiarity with using a computer, browsing the internet, and managing files. </li>
+                  <li> Access to a Computer: A laptop or desktop where Python and an IDE (like VS Code or PyCharm) can be installed. </li>
+                  <li> Internet Access: For downloading Python, the IDE, and additional packages or libraries as required. </li>
+                  <li> No Prior Programming Knowledge: This course starts from the basics, so no prior coding experience is needed. A desire to learn and explore Python is essential! </li>
+                </ul>
+              </div>
             </div>
           </div>
 

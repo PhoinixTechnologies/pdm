@@ -9,10 +9,14 @@ main.course-overview {
 
     div.left {
         flex: 0 0 70%;
-        .brief {
+        .all {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            h4 {
+                font: 700 24px 'Space Grotesk';
+                color: #1D2026;
+            }
             .head {
                 display: flex;
                 flex-direction: column;
@@ -109,10 +113,26 @@ main.course-overview {
                     }
                 }
             }
-            .therest {
-                display: flex;
-                flex-direction: column;
-                gap: 25px;
+            .who-the-course-is-for {
+                div {
+                    p {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        font: 400 14px 'inter';
+                        color: #4E5566;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: #3935FF;
+                        }
+                    }
+                }
+            }
+            .course-reqs {
+                ul {
+                    li {list-style-type: disc;}
+                }
             }
         }
     }    
