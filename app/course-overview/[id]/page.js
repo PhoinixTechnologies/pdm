@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './course-overview.scss';
 import DashboardHeader from '@/components/dashboard/dash.header';
-import { faAngleRight, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import videoImg from '../../../public/assets/images/course/Course Images1.png'
 import Link from 'next/link';
@@ -60,6 +60,37 @@ export default function CourseOverview() {
                 <p style={{ margin: 'unset' }}> <b> Advanced Section </b> </p>
                 <p> Delve into advanced Python topics such as web scraping, creating GUIs with Tkinter, using regular expressions, and network programming. You’ll also learn how to develop web apps using Flask, interact with MySQL databases, and build scalable applications. </p>
                 <p> This course is ideal for anyone looking to gain a comprehensive understanding of Python, with practical tests and exercises at each stage to solidify your skills. </p>
+              </div>
+
+              <div className='what-you-learn'>
+                <h4> What you will learn in this course (Beginner) </h4>
+                <div className='mt-4'>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Introduction to Python </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Python Basics </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Data Structure (Strings) </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Data Structure (Lists) </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Data Structure (Tuples) </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Data Structure (Dictionaries) </p>
+                </div>
+              </div>
+
+              <div className='what-you-learn'>
+                <h4> What you will learn in this course (Intermediate) </h4>
+                <div className='mt-4'>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Program Flow (Control Flow Statements) </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Functions & Modules </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> File Handling </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> CSV & JSON Files </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Word, Pdf & Json Documents using Python </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Handling Excel FIles using Python </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Class and OOP </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Web Scraping  </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Writing GUIs in python </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Regular Expression </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Network Programming </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> Flask </p>
+                  <p> <FontAwesomeIcon icon={faCheckCircle} /> My SQL Database in Python </p>
+                </div>
               </div>
             </div>
 

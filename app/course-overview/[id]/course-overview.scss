@@ -90,6 +90,25 @@ main.course-overview {
                     height: 492px;
                 }
             }
+            .what-you-learn {
+                padding: 40px;
+                background-color: rgba(57, 53, 255, 0.1);
+                div {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    p {
+                        display: flex;
+                        gap: 11px;
+                        align-items: center;
+                        font: 400 14px 'inter';
+                        svg {
+                            color: #3935FF;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
             .therest {
                 display: flex;
                 flex-direction: column;
