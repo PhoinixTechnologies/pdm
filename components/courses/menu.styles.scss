@@ -1,0 +1,27 @@
+ul {
+    li {
+        span.ant-menu-title-content {
+            span.normal {
+                font: 500 15px 'Inter';
+                color: #4E5566;
+            }
+            span {
+                font: 400 14px 'Inter';
+                color: #4E5566;
+            }
+        }
+    }
+}
+
+.menu-item-label {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .menu-item-label span {
+    font-size: 12px;
+    color: #888;
+  }
+  
