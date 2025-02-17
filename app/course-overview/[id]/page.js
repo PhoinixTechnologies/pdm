@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './course-overview.scss';
 import DashboardHeader from '@/components/dashboard/dash.header';
-import { faAngleRight, faArrowRight, faCheckCircle, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faArrowRight, faCheckCircle, faClockFour, faFolderOpen, faPlay, faStar } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import videoImg from '../../../public/assets/images/course/Course Images1.png'
 import Link from 'next/link';
@@ -118,6 +118,14 @@ export default function CourseOverview() {
             </div>
 
             <div className='curriculum'>
+              <h4> Curriculum 
+                <div> 
+                  <span> <FontAwesomeIcon icon={faFolderOpen} /> 6 Sections </span> 
+                  <span> <FontAwesomeIcon icon={faPlay} /> 202 lectures </span> 
+                  <span> <FontAwesomeIcon icon={faClockFour} /> 19h 37m </span> 
+                </div> 
+              </h4>
+
               <ClientMenu />
             </div>
           </div>

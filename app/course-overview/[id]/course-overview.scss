@@ -136,7 +136,25 @@ main.course-overview {
             }
         }
         .curriculum {
-            
+            h4 {
+                font: 700 24px 'Space Grotesk';
+                color: #1D2026;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 1.5rem 0rem;
+                div {
+                    span {
+                        font: 400 14px 'Inter';
+                        color: #4E5566;
+                        svg {
+                            color: #3935FF;
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }   
         }
     }    
 }
