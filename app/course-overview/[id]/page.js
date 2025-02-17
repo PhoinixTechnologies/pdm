@@ -6,7 +6,7 @@ import Image from 'next/image';
 import videoImg from '../../../public/assets/images/course/Course Images1.png'
 import Link from 'next/link';
 import creatorsImg from '../../../public/assets/images/eniola_icon.png'
-
+import ClientMenu from '@/components/courses/menu';
 
 
 export default function CourseOverview() {
@@ -115,6 +115,10 @@ export default function CourseOverview() {
                   <li> No Prior Programming Knowledge: This course starts from the basics, so no prior coding experience is needed. A desire to learn and explore Python is essential! </li>
                 </ul>
               </div>
+            </div>
+
+            <div className='curriculum'>
+              <ClientMenu />
             </div>
           </div>
 
