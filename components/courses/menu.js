@@ -1,8 +1,10 @@
 "use client";
 import './menu.styles.scss';
 import { Menu } from 'antd';
-import { FileProtectOutlined, PlayCircleOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { FileProtectOutlined, PlayCircleOutlined } from '@ant-design/icons';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faFileShield, faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default function ClientMenu() {
   let keyValue = 1;
@@ -12,14 +14,26 @@ export default function ClientMenu() {
     setSelectedKey(key);
   };
 
-  const renderLabel = (label, key, extra = '') => (
-    <span className="menu-item-label" style={{ 
-      fontWeight: selectedKey === key ? "bold" : "normal",
-      color: selectedKey === key ? "#1677ff" : "inherit",
-      display: 'flex', justifyContent: 'space-between', width: '100%'
-    }}>
+  const renderLabel = (label, key, lectures = null, time = null) => (
+    <span
+      className="menu-item-label"
+      style={{
+        fontWeight: selectedKey === key ? "bold" : "normal",
+        color: selectedKey === key ? "#1677ff" : "inherit",
+        display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%",
+      }}
+    >
       {label}
-      {extra && <span style={{ color: "#888", fontSize: "12px" }}>{extra}</span>}
+      {lectures && (
+        <span style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "12px" }}>
+          <FontAwesomeIcon icon={faPlay} style={{ color: '#3935FF' }} /> {lectures}
+        </span>
+      )}
+      {time && (
+        <span style={{ display: "flex", alignItems: "center", gap: "4px", color: "#888", fontSize: "12px" }}>
+          <FontAwesomeIcon icon={faClock} style={{ color: '#3935FF' }} /> {time}
+        </span>
+      )}
     </span>
   );
 
@@ -32,15 +46,15 @@ export default function ClientMenu() {
           key: 'g1',
           type: 'group',
           children: [
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('What is Python?', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('What is programming?', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Why Python(Advantages & Importance)', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Installation & Configuration of Python', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Why Python(Advantages & Importance)', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Installation & Configuration of Python', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('What is an IDE?', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Examples of IDE', `${keyValue++}`, '07:31') },
-            { key: `${keyValue++}`, icon: <FileProtectOutlined />, label: renderLabel('Short Test', `${keyValue++}`, '5.3 MB') },
+            { key: `${keyValue++}`, icon: <FontAwesomeIcon icon={faPlayCircle} />, label: renderLabel("What is Python?", `${keyValue++}`, null, "07:31") },
+            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('What is programming?', `${keyValue++}`, null, '07:31') },
+            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Why Python(Advantages & Importance)', `${keyValue++}`, null, '07:31') },
+            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Installation & Configuration of Python', `${keyValue++}`, null, '07:31') },
+            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Why Python(Advantages & Importance)', `${keyValue++}`, null, '07:31') },
+            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Installation & Configuration of Python', `${keyValue++}`, null, '07:31') },
+            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('What is an IDE?', `${keyValue++}`, null, '07:31') },
+            { key: `${keyValue++}`, icon: <PlayCircleOutlined />, label: renderLabel('Examples of IDE', `${keyValue++}`, null, '07:31') },
+            { key: `${keyValue++}`, icon: <FileProtectOutlined />, label: renderLabel('Short Test', `${keyValue++}`, '5.3 MB', null) }
           ],
         },
       ],
@@ -68,7 +82,6 @@ export default function ClientMenu() {
     },
   ];
 
-  return (
-    <Menu mode="inline" selectedKeys={[selectedKey]} onClick={handleSelect} items={items} />
-  );
+  return <div className='dropdown-left-menu'> <Menu mode="inline" selectedKeys={[selectedKey]} onClick={handleSelect} items={items} /> </div>;
+
 }
