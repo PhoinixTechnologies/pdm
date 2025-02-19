@@ -131,7 +131,7 @@ export default function CourseOverview() {
           </div>
 
           <div className='right'>
-
+            
           </div>
         </main>
       </div> 

@@ -4,7 +4,7 @@ import { Menu } from 'antd';
 import { FileProtectOutlined, PlayCircleOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faFileShield, faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default function ClientMenu() {
   let keyValue = 1;
