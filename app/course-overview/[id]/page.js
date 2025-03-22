@@ -20,7 +20,7 @@ export default function CourseOverview() {
         <DashboardHeader />
       
         <main className='course-overview'>
-          <div className='left'>
+          <div className='left'>  
             <div className='all'>
               <div className='head'>
                 <div className='upper'>
