@@ -1,0 +1,29 @@
+div.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .each {
+        padding: 15px;
+        border: 1px solid #E9EAF0;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        cursor: pointer;
+        &:first-child, &:nth-child(2) {
+            justify-content: space-between;
+        }
+        img {
+            width: 30px;
+        }
+        svg {
+            width: 26px;
+            height: 100%;
+            color: #3935FF;
+        }
+        p {
+            font: 400 15px 'Space Grotesk';
+            color: #4E5566;
+            margin: unset;
+        }
+    }
+}
