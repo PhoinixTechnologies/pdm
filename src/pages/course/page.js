@@ -99,5 +99,3 @@ export default function Course() {
   );
 }
 
-
-export const metadata = { title: 'PDM - Courses' };

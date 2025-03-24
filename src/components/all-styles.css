@@ -7,11 +7,6 @@
 /* Custom font */
 @font-face {
     font-family: 'MyCustomFont';
-    src:
-    /* url('/pdm_venv/tutorboard/static/fonts/GOODDC__.TTF') format('ttf'),
-    url('/pdm_venv/tutorboard/static/fonts/GOODDOGC.TXT') format('ttf'),
-    url('/pdm_venv/tutorboard/static/fonts/GOODDOGP.TXT') format('ttf'), */
-    url('/pdm_venv/tutorboard/static/fonts/GOODDP__.TTF');
     font-weight: 400;
     font-style: normal;
 }
@@ -151,7 +146,7 @@ body{
 .fs-sec{
     padding: 12% 8%;
     color: white;
-    background-image: url('../public/assets/images/bg.png');
+    background-image: url('../assets/bg.png');
 }
 
 .fs-sec .sec-div{

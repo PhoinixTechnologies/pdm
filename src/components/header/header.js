@@ -1,17 +1,25 @@
-import Link from 'next/link'
 import React from 'react'
-import pdm_icon from '../../public/assets/icons/pdm.png'
-import Image from 'next/image'
+import pdm_icon from '../../assets/logo.png'
 import '../../components/all-styles.css'
+import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
 
 
-export default function Header() {
+
+export const Header = ({ title }) => {
+
+    useEffect(() => {
+        document.title = title;
+        window.scrollTo(0, 0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <header className="header">
             {/* Logo and Navigation Bar  */}
             <div className="logoimg">
                 <a href="#" className="logo">
-                    <Image src={pdm_icon} alt="logo" />
+                    <img src={pdm_icon} alt="logo" />
                     <i className='bx bx-menu' id="menu-icon"><span className="animate"></span></i>
                 </a>
                 <span> My PDM Tutor </span>

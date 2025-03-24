@@ -1,11 +1,17 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
-import pdm_icon from '../../public/assets/icons/pdm.png';
+import pdm_icon from '../../assets/logo.png';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
-export default function Footer() {
+export const Footer = ({ title }) => {
+    useEffect(() => {
+      document.title = title;
+      window.scrollTo(0, 0);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
     return (
         <footer>
           <div className="subscribe">
@@ -28,7 +34,7 @@ export default function Footer() {
             <div className="footer-sec">
               <div className="footer-sec1">
                   <div className="logoimg">
-                    <Link href={'/home'} className="logo"> <Image src={pdm_icon} alt="logo" width={100} height={100} /> </Link> 
+                    <Link href={'/home'} className="logo"> <img src={pdm_icon} alt="logo" width={100} height={100} /> </Link> 
                     <span> My PDM Tutor </span>
                   </div> <br />
                     <p> Phone: +234 803 986 7195 </p>
