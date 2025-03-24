@@ -18,7 +18,7 @@ export const Header = ({ title }) => {
         <header className="header">
             {/* Logo and Navigation Bar  */}
             <div className="logoimg">
-                <a href="#" className="logo">
+                <a href="#head" className="logo">
                     <img src={pdm_icon} alt="logo" />
                     <i className='bx bx-menu' id="menu-icon"><span className="animate"></span></i>
                 </a>
