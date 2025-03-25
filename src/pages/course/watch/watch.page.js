@@ -1,18 +1,32 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './watch-course.scss';
-import DashboardHeader from '@/components/dashboard/dash.header';
-import { faArrowLeft, faClock, faComment, faDownload, faFolder, faPlayCircle, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
-import avatarOne from '../../../../public/assets/images/course/watch/avatar_one.png';
-import avatarTwo from '../../../../public/assets/images/course/watch/avatar_two.png';
-import avatarThree from '../../../../public/assets/images/course/watch/avatar_three.png';
-import avatarFour from '../../../../public/assets/images/course/watch/avatar_four.png';
-import avatarFive from '../../../../public/assets/images/course/watch/avatar_five.png';
-import { notificationAlert } from '@/utils/utils';
+import { faArrowLeft, faClock, faDownload, faFolder, faPlayCircle, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import avatarOne from '../../../assets/images/course/watch/avatar_one.png';
+import avatarTwo from '../../../assets/images/course/watch/avatar_two.png';
+import avatarThree from '../../../assets/images/course/watch/avatar_three.png';
+import avatarFour from '../../../assets/images/course/watch/avatar_four.png';
+import avatarFive from '../../../assets/images/course/watch/avatar_five.png';
+import { notificationAlert } from '../../../utils/utils';
+import DashboardHeader from '../../../components/dashboard/dash.header';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+  
+  
+  
+export const WatchCourse = ({ title }) => {
+  
+  const navigate = useNavigate();
+  console.log(navigate);
 
+  const handleLocation = (where) => {
+    navigate(where);
+  }
 
-
-export default function WatchCourse() {
+  useEffect(() => {
+    document.title = title;
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const date = Date().split(" ").slice(1, 4).join(" ");
 
@@ -22,7 +36,7 @@ export default function WatchCourse() {
       
         <main className='watch-courses'>
           <div className='top'>
-            <button type='button'> <FontAwesomeIcon icon={faArrowLeft} /> </button>
+            <button type='button' onClick={handleLocation("/courses")} > <FontAwesomeIcon icon={faArrowLeft} /> </button>
 
             <div className='middle'>
               <div className='details'>
@@ -50,11 +64,11 @@ export default function WatchCourse() {
               <div className='statistics'> 
                 <div className='left'>
                   <div className='icons'>
-                    <Image src={avatarOne} alt='profile icon' width={100} height={100} />
-                    <Image src={avatarTwo} alt='profile icon' width={100} height={100} />
-                    <Image src={avatarThree} alt='profile icon' width={100} height={100} />
-                    <Image src={avatarFour} alt='profile icon' width={100} height={100} />
-                    <Image src={avatarFive} alt='profile icon' width={100} height={100} />
+                    <img src={avatarOne} alt='profile icon' width={100} height={100} />
+                    <img src={avatarTwo} alt='profile icon' width={100} height={100} />
+                    <img src={avatarThree} alt='profile icon' width={100} height={100} />
+                    <img src={avatarFour} alt='profile icon' width={100} height={100} />
+                    <img src={avatarFive} alt='profile icon' width={100} height={100} />
                   </div>
                   <div className='photos'>
                     <h6> 512 </h6>
@@ -92,7 +106,7 @@ export default function WatchCourse() {
                 <h3> Comments (154) </h3>
 
                 <div className='combine'>
-                  <Image src={avatarFive} alt='progfile icon' />
+                  <img src={avatarFive} alt='progfile icon' />
                   <form action={'#'} method='POST'>
                     <h6> Ronald Richards <span> . </span> <small> 1 week ago </small> </h6>
                     <p> Thank You so much ma, you’re a great mentor. 🔥🔥🔥 </p>
@@ -101,7 +115,7 @@ export default function WatchCourse() {
                 </div>
 
                 <div className='combine'>
-                  <Image src={avatarThree} alt='progfile icon' />
+                  <img src={avatarThree} alt='progfile icon' />
                   <form action={'#'} method='POST'>
                     <h6> Guy Hawkins <span> . </span> <small> 2 week ago </small> </h6>
                     <p> Thank you for your helpful video.  </p>
@@ -110,7 +124,7 @@ export default function WatchCourse() {
                 </div>
 
                 <div className='combine'>
-                  <Image src={avatarOne} alt='progfile icon' />
+                  <img src={avatarOne} alt='progfile icon' />
                   <form action={'#'} method='POST'>
                     <h6> Esther Howard <span> . </span> <small> 2 week ago </small> </h6>
                     <p> Quality Content </p>
@@ -119,7 +133,7 @@ export default function WatchCourse() {
                 </div>
 
                 <div className='combine'>
-                  <Image src={avatarTwo} alt='progfile icon' />
+                  <img src={avatarTwo} alt='progfile icon' />
                   <form action={'#'} method='POST'>
                     <h6> Theresa Webb <span> . </span> <small> 3 week ago </small> </h6>
                     <p> Now i know that i will spent that 5 minutes of my life with pure pleasure </p>
@@ -128,7 +142,7 @@ export default function WatchCourse() {
                 </div>
 
                 <div className='combine'>
-                  <Image src={avatarThree} alt='progfile icon' />
+                  <img src={avatarThree} alt='progfile icon' />
                   <form action={'#'} method='POST'>
                     <h6> Courtney Henry <span> . </span> <small> 1 month ago </small> </h6>
                     <p> Imagine seeing this while being a front end programmer. </p>
@@ -146,5 +160,3 @@ export default function WatchCourse() {
   );
 }
 
-
-export const metadata = { title: 'PDM - Watch Courses' }

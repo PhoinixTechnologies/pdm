@@ -4,6 +4,7 @@ import config from "../config";
 import Swal from "sweetalert2";
 import { RESPONSE_STATES } from "../utils/constants.js";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
@@ -14,7 +15,7 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(localStorage.getItem("user") || null);
     const [token, setToken] = useState(localStorage.getItem("authtoken") || "");
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
 
     const loginAction = async (data) => {
@@ -22,7 +23,7 @@ const AuthProvider = ({children}) => {
 
             const apiConfig = {
                 method: 'POST',
-                url: `${apiUrl}/ashopree/auth/login`,
+                url: `${apiUrl}/auth/login`,
                 data
             }
 
@@ -44,7 +45,7 @@ const AuthProvider = ({children}) => {
                     let getName = usersFirstname[1];
                     Swal.fire({ icon: 'success', title: 'Welcome back', text: 'Hi ' + getName + ', It\'s nice to have you back. ', });
 
-                    // navigate("/");
+                    navigate("/dashboard");
 
                 } else {
                     return RESPONSE_STATES.error;
@@ -65,66 +66,16 @@ const AuthProvider = ({children}) => {
         }
     };
 
-    const loginActionWithEmail = async (data) => {
-
-        try {
-
-            const apiConfig = {
-                method: 'POST',
-                url: `${apiUrl}/login`,
-                data,
-                headers: { Authorization: "Bearer base64:JFM+PJaWD/pBypX+NhXudDrAmianZdGYZ41qz4WhXL0=" }
-            }
-
-            const result = await axios(apiConfig);
-            const userData  = result.data;
-
-            console.log(userData);
-
-            if (userData.status === 200) {
-                setUser(userData.data);
-                setToken(userData.data.apiToken);
-                localStorage.setItem("authtoken", userData.data.apiToken);
-                localStorage.setItem("user", JSON.stringify(userData.data));
-
-                let getName = (userData.data.name.split(' '));
-
-                Swal.fire({
-                    icon: 'success',
-                    title: userData.message,
-                    text: 'Hello ' + getName[0] + ', you are welcome, It\'s nice to have you back. ',
-                });
-
-                // navigate("/");
-                return RESPONSE_STATES.success;
-
-            } else {
-
-                Swal.fire({ icon: 'error', title: 'Try again', text: 'Invalid Credentials', });
-                return RESPONSE_STATES.error;
-            }
-
-        } catch (error) {
-            if (error.response) {
-
-                Swal.fire({ icon: 'error', title: 'Please, try again', text: error.message, });
-            } else {
-    
-                Swal.fire({ icon: 'error', title: 'Sorry, Try Again', text: error.message, });
-            }
-        }
-    };
-
     const logOut = () => {
         setUser(null);
         setToken("");
         localStorage.removeItem("user");
         localStorage.removeItem("authtoken");
-        // navigate("/get-started");
+        navigate("/");
     };
 
     return (
-        <AuthContext.Provider value={{ token, user, loginAction, loginActionWithEmail, logOut }}>
+        <AuthContext.Provider value={{ token, user, loginAction, logOut }}>
             {children}
         </AuthContext.Provider>
     );

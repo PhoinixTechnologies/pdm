@@ -13,6 +13,7 @@ main.watch-courses {
             border-radius: 50%;
             padding: 15px;
             border: none;
+            cursor: pointer;
             svg {
                 width: 24px;
                 height: 24px;
@@ -159,7 +160,7 @@ main.watch-courses {
                 button {
                     font: 500 16px 'Space Grotesk';
                     color: #4E5566;
-                    padding: 20px;
+                    padding: 15px;
                     border: none;
                     span {
                         color: #3935FF;
@@ -233,7 +234,11 @@ main.watch-courses {
                         }
                         input {
                             font: 500 14px 'Space Grotesk';
-                            color: #8C94A3;
+                            // color: #8C94A3;
+                            color: #000;
+                            background-color: #d9d9d9;
+                            border-color: #fff;
+                            margin: unset;
 
                         }
                     }

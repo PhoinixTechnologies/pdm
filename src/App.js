@@ -9,6 +9,7 @@ import { Login } from "./pages/login/login.page.js";
 import { Dashboard } from "./pages/dashboard/dashboard.page.js";
 import { Courses } from "./pages/course/course.page.js";
 import { GiftCourse } from "./pages/course/gift/gift.page.js";
+import { WatchCourse } from "./pages/course/watch/watch.page.js";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/dashboard" exact element={<Dashboard title="PDM - Tutur | Dashboard" />} />
                 <Route path="/courses" element={<Courses title="PDM - Tutor | Courses" />} />
                 <Route path="/courses/gift" exact element={<GiftCourse title="PDM - Tutor | Gift Course" />} />
+                <Route path="/courses/watch/:id" exact element={<WatchCourse title="PDM - Tutor | Watch Courses" />} />
               {/* </Route> */}
           </Routes>
 
