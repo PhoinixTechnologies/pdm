@@ -1,10 +1,16 @@
 import './login.styles.scss';
 import logo_icon from '../../assets/icons/pdm.png';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
+export const Login = ({ title }) => {
 
-export default function Login() {
+    useEffect(() => {
+      document.title = title;
+      window.scrollTo(0, 0);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
   return (
     <div className="pdm-login">
@@ -87,6 +93,3 @@ export default function Login() {
     </div> 
   );
 }
-
-
-export const metadata = { title: 'PDM - Login' };

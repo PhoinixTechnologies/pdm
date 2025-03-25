@@ -1,10 +1,17 @@
 import './register.styles.scss';
 import logo_icon from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
-export default function Register() {
+export const Register = ({ title }) => {
+
+  useEffect(() => {
+    document.title = title;
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="pdm-register">
