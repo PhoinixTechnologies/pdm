@@ -17,9 +17,9 @@ function App() {
           {/* <Header /> */}
 
           <Routes>
+              <Route path="/" exact element={<Home title="PDM Tutor | Welcome To PDM Tutor" />} />
               <Route path="/register" exact element={<Register title="PDM Tutor | Register an Account " />} />
               <Route path="/login" exact element={<Login title="PDM Tutor | Login to your Account " />} />
-                <Route path="/" exact element={<Home title="PDM - Tutor Home" />} />
               <Route element={<PrivateRoute />}>
                 <Route path="/courses" exact element={<Home title="PDM - Courses" />} />
               </Route>  

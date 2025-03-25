@@ -3,7 +3,6 @@ import pythonImage from '../../assets/images/py.png';
 import dataAnalyst from '../../assets/images/da.png';
 import machingLearning from '../../assets/images/ml.png';
 import loginImage from '../../assets/images/login.png';
-import { Link } from 'react-router-dom';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { useEffect } from 'react';
@@ -34,7 +33,7 @@ export const Home = ({ title }) => {
 
                     <div className="div-btn">
                         <div className="link-container">
-                            <Link href={'#'}>Get Started 🔥</Link>
+                            <a href={'register'}>Get Started 🔥</a>
                         </div>
 
                         {/* Arrow & tilted text  */}
@@ -109,8 +108,8 @@ export const Home = ({ title }) => {
                 </div>
 
                 <div className="abt-links">
-                <Link href={'#'} className="get-started"> Get Started </Link>
-                <Link href={'#learn-more'} className="learn-more"> Learn more </Link>
+                <a href={'register'} className="get-started"> Get Started </a>
+                <a href={'about'} className="learn-more"> Learn more </a>
                 </div>
             </div>
             </section>
@@ -129,27 +128,27 @@ export const Home = ({ title }) => {
                     <div className="course-btn"> <p> Our Courses </p> </div>
 
                 <div className="bx-container">
-                    <div className="btn-bx" style={{ backgroundImage: `url('${pythonImage.src}')`, backgroundRepeat: 'no-repeat'}} width={100} height={100}>
+                    <div className="btn-bx" style={{ backgroundImage: `url('${pythonImage}')`, backgroundRepeat: 'no-repeat'}} width={100} height={100}>
                         <p> Python Programming </p>
                         <br />
                         <span> Key Python concepts include variables, control flow,  <br /> functions, data structures, object-oriented  <br /> programming, and error handling.</span>
                         <br />
-                        <Link href={'#'}> Get Started </Link>
+                        <a href={'register'}> Get Started </a>
                     </div>
 
-                    <div className="btn-bx" style={{ backgroundImage: `url('${dataAnalyst.src}')`, backgroundRepeat: 'no-repeat'}} width={100} height={100}>
+                    <div className="btn-bx" style={{ backgroundImage: `url('${dataAnalyst}')`, backgroundRepeat: 'no-repeat'}} width={100} height={100}>
                     <p> Data Analysis </p>
                     <br />
                     <span>Key Python concepts include variables, control flow,  <br /> functions, data structures, object-oriented  <br /> programming, and error handling.</span>
                     <br />
-                    <Link href={'#'}> Get Started </Link>
+                    <a href={'register'}> Get Started </a>
                     </div>
 
-                    <div className="btn-bx" style={{ backgroundImage: `url('${machingLearning.src}')`, backgroundRepeat: 'no-repeat'}} width={100} height={100}>
+                    <div className="btn-bx" style={{ backgroundImage: `url('${machingLearning}')`, backgroundRepeat: 'no-repeat'}} width={100} height={100}>
                     <p> Machine Learning </p> <br />
                     <span> Key Python concepts include variables, control flow,  <br /> functions, data structures, object-oriented  <br /> programming, and error handling.</span>
                     <br />
-                    <Link href={'#'}> Get Started </Link>
+                    <a href={'register'}> Get Started </a>
                     </div>
                 </div>
 
@@ -188,8 +187,8 @@ export const Home = ({ title }) => {
         
                         <br />
                         <div className="abt-links">
-                        <Link href={'#'} className="get-started"> Get Started </Link>
-                        <Link href={'#learn-more'} className="learn-more"> Learn more </Link>
+                        <a href={'register'} className="get-started"> Get Started </a>
+                        <a href={'about'} className="learn-more"> Learn more </a>
                         </div>
                     </div>
                     </div>
@@ -209,31 +208,31 @@ export const Home = ({ title }) => {
 
                     <div className="div-ics">
                     <div className="lks">
-                        <Link href={'#facebook'}>
+                        <a href={'#facebook'}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
                             <path d="M25.0059 50.1495C38.8097 50.1495 50 39.0236 50 25.2991C50 11.5746 38.8097 0.44873 25.0059 0.44873C11.202 0.44873 0.0117188 11.5746 0.0117188 25.2991C0.0117188 39.0236 11.202 50.1495 25.0059 50.1495Z" fill="#D9D9D9"/>
                             <path d="M23.7062 32.6462L23.6858 26.387H21.0078V23.7044H23.6858V21.9161C23.6858 19.5025 25.1778 18.3394 27.3272 18.3394C28.3568 18.3394 29.2417 18.4161 29.4995 18.4505V20.9728L28.0088 20.9735C26.8399 20.9735 26.6135 21.5299 26.6135 22.3464V23.7044H29.9343L29.0416 26.387H26.6135V32.6462H23.7062Z" fill="#2A27C9"/>
                         </svg>
-                        </Link>
+                        </a>
                     </div>
 
                     <div className="lks">
                         <div className="insta">
-                        <Link href={'#instagram'} className="instagram">
+                        <a href={'#instagram'} className="instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                             </svg>
-                        </Link>
+                        </a>
                         </div>
                     </div>
 
                     <div className="lks">
-                        <Link href={'#X'}>
+                        <a href={'#X'}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
                             <path d="M25.0059 50.5511C38.8097 50.5511 50 39.4252 50 25.7007C50 11.9762 38.8097 0.850342 25.0059 0.850342C11.202 0.850342 0.0117188 11.9762 0.0117188 25.7007C0.0117188 39.4252 11.202 50.5511 25.0059 50.5511Z" fill="#D9D9D9"/>
                             <path d="M32.2902 21.0783C31.7546 21.3466 31.219 21.436 30.5942 21.5254C31.219 21.1677 31.6653 20.6312 31.8439 19.9159C31.3083 20.2736 30.6834 20.4524 29.9693 20.6312C29.4337 20.0947 28.6303 19.7371 27.8269 19.7371C26.3094 19.7371 24.9705 21.0783 24.9705 22.6879C24.9705 22.9561 24.9705 23.1349 25.0597 23.3138C22.6496 23.2244 20.418 22.0619 18.9897 20.2736C18.7219 20.7207 18.6327 21.1677 18.6327 21.7937C18.6327 22.7773 19.1683 23.6715 19.9716 24.208C19.5253 24.208 19.079 24.0291 18.6327 23.8503C18.6327 25.281 19.6146 26.4434 20.9536 26.7117C20.6858 26.8011 20.418 26.8011 20.1502 26.8011C19.9716 26.8011 19.7931 26.8011 19.6146 26.7117C19.9716 27.8741 21.0428 28.7683 22.3818 28.7683C21.3999 29.573 20.1502 30.0201 18.7219 30.0201C18.4541 30.0201 18.2756 30.0201 18.0078 30.0201C19.3468 30.8249 20.8643 31.3614 22.4711 31.3614C27.8269 31.3614 30.7727 26.8905 30.7727 23.0455C30.7727 22.9561 30.7727 22.7773 30.7727 22.6879C31.3975 22.2408 31.9331 21.7043 32.2902 21.0783Z" fill="#2A27C9"/>
                         </svg>
-                        </Link>
+                        </a>
                     </div>
 
                     </div>
@@ -250,11 +249,11 @@ export const Home = ({ title }) => {
                     </form>
                 </div>
                 <div className="leave-a-message">
-                    <Link href="#leave-a-message"> Leave us a Message 
+                    <a href="#leave-a-message"> Leave us a Message 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
                     </svg>
-                    </Link>
+                    </a>
                 </div>
                 </div>
             </section>
