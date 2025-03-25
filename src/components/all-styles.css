@@ -940,6 +940,10 @@ html {
 }
 
 
+:where(.css-dev-only-do-not-override-1a3rktk).ant-picker-outlined {
+    width: 100%;
+}
+
 /* Media Screen Design */
 @media screen and (max-width: 767px) {
     html{

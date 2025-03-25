@@ -1,31 +1,33 @@
 import './course.styles.scss';
-import DashboardHeader from '@/components/dashboard/dash.header';
-import Head from 'next/head';
-import Image from 'next/image';
-import courseOnePreview from '../../public/assets/images/course/Course Images1.png'
-import courseTwoPreview from '../../public/assets/images/course/Image2.png'
-import courseThreePreview from '../../public/assets/images/course/Image3.png'
-import courseFourPreview from '../../public/assets/images/course/Image4.png'
+import courseOnePreview from '../../assets/images/course/Course Images1.png'
+import courseTwoPreview from '../../assets/images/course/Image2.png'
+import courseThreePreview from '../../assets/images/course/Image3.png'
+import courseFourPreview from '../../assets/images/course/Image4.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faUser } from '@fortawesome/free-solid-svg-icons';
-import SummaryndDatePicker from '@/components/summary';
+import DashboardHeader from '../../components/dashboard/dash.header';
+import { useEffect } from 'react';
+import SummaryndDatePicker from '../../components/summary/index.tsx';
 
 
 
-export default function Course() {
+export const Courses = ({ title }) => {
+
+  useEffect(() => {
+    document.title = title;
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
       <div className="pdm-course">
-        <Head>
-          <title> PDM - Courses </title>
-        </Head>
 
         <DashboardHeader />
       
         <section className='both'>
           <div className='main'>
             <div className='each'>
-              <Image src={courseOnePreview} alt='course icon preview logo' />
+              <img src={courseOnePreview} alt='course icon preview logo' />
 
               <div className='title'>
                 <div>
@@ -42,7 +44,7 @@ export default function Course() {
             </div>
             
             <div className='each'>
-              <Image src={courseTwoPreview} alt='course icon preview logo' />
+              <img src={courseTwoPreview} alt='course icon preview logo' />
 
               <div className='title'>
                 <div>
@@ -59,7 +61,7 @@ export default function Course() {
             </div>
 
             <div className='each'>
-              <Image src={courseThreePreview} alt='course icon preview logo' />
+              <img src={courseThreePreview} alt='course icon preview logo' />
 
               <div className='title'>
                 <div>
@@ -76,7 +78,7 @@ export default function Course() {
             </div>
 
             <div className='each'>
-              <Image src={courseFourPreview} alt='course icon preview logo' />
+              <img src={courseFourPreview} alt='course icon preview logo' />
 
               <div className='title'>
                 <div>

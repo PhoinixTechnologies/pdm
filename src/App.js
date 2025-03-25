@@ -4,8 +4,10 @@ import "./components/all-styles.css"
 import AuthProvider from "./hook/AuthProvider.js";
 import { Home } from "./pages/home/home.page.js";
 import PrivateRoute from "./router/route.js";
-import Register from "./pages/register/register.page.js";
-import Login from "./pages/login/login.page.js";
+import { Register } from "./pages/register/register.page.js";
+import { Login } from "./pages/login/login.page.js";
+import { Dashboard } from "./pages/dashboard/dashboard.page.js";
+import { Courses } from "./pages/course/course.page.js";
 
 
 function App() {
@@ -20,9 +22,10 @@ function App() {
               <Route path="/" exact element={<Home title="PDM Tutor | Welcome To PDM Tutor" />} />
               <Route path="/register" exact element={<Register title="PDM Tutor | Register an Account " />} />
               <Route path="/login" exact element={<Login title="PDM Tutor | Login to your Account " />} />
-              <Route element={<PrivateRoute />}>
-                <Route path="/courses" exact element={<Home title="PDM - Courses" />} />
-              </Route>  
+              {/* <Route element={<PrivateRoute />}> */}
+                <Route path="/dashboard" exact element={<Dashboard title="PDM - Tutur | Dashboard" />} />
+                <Route path="/courses" exact element={<Courses title="PDM - Tutor | Courses" />} />
+              {/* </Route> */}
           </Routes>
 
         </AuthProvider>

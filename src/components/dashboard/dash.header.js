@@ -1,13 +1,15 @@
 'use client'
-import Link from 'next/link';
+import '../../pages/dashboard/dashboard.styles.scss'
 import React from 'react';
-import '../../app/dashboard/dashboard.styles.scss';
-import { usePathname } from 'next/navigation';
+// import '../../app/dashboard/dashboard.styles.scss';
+import { useLocation } from 'react-router-dom';
 
 
 export default function DashboardHeader() {
 
-    const pathname = usePathname();
+    // const pathname = usePathname();
+    const location = useLocation();
+    const pathname = location.pathname;
     const id = 4444;
 
     return (
@@ -17,15 +19,15 @@ export default function DashboardHeader() {
             <div id="nav">
                 <div style={{ padding: '10px' }}> <div id="logo"> </div> </div>
                 
-                <Link href={'/dashboard'} className={`navigate ${pathname === '/dashboard' ? 'active' : ''}`}> Home </Link>
+                <a href={'/dashboard'} className={`navigate ${pathname === '/dashboard' ? 'active' : ''}`}> Home </a>
 
-                <Link href={'/course'} className={`navigate ${pathname === '/course' || pathname === `/course/watch/${id}` || pathname === '/course/gift' || pathname === `/course-overview/${id}` ? 'active' : ''}`}> Courses </Link>
+                <a href={'/courses'} className={`navigate ${pathname === '/courses' || pathname === `/course/watch/${id}` || pathname === '/course/gift' || pathname === `/course-overview/${id}` ? 'active' : ''}`}> Courses </a>
 
-                <Link href={'/workshop'} className={`navigate ${pathname === '/workshop' ? 'active' : ''}`}> Workshops </Link>
+                <a href={'/workshop'} className={`navigate ${pathname === '/workshop' ? 'active' : ''}`}> Workshops </a>
 
-                <Link href={'#'} className={`navigate ${pathname === '#groups' ? 'active' : ''}`}> Groups </Link>
+                <a href={'groups'} className={`navigate ${pathname === '#groups' ? 'active' : ''}`}> Groups </a>
 
-                <Link href={'#'} className={`navigate ${pathname === '#certificates' ? 'active' : ''}`}> Certificates </Link>
+                <a href={'certifications'} className={`navigate ${pathname === '#certificates' ? 'active' : ''}`}> Certificates </a>
             </div>
 
 

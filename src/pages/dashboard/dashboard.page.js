@@ -1,15 +1,21 @@
-import Image from 'next/image';
 import './dashboard.styles.scss';
-import Link from 'next/link';
-import DashboardHeader from '@/components/dashboard/dash.header';
-import rectangle from '../../public/assets/images/Rectangle1.png';
-import cover from '../../public/assets/images/cover.png';
-import cover1 from '../../public/assets/images/cover1.png';
-import cover2 from '../../public/assets/images/cover2.png';
+import rectangle from '../../assets/images/Rectangle1.png';
+import cover from '../../assets/images/cover.png';
+import cover1 from '../../assets/images/cover1.png';
+import cover2 from '../../assets/images/cover2.png';
+import DashboardHeader from '../../components/dashboard/dash.header';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
-export default function Dashboard() {
+export const Dashboard = ({ title }) => {
+
+  useEffect(() => {
+    document.title = title;
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
       <div className="pdm-dashboard">
@@ -25,7 +31,7 @@ export default function Dashboard() {
                 {/* Progress circle with image  */}
                   <div className="profile">
                     <div id="user-img">
-                      <Image src={rectangle} alt='rect icon' width={100} height={100} />
+                      <img src={rectangle} alt='rect icon' width={100} height={100} />
                     </div>
                     {/* profile progress indicator svg */}
                       <svg xmlns="http://www.w3.org/2000/svg" width="83" height="94" viewBox="0 0 83 94" fill="none" className="progress-bar">
@@ -99,7 +105,7 @@ export default function Dashboard() {
             </div>
 
             {/* horizontal divider  */}
-            <div className="line" id="line1"> </div>
+            <div className="dh-line" id="line1"> </div>
 
             {/* Course the user is offering */}
               <div className="column" id="column-2">
@@ -121,7 +127,7 @@ export default function Dashboard() {
             {/* Outline Boxes */}
               {/* First box */}
                 <div className="course-box">
-                  <Image src={cover} alt='cover image' width={100} height={100} />
+                  <img src={cover} alt='cover icon' width={100} height={100} />
                   <div className="course-info">
                       <span> Python <br /> Programming </span>
                       <p> 5 <span className="num-identity"> /10 lessons </span> 50% </p>
@@ -135,7 +141,7 @@ export default function Dashboard() {
 
               {/* Second box  */}
                 <div className="course-box">
-                  <Image src={cover1} alt='cover img' width={100} height={100} />
+                  <img src={cover1} alt='cover img' width={100} height={100} />
                     <div className="course-info">
                         <span> Data <br /> Analytics </span>
                         <p> 5<span className="num-identity">/10 lessons</span> 50%</p>
@@ -149,7 +155,7 @@ export default function Dashboard() {
 
               {/* Third box */}
                <div className="course-box">
-                <Image src={cover2} alt='cover' width={100} height={100} />
+                <img src={cover2} alt='cover' width={100} height={100} />
                 <div className="course-info">
                   <span> Machine  <br /> Learning </span>
                     <p> 5 <span className="num-identity"> /10 lessons </span> 50% </p>
@@ -164,7 +170,7 @@ export default function Dashboard() {
             {/* Course the user is offering ends */}
 
             {/* horizontal divider */}
-              <div className="line" id="line2"> </div>
+              <div className="dh-line" id="line2"> </div>
 
               {/* Third column */}
                 <div id="schedule">
@@ -303,6 +309,3 @@ export default function Dashboard() {
       </div> 
   );
 }
-
-
-export const metadata = { title: 'PDM - Dashboard' }
