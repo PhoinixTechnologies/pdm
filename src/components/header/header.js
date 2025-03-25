@@ -1,7 +1,6 @@
 import React from 'react'
 import pdm_icon from '../../assets/logo.png'
 import '../../components/all-styles.css'
-import { Link } from 'react-router-dom'
 import { useEffect } from 'react';
 
 
@@ -26,15 +25,15 @@ export const Header = ({ title }) => {
             </div>
             
             <nav className="navbar">
-                <Link href={'home'} className="active"> Home </Link>
-                <Link href={'about'}> About </Link>
-                <Link href={'agenda'}> Agenda </Link>
-                <Link href={'contact-us'}> Contact Us </Link>
-                <Link href={'connect'}> Connect with Us </Link>
+                <a href={'home'} className="active"> Home </a>
+                <a href={'about'}> About </a>
+                <a href={'agenda'}> Agenda </a>
+                <a href={'contact-us'}> Contact Us </a>
+                <a href={'connect'}> Connect with Us </a>
                 
                 <div className="nav-buttons">
-                    <Link className="btn-login" href={'login'}> Login </Link>
-                    <Link className="btn-reg" href={'register'}> Register </Link>
+                    <a className="btn-login" href={'login'}> Login </a>
+                    <a className="btn-reg" href={'register'}> Register </a>
                 </div>
                 
                 <span className="active-nav"></span>
