@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import './register.styles.scss';
-import Link from 'next/link';
-import logo_icon from '../../public/assets/icons/pdm.png';
+import logo_icon from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,7 +11,7 @@ export default function Register() {
       <div className="div form-container" id="container">
         <div className="dic header-div" id="header">
           <div className="logo">
-            <Image src={logo_icon} alt="logo" /> My PDM Tutor
+            <img src={logo_icon} alt="logo" /> My PDM Tutor
           </div>
           <div> <Link href={'login'} className="signin-header"> Sign in </Link> </div>
         </div>
