@@ -11,6 +11,9 @@ div.cards {
         cursor: pointer;
         &:first-child, &:nth-child(2) {
             justify-content: space-between;
+            input {
+                width: 100%;
+            }
         }
         img {
             width: 30px;
@@ -21,9 +24,14 @@ div.cards {
             color: #3935FF;
         }
         p {
+            width: 100%;
             font: 400 15px 'Space Grotesk';
             color: #4E5566;
             margin: unset;
+        }
+        input {
+            margin: unset;
+            width: 30%;
         }
     }
 }

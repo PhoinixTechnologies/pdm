@@ -16,6 +16,7 @@ main.gift-course {
     form {
         padding: 40px 60px;
         display: flex;
+        flex-direction: row;
         gap: 40px;
         div.left {
             display: flex;
@@ -49,10 +50,13 @@ main.gift-course {
                             gap: 10px;
                             label {
                                 font: 400 14px 'Space Grotesk';
+                                color: #1D2026;
                             }
                             input, textarea {
                                 border: 1px solid #E9EAF0;
                                 padding: 12px ;
+                                color: #1D2026;
+                                margin: unset;
                             }
                             input:focus, textarea:focus {
                                 border-color: #86b7fe;
@@ -143,7 +147,7 @@ main.gift-course {
                     margin-top: 20px;
                     font: 700 18px 'Space Grotesk';
                     width: 100%;
-                    padding: 30px;
+                    padding: 20px;
                     color: #fff;
                     background-color: #3935FF;
                     border: none;

@@ -1,16 +1,22 @@
 "use client"
 import { useState } from 'react';
 import './gift-course.styles.scss';
-import DashboardHeader from '@/components/dashboard/dash.header';
 import { Checkbox } from 'antd';
-import { notificationAlert } from '@/utils/utils';
-import PaymentMethods from '@/components/payment-method/page';
-import Image from 'next/image';
-import course_icon from '../../../public/assets/images/course/Course Images1.png'
+import course_icon from '../../../assets/images/course/Course Images1.png'
+// import { notificationAlert } from '../../../utils/utils';
+import DashboardHeader from '../../../components/dashboard/dash.header';
+import PaymentMethods from '../../../components/payment-method/payment.mthd';
+import { useEffect } from 'react';
 
 
 
-export default function GiftCourse() {
+export const GiftCourse = ({ title }) => {
+
+  useEffect(() => {
+    document.title = title;
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
@@ -20,20 +26,20 @@ export default function GiftCourse() {
   const [expiration_date, setExpirationDate] = useState("");
   const [cvv, setCVV] = useState("");
 
-  const radioInputBox = function () {
-    let lastCheckedRadio = null;
+  // const radioInputBox = function () {
+  //   let lastCheckedRadio = null;
 
-    if (event.target.type === "radio") {
-      if (lastCheckedRadio === event.target) {
-          event.target.checked = false; 
-          lastCheckedRadio = null;
-      } else {
-          lastCheckedRadio = event.target;
-      }
-    }
+  //   if (event.target.type === "radio") {
+  //     if (lastCheckedRadio === event.target) {
+  //         event.target.checked = false; 
+  //         lastCheckedRadio = null;
+  //     } else {
+  //         lastCheckedRadio = event.target;
+  //     }
+  //   }
 
-    notificationAlert('success', 'Congratulations!', 'Hi there, your download process have started :)');
-  }
+  //   notificationAlert('success', 'Congratulations!', 'Hi there, your download process have started :)');
+  // }
 
 
   return (
@@ -103,7 +109,7 @@ export default function GiftCourse() {
                 <h5> Course </h5>
 
                 <div className='inner'>
-                  <Image src={course_icon} alt='course icon' />
+                  <img src={course_icon} alt='course icon' />
 
                   <div>
                     <p> <span> Course by: </span> Somoye Eniola </p>
@@ -135,6 +141,3 @@ export default function GiftCourse() {
       </div> 
   );
 }
-
-
-// export const metadata = { title: 'PDM - Gift Course' }

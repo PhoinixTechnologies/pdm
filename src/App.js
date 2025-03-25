@@ -3,11 +3,12 @@ import "./App.css";
 import "./components/all-styles.css"
 import AuthProvider from "./hook/AuthProvider.js";
 import { Home } from "./pages/home/home.page.js";
-import PrivateRoute from "./router/route.js";
+// import PrivateRoute from "./router/route.js";
 import { Register } from "./pages/register/register.page.js";
 import { Login } from "./pages/login/login.page.js";
 import { Dashboard } from "./pages/dashboard/dashboard.page.js";
 import { Courses } from "./pages/course/course.page.js";
+import { GiftCourse } from "./pages/course/gift/gift.page.js";
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
               <Route path="/login" exact element={<Login title="PDM Tutor | Login to your Account " />} />
               {/* <Route element={<PrivateRoute />}> */}
                 <Route path="/dashboard" exact element={<Dashboard title="PDM - Tutur | Dashboard" />} />
-                <Route path="/courses" exact element={<Courses title="PDM - Tutor | Courses" />} />
+                <Route path="/courses" element={<Courses title="PDM - Tutor | Courses" />} />
+                <Route path="/courses/gift" exact element={<GiftCourse title="PDM - Tutor | Gift Course" />} />
               {/* </Route> */}
           </Routes>
 

@@ -1,11 +1,10 @@
 import './payment-mthd.styles.scss'
 import { useState } from "react";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
-import visa from "../../public/assets/icons/visa_card_icon.png";
-import mastercard from "../../public/assets/icons/master_card_icon.png";
-import paypal from "../../public/assets/icons/paypal_card_icon.png";
+import visa from "../../assets/icons/visa_card_icon.png";
+import mastercard from "../../assets/icons/master_card_icon.png";
+import paypal from "../../assets/icons/paypal_card_icon.png";
 
 const PaymentMethods = () => {
   const [selected, setSelected] = useState(null);
@@ -24,7 +23,7 @@ const PaymentMethods = () => {
         { icon: faCreditCard, text: "New Payment Cards", isFontAwesome: true, last: "credit-card" }
       ].map((item, index) => (
         <div key={index} className={`each ${selected === index ? "selected" : ""}`} onClick={() => radioInputBox(index)}>
-          {item.isFontAwesome ? ( <FontAwesomeIcon icon={item.icon} /> ) : ( <Image src={item.icon} alt="payment method icon" /> )}
+          {item.isFontAwesome ? ( <FontAwesomeIcon icon={item.icon} /> ) : ( <img src={item.icon} alt="payment method icon" /> )}
 
           <p> {item.text} </p>
           {item.subText && <p> {item.subText} </p>}
