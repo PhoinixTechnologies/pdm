@@ -5,6 +5,7 @@ import AuthProvider from "./hook/AuthProvider.js";
 import { Home } from "./pages/home/home.page.js";
 import PrivateRoute from "./router/route.js";
 import Register from "./pages/register/register.page.js";
+import Login from "./pages/login/login.page.js";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
 
           <Routes>
               <Route path="/register" exact element={<Register title="PDM Tutor | Register an Account " />} />
-              {/* <Route path="/login" exact element={<HomePage title="PDM Tutor | Login to your Account " />} /> */}
+              <Route path="/login" exact element={<Login title="PDM Tutor | Login to your Account " />} />
                 <Route path="/" exact element={<Home title="PDM - Tutor Home" />} />
               <Route element={<PrivateRoute />}>
                 <Route path="/courses" exact element={<Home title="PDM - Courses" />} />

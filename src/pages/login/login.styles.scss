@@ -3,17 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-/* Custom font */
-@font-face {
-    font-family: 'MyCustomFont';
-    src:
-    /* url('/pdm_venv/tutorboard/static/fonts/GOODDC__.TTF') format('ttf'),
-    url('/pdm_venv/tutorboard/static/fonts/GOODDOGC.TXT') format('ttf'),
-    url('/pdm_venv/tutorboard/static/fonts/GOODDOGP.TXT') format('ttf'), */
-    url('/pdm_venv/tutorboard/static/fonts/GOODDP__.TTF');
-    font-weight: 400;
-    font-style: normal;
-}
 *{
     margin: 0;
     padding: 0;
@@ -31,17 +20,19 @@ html{
     height: 100vh;
 }
 
-body{
+.pdm-login {
     overflow-y: scroll;
-    background: linear-gradient(0deg, rgba(57, 53, 255, 0.10) 0%, rgba(57, 53, 255, 0.10) 100%), url('../../public/assets/images/signup.png') lightgray 50% / cover no-repeat;
-    background: url('../../public/assets/images/signup.png') lightgray 50% / contain no-repeat;
-    background-image: url('../../public/assets/images/signup.png');
+    background: linear-gradient(0deg, rgba(57, 53, 255, 0.10) 0%, rgba(57, 53, 255, 0.10) 100%), url('../../assets/images/signup.png') lightgray 50% / cover no-repeat;
+    background: url('../../assets/images/signup.png') lightgray 50% / contain no-repeat;
+    background-image: url('../../assets/images/signup.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #container{

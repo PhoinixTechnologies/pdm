@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import './login.styles.scss';
-import Link from 'next/link';
-import logo_icon from '../../public/assets/icons/pdm.png';
+import logo_icon from '../../assets/icons/pdm.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,11 +11,11 @@ export default function Login() {
       <div className="div form-container" id="container">
         <div className="dic header-div" id="header">
           <div className="logo">
-            <Image src={logo_icon} alt="logo" />
+            <img src={logo_icon} alt="logo" />
               My PDM Tutor 
           </div>
           <div>
-          <Link href={'register'} className="signin-header"> Sign up  </Link>
+          <a href={'register'} className="signin-header"> Sign up  </a>
           </div>
         </div>
 

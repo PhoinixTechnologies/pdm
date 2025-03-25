@@ -13,13 +13,13 @@ export default function Register() {
           <div className="logo">
             <img src={logo_icon} alt="logo" /> My PDM Tutor
           </div>
-          <div> <Link href={'login'} className="signin-header"> Sign in </Link> </div>
+          <div> <a href={'login'} className="signin-header"> Sign in </a> </div>
         </div>
 
         <div className="box signup-box">
           <h2> Create Your Profile </h2>
         
-          <form className="form-group" id="form" method="POST" action="#">
+          <form className="form-group" id="register-form" method="POST" action="#">
             <div className="inputs">
               <div>
                 <label htmlFor="email"> Email </label>
@@ -41,7 +41,7 @@ export default function Register() {
               <Link href={'dashboard'}> Sign Up </Link>
             </div>
 
-            <div id="horizontal-line"> <div className="line"> Or continue with </div> </div>
+            <div id="horizontal-line-register"> <div className="line"> Or continue with </div> </div>
 
             <div className="signin-opt">
               <div id="google-opt">

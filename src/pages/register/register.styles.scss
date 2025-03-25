@@ -89,10 +89,10 @@ html{
     text-align: center;
 }
 
-#form{
+#register-form{
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 15px;
     gap: 1.5rem;
     color: #000;
 }
@@ -137,6 +137,9 @@ input:focus{
     transition: .3s ease-in-out;
 }
 
+#horizontal-line-register {
+    margin-bottom: -1rem;
+}
 
 .line{
     display: flex;
@@ -166,7 +169,7 @@ input:focus{
     flex-direction: column;
     align-items: center;
     text-align: center;
-
+    margin-top: 20px;
 }
 
 #google-opt{
