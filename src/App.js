@@ -11,6 +11,7 @@ import { Courses } from "./pages/course/course.page.js";
 import { GiftCourse } from "./pages/course/gift/gift.page.js";
 import { WatchCourse } from "./pages/course/watch/watch.page.js";
 import { CourseOverview } from "./pages/course-overview/course-overview.page.js";
+import { Workshop } from "./pages/workshop/workshop.page.js";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/courses/gift" exact element={<GiftCourse title="PDM - Tutor | Gift Course" />} />
                 <Route path="/courses/watch/:id" exact element={<WatchCourse title="PDM - Tutor | Watch Courses" />} />
                 <Route path="/course-overview/:id" exact element={<CourseOverview title="PDM - Tutor | Course Overview" />} />
+                <Route path="/workshop" exact element={<Workshop title="PDM - Tutor | WorkShop" />} />
               {/* </Route> */}
           </Routes>
 

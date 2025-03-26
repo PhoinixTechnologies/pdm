@@ -23,7 +23,7 @@ export default function DashboardHeader() {
 
                 <a href={'/courses'} className={`navigate ${pathname === '/courses' || pathname === `/courses/watch/${id}` || pathname === '/courses/gift' || pathname === `/course-overview/${id}` ? 'active' : ''}`}> Courses </a>
 
-                <a href={'/workshop'} className={`navigate ${pathname === '/workshop' ? 'active' : ''}`}> Workshops </a>
+                <a href={'/workshop'} className={`navigate ${pathname === '/workshop' ? 'active' : ''}`}> Workshop </a>
 
                 <a href={'groups'} className={`navigate ${pathname === '#groups' ? 'active' : ''}`}> Groups </a>
 
