@@ -26,10 +26,10 @@ export const Header = ({ title }) => {
             
             <nav className="navbar">
                 <a href={'home'} className="active"> Home </a>
-                <a href={'about'}> About </a>
-                <a href={'agenda'}> Agenda </a>
-                <a href={'contact-us'}> Contact Us </a>
-                <a href={'connect'}> Connect with Us </a>
+                <a href={'#about'}> About </a>
+                <a href={'#agenda'}> Agenda </a>
+                <a href={'#contact-us'}> Contact Us </a>
+                <a href={'#connect'}> Connect with Us </a>
                 
                 <div className="nav-buttons">
                     <a className="btn-login" href={'login'}> Login </a>

@@ -33,6 +33,10 @@ body{
     height: 90vh;
 }
 
+input.home-input {
+    color: #fff;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -45,6 +49,7 @@ body{
     z-index: 100;
     background: #000;
     transition: .3s;
+    border-color: #000;
 }
 
 .navbar{

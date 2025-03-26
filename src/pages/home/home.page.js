@@ -242,9 +242,9 @@ export const Home = ({ title }) => {
                 <div className="input-area">
                     <form action="#" method="POST">
                     {/* <label for="Name"> Name: </label> */}
-                    <input type="text" id="fullname" name="fname" placeholder="Your Name" />
-                    <input type="email" id="email" name="email" placeholder="Email Address" />
-                    <input type="number" id="phone" name="phone" placeholder="Phone Number[optional]" />
+                    <input className='home-input' type="text" id="fullname" name="fname" placeholder="Your Name" />
+                    <input className='home-input' type="email" id="email" name="email" placeholder="Email Address" />
+                    <input className='home-input' type="number" id="phone" name="phone" placeholder="Phone Number[optional]" />
                     <textarea name="message" rows="5" cols="30" placeholder="Message"></textarea>
                     </form>
                 </div>
