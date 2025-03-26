@@ -15,7 +15,7 @@ export const Register = ({ title }) => {
 
   return (
     <div className="pdm-register">
-      <div className="div form-container" id="container">
+      <div className="div form-container" id="container-reg">
         <div className="dic header-div" id="header">
           <div className="logo">
             <img src={logo_icon} alt="logo" /> My PDM Tutor

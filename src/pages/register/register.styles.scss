@@ -36,7 +36,7 @@ html{
     overflow: hidden;
 }
 
-#container{
+#container-reg{
     margin-top: 37px;
     background-color: #fff;
     width: 480px;
@@ -48,7 +48,7 @@ html{
     border: 1px solid #fff;
 }
 
-#container::before{
+#container-reg::before{
     content: '';
     position: absolute;
     width: 100%;
