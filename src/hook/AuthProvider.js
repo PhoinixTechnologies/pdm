@@ -1,10 +1,9 @@
 import { useContext, createContext, useState } from "react";
-// import { useNavigate } from "react-router-dom";
-import config from "../config";
 import Swal from "sweetalert2";
 import { RESPONSE_STATES } from "../utils/constants.js";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { config } from "../config/index.js";
 
 const AuthContext = createContext();
 
@@ -23,34 +22,36 @@ const AuthProvider = ({children}) => {
 
             const apiConfig = {
                 method: 'POST',
-                url: `${apiUrl}/auth/login`,
+                url: `${apiUrl}auth/login`,
                 data
             }
 
+            console.log(apiUrl, apiConfig);
+
             const result = await axios(apiConfig);
-            // console.log(result.data.data);
+            console.log(result.data.data);
 
-            if (result.data.data.accountType === "Merchant") {
+            // if (result.data.data.role === "Admin") {
 
-                window.location.href = `https://paysprint.ca/ashopree/auth/merchant-redirect/${result.data.data.apiToken}`;
+            //     window.location.href = `https://paysprint.ca/ashopree/auth/merchant-redirect/${result.data.data.apiToken}`;
                 
-            } else {
-                if (result.data.status === 200) {
-                    setUser(result.data.data);
-                    setToken(result.data.data.apiToken);
-                    localStorage.setItem("authtoken", result.data.data.apiToken);
-                    localStorage.setItem("user", JSON.stringify(result.data.data));
+            // } else {
+            //     if (result.data.status === 200) {
+            //         setUser(result.data.data);
+            //         setToken(result.data.data.apiToken);
+            //         localStorage.setItem("authtoken", result.data.data.apiToken);
+            //         localStorage.setItem("user", JSON.stringify(result.data.data));
 
-                    let usersFirstname = result.data.data.name.split(' ');
-                    let getName = usersFirstname[1];
-                    Swal.fire({ icon: 'success', title: 'Welcome back', text: 'Hi ' + getName + ', It\'s nice to have you back. ', });
+            //         let usersFirstname = result.data.data.name.split(' ');
+            //         let getName = usersFirstname[1];
+            //         Swal.fire({ icon: 'success', title: 'Welcome back', text: 'Hi ' + getName + ', It\'s nice to have you back. ', });
 
-                    navigate("/dashboard");
+            //         navigate("/dashboard");
 
-                } else {
-                    return RESPONSE_STATES.error;
-                }
-            }
+            //     } else {
+            //         return RESPONSE_STATES.error;
+            //     }
+            // }
             
 
         } catch (error) {
