@@ -37,6 +37,14 @@ input.home-input {
     color: #fff;
 }
 
+em.error {
+    font-style: normal;
+    font-size: 1.6rem;
+    color: rgba(230, 34, 34, 0.808);
+    font-weight: 600;
+    text-align: center;
+}
+  
 .header{
     position: fixed;
     top: 0;
