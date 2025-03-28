@@ -29,3 +29,28 @@ export function handleLoginOption(phoneSigninClass, emailSignInClass) {
   }
 
 }
+
+
+
+export const isLoggedIn = () => {
+  const authData = localStorage.getItem("authtoken");
+  if (!authData) return false;
+
+  const parsedAuthData = JSON.parse(authData);
+  const currentTime = new Date().getTime();
+  if (!parsedAuthData || !parsedAuthData.expirationTime) return false;
+
+  return parsedAuthData.expirationTime > currentTime; // Check if token is still valid
+};
+
+export const getUser = () => {
+  const user = localStorage.getItem("user");
+  
+  if (user) {
+    const parsedUser = JSON.parse(user);
+    // console.log(parsedUser);
+    return parsedUser;
+  }
+
+  return null; 
+};
