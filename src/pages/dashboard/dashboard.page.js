@@ -7,7 +7,6 @@ import DashboardHeader from '../../components/dashboard/dash.header';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { capitalizeWords, getUser } from '../../utils/utils';
-import { useAuth } from '../../hook/AuthProvider';
 
 
 
