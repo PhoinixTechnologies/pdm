@@ -157,7 +157,7 @@ export const Login = ({ title }) => {
               {errorMessage &&  <em className="error">*{errorMessage}</em> }
 
               <div className="input continue-button">
-              <button type="button" onClick={() => submitLogin()}>
+                <button type="button" onClick={() => submitLogin()}>
                     {responseState === RESPONSE_STATES.loading ? <Loader /> : "Continue"}
                   </button>
               </div>
