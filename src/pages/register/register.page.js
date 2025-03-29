@@ -1,11 +1,66 @@
 import './register.styles.scss';
 import logo_icon from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { RESPONSE_STATES } from '../../utils/constants';
+import { useAuth } from '../../hook/AuthProvider';
+import Swal from 'sweetalert2';
+import { Loader } from '../../components/loader/loader.component';
 
 
 
 export const Register = ({ title }) => {
+
+   const auth = useAuth();
+    const [errorMessage, setErrorMessage] = useState("");
+    const [responseState, setResponseState] = useState(RESPONSE_STATES.none);
+    const [firstname, setFirstName] = useState("");
+    const [lastname, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  
+    
+    const submitRegister = async () => {
+      if (!firstname || !lastname || !email || !password || !confirmPassword) { 
+          return setErrorMessage("All fields must be filled.");
+      }
+
+      if (firstname.length < 4 || lastname < 4) return setErrorMessage("First name and last name must be 4 or more characters");
+  
+      if (!emailRegex.test(email)) {
+          return setErrorMessage("Invalid Email entered.");
+      }
+  
+      if (password.length < 8) {
+          return setErrorMessage("Password cannot be less than 8 characters.");
+      }
+
+      if (password !== confirmPassword) return setErrorMessage("Password and Confirm Password fields must match.");
+  
+      const fullname = firstname + ' ' + lastname;
+      const data = {fullname, email, password };
+      try {
+        setResponseState(RESPONSE_STATES.loading);
+        setErrorMessage("");
+  
+        const responseState = await auth.registerAction({ data });
+        setResponseState(responseState);
+  
+        // if (responseState === RESPONSE_STATES.error) {
+        //     setErrorMessage("Invalid Credentials");
+        // }
+
+        console.log(responseState);
+  
+      } catch (error) {
+          setResponseState(RESPONSE_STATES.none);
+          const errorMessage = error.response ? error.response.data.message : error.message;
+          
+          Swal.fire({ icon: 'error', title: 'Error', text: errorMessage, });
+      }
+    };
 
   useEffect(() => {
     document.title = title;
@@ -29,23 +84,37 @@ export const Register = ({ title }) => {
           <form className="form-group" id="register-form" method="POST" action="#">
             <div className="inputs">
               <div>
+                <label htmlFor="firstname"> First Name </label>
+                <input type="text" name="firstname" className="form-control" value={firstname} onChange={e => setFirstName(e.target.value)} required />
+              </div>
+              
+              <div>
+                <label htmlFor="lastname"> Last Name </label>
+                <input type="text" name="lastname" className="form-control" value={lastname} onChange={e => setLastName(e.target.value)} required />
+              </div>
+              
+              <div>
                 <label htmlFor="email"> Email </label>
-                <input type="email" name="email" id="email" className="form-control" required />
+                <input type="email" name="email" id="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} required />
               </div>
 
               <div>
                 <label htmlFor="pwd"> Password </label>
-                <input type="password" name="password" id="password1" className="form-control" required />
+                <input type="password" name="password" id="password1" className="form-control" value={password} onChange={e => setPassword(e.target.value)} required />
               </div>
               
               <div>
                 <label htmlFor="pwds"> Confirm Password </label>
-                <input type="password" name="cpassword" id="password2" className="form-control" required />
+                <input type="password" name="cpassword" id="password2" className="form-control" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} required />
               </div>
             </div>
 
-            <div className="input submit-button">
-              <Link href={'dashboard'}> Sign Up </Link>
+            {errorMessage &&  <em className="error">*{errorMessage}</em> }
+
+            <div className="input continue-button">
+              <button type="button" onClick={() => submitRegister()}>
+                  {responseState === RESPONSE_STATES.loading ? <Loader /> : "Sign Up"}
+                </button>
             </div>
 
             <div id="horizontal-line-register"> <div className="line"> Or continue with </div> </div>
