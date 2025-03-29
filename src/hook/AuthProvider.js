@@ -16,7 +16,6 @@ const AuthProvider = ({children}) => {
     const [token, setToken] = useState(localStorage.getItem("authtoken") || "");
     const navigate = useNavigate();
 
-
     const loginAction = async (data) => {
         try {
 
@@ -27,12 +26,12 @@ const AuthProvider = ({children}) => {
             }
 
             const result = await axios(apiConfig);
-            console.log(result.data.data.user, result.status);
+            // console.log(result.data.data.user, result.status);
 
             if (result.status === 200) {
                 setUser(result.data.data.user);
                 setToken(result.data.data.tokens);
-                localStorage.setItem("authtoken", result.data.data.tokens);
+                localStorage.setItem("authtoken", JSON.stringify(result.data.data.tokens));
                 localStorage.setItem("user", JSON.stringify(result.data.data.user));
 
                 let usersFirstname = result.data.data.user.fullname.split(' ');
@@ -59,12 +58,41 @@ const AuthProvider = ({children}) => {
         }
     };
 
-    const logOut = () => {
-        setUser(null);
-        setToken("");
-        localStorage.removeItem("user");
-        localStorage.removeItem("authtoken");
-        navigate("/");
+    const logOut = async (data) => {
+        try {
+
+            const apiConfig = {
+                method: 'POST',
+                url: `${apiUrl}auth/logout`,
+                data
+            }
+
+            const result = await axios(apiConfig);
+
+            if (result.status === 204 && result.statusText === "No Content") {
+                setUser(null);
+                setToken("");
+                localStorage.removeItem("user");
+                localStorage.removeItem("authtoken");
+
+                Swal.fire({ icon: 'success', title: 'I will miss you :(', text: 'See you next time pal!', });
+
+                navigate("/");
+            } else {
+                return RESPONSE_STATES.error;
+            }
+
+        } catch (error) {
+
+            if (error.response) {
+                // alert(error.response.data.message);
+                Swal.fire({ icon: 'error', title: 'Please, try again', text: error.response.data.message, });
+                return;
+            } else {
+                // alert(error.message);
+                Swal.fire({ icon: 'error', title: 'Sorry, Try Again', text: error.message, });
+            }
+        }
     };
 
     return (

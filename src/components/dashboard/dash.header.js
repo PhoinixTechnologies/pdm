@@ -1,16 +1,49 @@
 'use client'
 import '../../pages/dashboard/dashboard.styles.scss'
-import React from 'react';
-// import '../../app/dashboard/dashboard.styles.scss';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useAuth } from '../../hook/AuthProvider';
+import { RESPONSE_STATES } from '../../utils/constants';
+import Swal from 'sweetalert2';
+import { Loader } from '../loader/loader.component';
 
 
 export default function DashboardHeader() {
 
-    // const pathname = usePathname();
+    const auth = useAuth();
+    const token = localStorage.getItem("authtoken");
+    const refreshToken = JSON.parse(token).refresh.token;
+
     const location = useLocation();
     const pathname = location.pathname;
     const id = 4444;
+
+
+    const [errorMessage, setErrorMessage] = useState("");
+    const [responseState, setResponseState] = useState(RESPONSE_STATES.none);
+
+    const submitLogout = async () => {
+    
+        try {
+            setResponseState(RESPONSE_STATES.loading);
+            setErrorMessage("");
+        
+            const responseState = await auth.logOut({ refreshToken });
+            setResponseState(responseState);
+        
+            if (responseState === RESPONSE_STATES.error) {
+                setErrorMessage("Invalid Credentials");
+            }
+        
+        } catch (error) {
+            setResponseState(RESPONSE_STATES.none);
+            const errorMessage = error.response ? error.response.data.message : error.message;            
+
+            Swal.fire({ icon: 'error', title: 'Error', text: errorMessage, });
+        }
+    };
+
+
 
     return (
         <header>
@@ -43,7 +76,8 @@ export default function DashboardHeader() {
                 </div>
 
                 {/* <User image  */}
-                <div id="user-image"> </div>
+                {/* <div id="user-image" onClick={() => auth.logOut(refreshToken)}> </div> */}
+                <div id="user-image" onClick={() => submitLogout()}> {responseState === RESPONSE_STATES.loading ? <Loader /> : ""} </div>
             </div>
         </header>
     );

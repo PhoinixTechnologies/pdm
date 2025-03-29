@@ -31,7 +31,6 @@ export function handleLoginOption(phoneSigninClass, emailSignInClass) {
 }
 
 
-
 export const isLoggedIn = () => {
   const authData = localStorage.getItem("authtoken");
   if (!authData) return false;
@@ -54,3 +53,6 @@ export const getUser = () => {
 
   return null; 
 };
+
+
+export const capitalizeWords = (text) => text.replace(/\b\w/g, (match) => match.toUpperCase());

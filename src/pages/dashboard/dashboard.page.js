@@ -6,19 +6,15 @@ import cover2 from '../../assets/images/cover2.png';
 import DashboardHeader from '../../components/dashboard/dash.header';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { getUser } from '../../utils/utils';
+import { capitalizeWords, getUser } from '../../utils/utils';
+import { useAuth } from '../../hook/AuthProvider';
 
 
 
 export const Dashboard = ({ title }) => {
 
   const user = getUser();
-  console.log(user.fullname);
-
-
-  const text = "hello world";
-  const upperCaseText = text.replace(/\b\w/g, (match) => match.toUpperCase());
-  console.log(upperCaseText); // Output: "Hello World"
+  const username = capitalizeWords(user.fullname);  
 
   useEffect(() => {
     document.title = title;
@@ -52,7 +48,7 @@ export const Dashboard = ({ title }) => {
                   </div>
                   <br />
                 {/* Progress circle with image  ends */}
-                <span> {user? user.fullname : null} </span>
+                <span> {user? username : null} </span>
 
                 {/* level information */}
                 <br />
