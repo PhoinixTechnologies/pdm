@@ -48,9 +48,9 @@ export const Register = ({ title }) => {
         const responseState = await auth.registerAction({ data });
         setResponseState(responseState);
   
-        // if (responseState === RESPONSE_STATES.error) {
-        //     setErrorMessage("Invalid Credentials");
-        // }
+        if (responseState === RESPONSE_STATES.error) {
+            setErrorMessage("Something went wrong, try again");
+        }
 
         console.log(responseState);
   
