@@ -45,14 +45,12 @@ export const Register = ({ title }) => {
         setResponseState(RESPONSE_STATES.loading);
         setErrorMessage("");
   
-        const responseState = await auth.registerAction({ data });
+        const responseState = await auth.registerAction(data);
         setResponseState(responseState);
   
         if (responseState === RESPONSE_STATES.error) {
             setErrorMessage("Something went wrong, try again");
         }
-
-        console.log(responseState);
   
       } catch (error) {
           setResponseState(RESPONSE_STATES.none);
