@@ -37,10 +37,10 @@ html{
 }
 
 #container-reg{
-    margin-top: 37px;
+    margin-top: 15px;
     background-color: #fff;
     width: 480px;
-    height: 665px;
+    height: 760px;
     position: relative;
     z-index: 1;
     box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.10), 0px 4px 6px -1px rgba(0, 0, 0, 0.10), 0px 0px 0px 0px rgba(0, 0, 0, 0.00), 0px 0px 0px 0px rgba(0, 0, 0, 0.00);
@@ -92,9 +92,16 @@ html{
 #register-form{
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 8px;
     gap: 1.5rem;
     color: #000;
+    div.merge {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
+    }
 }
 
 label{
@@ -218,7 +225,7 @@ input:focus{
 .inputs {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     div {
         display: flex;
         flex-direction: column;

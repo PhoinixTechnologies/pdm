@@ -83,14 +83,15 @@ export const Register = ({ title }) => {
         
           <form className="form-group" id="register-form" method="POST" action="#">
             <div className="inputs">
-              <div>
-                <label htmlFor="firstname"> First Name </label>
-                <input type="text" name="firstname" className="form-control" value={firstname} onChange={e => setFirstName(e.target.value)} required />
-              </div>
-              
-              <div>
+              <div className='merge'>
+                <div>
+                  <label htmlFor="firstname"> First Name </label>
+                  <input type="text" name="firstname" className="form-control" value={firstname} onChange={e => setFirstName(e.target.value)} required />
+                </div>
+                <div>
                 <label htmlFor="lastname"> Last Name </label>
                 <input type="text" name="lastname" className="form-control" value={lastname} onChange={e => setLastName(e.target.value)} required />
+              </div>
               </div>
               
               <div>
