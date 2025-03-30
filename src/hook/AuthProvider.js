@@ -63,12 +63,12 @@ const AuthProvider = ({children}) => {
 
             const apiConfig = {
                 method: 'POST',
-                url: `${apiUrl}auth/login`,
+                url: `${apiUrl}auth/regiter`,
                 data
             }
 
             const result = await axios(apiConfig);
-            // console.log(result.data.data.user, result.status);
+            console.log(result);
 
             // if (result.status === 200) {
             //     setUser(result.data.data.user);
