@@ -115,15 +115,6 @@ export const Dashboard = ({ title }) => {
         <DashboardHeader />
 
         {/* Msg for un verified users only */}
-          {/* {verified === false? (
-            <div className='alert-for-unverified-users'>
-              <p> 
-                  Please verify your account by <button type='button' onClick={() => resendVerificationEmail()}> {responseState === RESPONSE_STATES.loading ? <SmLoader /> : "Clicking here"} </button> 
-                  {errorMessage &&  <em className="error">*{errorMessage}</em> }
-              </p>
-              <FontAwesomeIcon icon={faXmark} onClick={() => removeAlertMSG()} />
-            </div>
-          ) : null} */}
           {dashboard?.isEmailVerified === false && (
             <div className='alert-for-unverified-users'>
               <p>
