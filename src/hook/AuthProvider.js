@@ -107,7 +107,7 @@ const AuthProvider = ({children}) => {
 
             if (result.status === 200 && result.statusText === "OK") {
                 Swal.fire({ icon: 'success', title: 'Success!', text: result.data.message, });
-                navigate("/login");
+                window.location.reload();
 
             } else {
                 Swal.fire({ icon: 'error', title: 'Error!', text: 'Sorry we could not send a verification message to you, kindly request for it manually from your dashboard', });

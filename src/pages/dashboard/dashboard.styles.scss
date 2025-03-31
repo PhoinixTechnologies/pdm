@@ -21,10 +21,36 @@ html{
     font-size: 80%;
 }
 
+.d-none {
+    display: none;
+}
+
 .pdm-dashboard {
     // overflow-y: scroll;
     // height: 100vh;
     margin: 10px;
+    div.alert-for-unverified-users {
+        width: 100%;
+        background-color: rgba(57, 53, 255, 0.1);
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+            line-height: 2.5rem;
+            button {
+                display: flex;
+                align-items: center;
+            }
+        }
+        svg {
+            position: absolute;
+            right: 4rem;
+            top: 6rem;
+            cursor: pointer;        
+        }
+    }
 }
 
 

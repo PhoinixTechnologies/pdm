@@ -5,15 +5,62 @@ import cover1 from '../../assets/images/cover1.png';
 import cover2 from '../../assets/images/cover2.png';
 import DashboardHeader from '../../components/dashboard/dash.header';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { capitalizeWords, getUser } from '../../utils/utils';
+import { SmLoader } from '../../components/loader/loader.component';
+import { RESPONSE_STATES } from '../../utils/constants';
+import Swal from 'sweetalert2';
+import { useAuth } from '../../hook/AuthProvider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 
 export const Dashboard = ({ title }) => {
 
+  const auth = useAuth();
   const user = getUser();
   const username = capitalizeWords(user.fullname);  
+  const verifiedUser = user.isEmailVerified;
+  const userEmail = user.email;
+  const [errorMessage, setErrorMessage] = useState("");
+  const [responseState, setResponseState] = useState(RESPONSE_STATES.none);
+
+    
+  const resendVerificationEmail = async () => {
+  
+    if (!userEmail) return setErrorMessage("Please Login and try again");
+
+    try {
+      setResponseState(RESPONSE_STATES.loading);
+      setErrorMessage("");
+    
+      const responseState = await auth.sendEmailVerification(userEmail);
+      setResponseState(responseState);
+    
+      if (responseState === RESPONSE_STATES.error) {
+          setErrorMessage("Something went wrong, try again");
+      }
+    
+    } catch (error) {
+        setResponseState(RESPONSE_STATES.none);
+        const errorMessage = error.response ? error.response.data.message : error.message            
+        Swal.fire({ icon: 'error', title: 'Error', text: errorMessage, });
+    }
+  };
+
+
+  const removeAlertMSG = () => {
+    let getAlert = document.getElementsByClassName('alert-for-unverified-users');
+    let index = 0;
+
+    if (getAlert) {
+      for (index; index < getAlert.length; index++) {
+        getAlert[index].classList.add('d-none');
+      }
+    }
+  }
+
 
   useEffect(() => {
     document.title = title;
@@ -21,10 +68,25 @@ export const Dashboard = ({ title }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
+
+
   return (
       <div className="pdm-dashboard">
         <DashboardHeader />
-      
+
+        {/* Msg for un verified users only */}
+          {verifiedUser === false? (
+            <div className='alert-for-unverified-users'>
+              <p> 
+                  Please verify your account by <button type='button' onClick={() => resendVerificationEmail()}> {responseState === RESPONSE_STATES.loading ? <SmLoader /> : "Clicking here"} </button> 
+                  {errorMessage &&  <em className="error">*{errorMessage}</em> }
+              </p>
+              <FontAwesomeIcon icon={faXmark} onClick={() => removeAlertMSG()} />
+            </div>
+          ) : null}
+        {/* Msg for un verified users ends */}
+
         {/* Main Information in body whoch includes the user's level, calendar and courses the user os taking */}
         <main>
             {/* The first column  */}
@@ -309,7 +371,7 @@ export const Dashboard = ({ title }) => {
                   </div>
                 </div>
               {/* Third column ends */}
-          </main>
+        </main>
       </div> 
   );
 }
