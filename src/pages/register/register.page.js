@@ -11,15 +11,15 @@ import { Loader } from '../../components/loader/loader.component';
 
 export const Register = ({ title }) => {
 
-   const auth = useAuth();
-    const [errorMessage, setErrorMessage] = useState("");
-    const [responseState, setResponseState] = useState(RESPONSE_STATES.none);
-    const [firstname, setFirstName] = useState("");
-    const [lastname, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  const auth = useAuth();
+  const [errorMessage, setErrorMessage] = useState("");
+  const [responseState, setResponseState] = useState(RESPONSE_STATES.none);
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   
     
     const submitRegister = async () => {
