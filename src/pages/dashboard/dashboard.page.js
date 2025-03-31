@@ -6,13 +6,15 @@ import cover2 from '../../assets/images/cover2.png';
 import DashboardHeader from '../../components/dashboard/dash.header';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { capitalizeWords, getUser } from '../../utils/utils';
+import { capitalizeWords, getUser, getUserAccessToken } from '../../utils/utils';
 import { SmLoader } from '../../components/loader/loader.component';
 import { RESPONSE_STATES } from '../../utils/constants';
 import Swal from 'sweetalert2';
 import { useAuth } from '../../hook/AuthProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+import { config } from '../../config';
 
 
 
@@ -20,11 +22,13 @@ export const Dashboard = ({ title }) => {
 
   const auth = useAuth();
   const user = getUser();
+  const apiUrl = config().baseUrl;
   const username = capitalizeWords(user.fullname);  
-  const verifiedUser = user.isEmailVerified;
   const userEmail = user.email;
   const [errorMessage, setErrorMessage] = useState("");
   const [responseState, setResponseState] = useState(RESPONSE_STATES.none);
+  const [dashboard, setDashboard] = useState("");
+  const [error, setError] = useState(null);
 
     
   const resendVerificationEmail = async () => {
@@ -61,13 +65,48 @@ export const Dashboard = ({ title }) => {
     }
   }
 
+  
+  const getUsersDetails = async () => {
+    
+    const userToken = getUserAccessToken();
+    let userId = user.id;
+    if (!userId) return setErrorMessage("Please Login and try again");
+
+    try {
+      setResponseState(RESPONSE_STATES.loading);
+      setErrorMessage("");
+    
+      axios.get(`${apiUrl}users/${userId}/dashboard`, {
+        headers: {
+          Authorization: `Bearer ${userToken.token}`,
+        },
+      }).then(response => {
+        if (response) { setResponseState(RESPONSE_STATES.none); };
+        // console.log(response.data);
+        setDashboard(response.data);
+      }).catch(error => {
+        setError('Error fetching Dashboard details: ' + error.message);
+      });
+    
+      if (responseState === RESPONSE_STATES.error) {
+          setErrorMessage("Something went wrong, try again");
+      }
+    
+    } catch (error) {
+        setResponseState(RESPONSE_STATES.none);
+        const errorMessage = error.response ? error.response.data.message : error.message            
+        Swal.fire({ icon: 'error', title: 'Error', text: errorMessage, });
+    }
+    
+  }
 
   useEffect(() => {
     document.title = title;
     window.scrollTo(0, 0);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
+    getUsersDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [title, error]);
 
 
 
@@ -76,7 +115,7 @@ export const Dashboard = ({ title }) => {
         <DashboardHeader />
 
         {/* Msg for un verified users only */}
-          {verifiedUser === false? (
+          {/* {verified === false? (
             <div className='alert-for-unverified-users'>
               <p> 
                   Please verify your account by <button type='button' onClick={() => resendVerificationEmail()}> {responseState === RESPONSE_STATES.loading ? <SmLoader /> : "Clicking here"} </button> 
@@ -84,7 +123,19 @@ export const Dashboard = ({ title }) => {
               </p>
               <FontAwesomeIcon icon={faXmark} onClick={() => removeAlertMSG()} />
             </div>
-          ) : null}
+          ) : null} */}
+          {dashboard?.isEmailVerified === false && (
+            <div className='alert-for-unverified-users'>
+              <p>
+                Please verify your account by 
+                <button type='button' onClick={() => resendVerificationEmail()}>
+                  {responseState === RESPONSE_STATES.loading ? <SmLoader /> : "Clicking here"}
+                </button>
+                {errorMessage && <em className="error">*{errorMessage}</em>}
+              </p>
+              <FontAwesomeIcon icon={faXmark} onClick={() => removeAlertMSG()} />
+            </div>
+          )}
         {/* Msg for un verified users ends */}
 
         {/* Main Information in body whoch includes the user's level, calendar and courses the user os taking */}
