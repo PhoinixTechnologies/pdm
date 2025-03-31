@@ -54,5 +54,17 @@ export const getUser = () => {
   return null; 
 };
 
+export const getUserAccessToken = () => {
+  const user = localStorage.getItem("authtoken");
+  
+  if (user) {
+    const parsedUser = JSON.parse(user);
+    // console.log(parsedUser);
+    return parsedUser.access;
+  }
+
+  return null; 
+};
+
 
 export const capitalizeWords = (text) => text.replace(/\b\w/g, (match) => match.toUpperCase());
