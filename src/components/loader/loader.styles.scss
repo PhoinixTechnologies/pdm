@@ -22,4 +22,29 @@
       transform: rotate(360deg);
     }
   }
+
+.lds-dual-ring-sm {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  }
+.lds-dual-ring-sm:after {
+  content: " ";
+  display: block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-color: #3935FF #fff #3935FF #3935FF;
+  animation: lds-dual-ring-sm 1s linear infinite;
+  }
+@keyframes lds-dual-ring-sm {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
   
