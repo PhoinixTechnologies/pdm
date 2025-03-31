@@ -155,5 +155,3 @@ export const Register = ({ title }) => {
   );
 }
 
-
-export const metadata = { title: 'PDM - Register' };
