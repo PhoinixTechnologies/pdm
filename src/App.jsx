@@ -1,5 +1,8 @@
+
+
 import Navbar from './Navbar';
 import Home from './Home';
+import About from './aboutus';
 
 function App() {
   const title ='App Component';
@@ -10,6 +13,7 @@ function App() {
      <Navbar />
         <div className='content'>
         <Home />
+        <About/>
           <h1>{title}</h1>
           {/* <p>Likes {likes} times</p>
 

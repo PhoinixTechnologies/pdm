@@ -1,12 +1,12 @@
 import logo from './img/logo.png';
 const Navbar = () => {
   return (
-    <nav className="bg-black flex justify-between items-center p-3">
-      <div className="text-white flex items-center gap-2 h-max text-lg font-semibold ">
+    <nav className="bg-black flex justify-between items-center py-3 px-10">
+      <div className="text-white flex items-center gap-3 h-max text-lg font-semibold ">
         <img src={logo} alt="" className='w-12' />
         <h3 className='font-logo tracking-wide'>My PDM Tutor</h3>
       </div>
-      <div className=" flex text-white gap-x-5 items-center justify-center font-normal font-link">
+      <div className=" flex text-white gap-x-10 items-center justify-center font-normal font-link">
         <a href="/">About</a>
         <a href="/create">Agenda</a>
         <a href="">Connect with us</a>
