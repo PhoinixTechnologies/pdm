@@ -1,10 +1,10 @@
 import about from './img/about.png'
 const About = () => {
     return (
-        <div className='flex border p-20 justify-around bg-black text-white'>
-            <div className='border w-md h-max'>
-                <div>
-                    <span className='flex'>
+        <div className='flex p-20 justify-around bg-black text-white border items-center'>
+            <div className='flex flex-col gap-y-6 w-max h-max'>
+                <div className='flex flex-col gap-y-5' >
+                    <span className='flex gap-x-3'>
                         <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <g opacity="0.9">
@@ -17,20 +17,20 @@ const About = () => {
                         </g>
                         </svg>
                         </div>
-                        <h3>Outline</h3>
+                        <h3 className='flex justify-center font-link font-semibold uppercase tracking-wide'>Outline</h3>
                     </span>
-                    <h3>About Us</h3>
+                    <h3 className='font-link text-5xl  tracking-wider font-medium'>About Us</h3>
                 </div>
-                <p>
+                <p className='w-xl font-link text-md leading-6 font-medium '>
                 As a dedicated tutor, I am passionate about helping students and professionals unlock their true potential in Python programming, data science, and machine learning. With a hands-on, personalized approach, I strive to make complex concepts accessible and engaging for learners at all levels. My goal is to empower you with the knowledge and practical skills needed to thrive in the fast-growing fields of data analytics and AI. Whether you’re starting from scratch or looking to advance your expertise, I am here to guide you every step of the way, ensuring your learning journey is both fulfilling and impactful.
                 </p>
-                <div>
-                    <a href="">Get started</a>
-                    <a href="">Learn more</a>
+                <div className='flex gap-x-4    items-center '>
+                    <a href="/" className='flex items-center px-1 py-3 rounded-2xl bg-white shadow-md text-black justify-center tracking-wide w-30 font-medium'>Get started</a>
+                    <a href="/" className='flex items-center px-1 py-3 rounded-2xl text-link border border-link w-30 justify-center shadwo-md'>Learn more</a>
                 </div>
             </div>
-            <div className='w-80 rounded-full'>
-                <img src={about} alt="" className='rounded-4xl'/>
+            <div className='w-100 h-full rounded-4xl w-fit'>
+                <img src={about} alt="" className='rounded-4xl h-100'/>
             </div>
         </div>
       );
