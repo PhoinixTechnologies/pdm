@@ -1,0 +1,19 @@
+import logo from './img/logo.png';
+const Navbar = () => {
+  return (
+    <nav className="bg-black flex justify-between items-center p-3">
+      <div className="text-white flex items-center gap-2 h-max text-lg font-semibold ">
+        <img src={logo} alt="" className='w-12' />
+        <h3 className='font-logo tracking-wide'>My PDM Tutor</h3>
+      </div>
+      <div className=" flex text-white gap-x-5 items-center justify-center font-normal font-link">
+        <a href="/">About</a>
+        <a href="/create">Agenda</a>
+        <a href="">Connect with us</a>
+      </div>
+      <a href="" className="flex-inline bg-white rounded-full px-5 py-2 font-normal items-center justify-center ">Join Waitlist</a>
+    </nav>
+  );
+};
+
+export default Navbar;
