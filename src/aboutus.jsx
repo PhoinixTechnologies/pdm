@@ -1,8 +1,8 @@
 import about from './img/about.png'
 const About = () => {
     return (
-        <div className='flex p-20 justify-around bg-black text-white border items-center'>
-            <div className='flex flex-col gap-y-6 w-max h-max'>
+        <div className='flex p-20 justify-around bg-black text-white items-center gap-x-10'>
+            <div className='flex flex-col gap-y-6 h-max max-w-full'>
                 <div className='flex flex-col gap-y-5' >
                     <span className='flex gap-x-3'>
                         <div>
@@ -21,7 +21,7 @@ const About = () => {
                     </span>
                     <h3 className='font-link text-5xl  tracking-wider font-medium'>About Us</h3>
                 </div>
-                <p className='w-xl font-link text-md leading-6 font-medium '>
+                <p className='max-w-160 font-link text-md leading-6 font-medium '>
                 As a dedicated tutor, I am passionate about helping students and professionals unlock their true potential in Python programming, data science, and machine learning. With a hands-on, personalized approach, I strive to make complex concepts accessible and engaging for learners at all levels. My goal is to empower you with the knowledge and practical skills needed to thrive in the fast-growing fields of data analytics and AI. Whether you’re starting from scratch or looking to advance your expertise, I am here to guide you every step of the way, ensuring your learning journey is both fulfilling and impactful.
                 </p>
                 <div className='flex gap-x-4    items-center '>
@@ -29,8 +29,8 @@ const About = () => {
                     <a href="/" className='flex items-center px-1 py-3 rounded-2xl text-link border border-link w-30 justify-center shadwo-md'>Learn more</a>
                 </div>
             </div>
-            <div className='w-100 h-full rounded-4xl w-fit'>
-                <img src={about} alt="" className='rounded-4xl h-100'/>
+            <div className='w-100 h-full rounded-4xl'>
+                <img src={about} alt="" className='rounded-4xl h-auto w-full max-w-full'/>
             </div>
         </div>
       );
