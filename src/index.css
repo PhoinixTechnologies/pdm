@@ -1,17 +1,35 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
 @theme{
     --font-logo: "Inter", sans-serif;
     --font-link:"Space Grotesk", sans-serif;
+    --font-sora: "Sora", sans-serif;
     --color-link: #7780A1;
     --color-mid:#2A27C9;
     --color-top:#504E52;
     --color-top2:#D0D0EC;
     --color-top3:#B5C0DC;
+    --color-get:#2A27C9;
 }
 
 .Headings{
     @apply font-link text-5xl  tracking-wider font-medium;
+}
+.card-bg{
+    @apply relative  bg-size-[fit_auto] bg-center bg-no-repeat h-120 max-w-full rounded-tr-4xl content-end absolute -top-0.5 ;
+}
+.card-gradient{
+    @apply absolute inset-0 rounded-tr-4xl;
+}
+.card-content{
+    @apply flex flex-col gap-y-3 relative z-10 p-4 max-w-full text-white inset-x-0 bottom-0;
+}
+.getStartedButton{
+    @apply w-full flex items-center px-6 py-3 rounded-xl bg-get justify-center shadow-[inset_-4px_-4px_4px_0_rgba(0,0,0,0.1),inset_4px_4px_4px_0_rgba(255,255,255,0.1)] font-bold tracking-wider font-sora;
+}
+.pText{
+    @apply text-white font-logo text-sm font-medium tracking-wider;
 }
