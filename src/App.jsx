@@ -3,6 +3,7 @@
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './aboutus';
+import Course from '../public/Courses';
 
 function App() {
   const title ='App Component';
@@ -14,6 +15,7 @@ function App() {
         <div className='content'>
         <Home />
         <About/>
+        <Course/>
           <h1>{title}</h1>
           {/* <p>Likes {likes} times</p>
 
