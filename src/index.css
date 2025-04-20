@@ -19,10 +19,10 @@
     @apply font-link text-5xl  tracking-wider font-medium;
 }
 .card-bg{
-    @apply relative  bg-size-[fit_auto] bg-center bg-no-repeat h-120 max-w-full rounded-tr-4xl content-end absolute -top-0.5 ;
+    @apply relative  bg-size-[fit_auto] bg-center bg-no-repeat h-120 max-w-full  content-end absolute -top-0.5 ;
 }
 .card-gradient{
-    @apply absolute inset-0 rounded-tr-4xl;
+    @apply absolute inset-0;
 }
 .card-content{
     @apply flex flex-col gap-y-3 relative z-10 p-4 max-w-full text-white inset-x-0 bottom-0;
