@@ -7,7 +7,7 @@ const Navbar = () => {
         <h3 className='font-logo tracking-wide'>My PDM Tutor</h3>
       </div>
       <div className=" flex text-white gap-x-10 items-center justify-center font-normal font-link max-w-80">
-        <a href="/">About</a>
+        <a href="./aboutus.jsx">About</a>
         <a href="/create">Agenda</a>
         <a href="">Connect with us</a>
       </div>

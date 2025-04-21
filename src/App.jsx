@@ -1,9 +1,8 @@
-
-
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './aboutus';
 import Course from '../public/Courses';
+import Agenda from './Agenda';
 
 function App() {
   const title ='App Component';
@@ -16,6 +15,7 @@ function App() {
         <Home />
         <About/>
         <Course/>
+        <Agenda/>
           <h1>{title}</h1>
           {/* <p>Likes {likes} times</p>
 
