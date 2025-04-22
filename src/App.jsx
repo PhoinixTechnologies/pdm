@@ -1,7 +1,7 @@
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './aboutus';
-import Course from '../public/Courses';
+import Course from './Courses';
 import Agenda from './Agenda';
 
 function App() {
