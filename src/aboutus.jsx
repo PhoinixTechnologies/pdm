@@ -73,7 +73,7 @@ const About = () => {
                 <path d="M0 10C0 4.47715 4.47715 0 10 0H156.429C161.902 0 167.136 2.2433 170.911 6.2069L185 21H0V10Z" fill="#D0D0EC"/>
                 </svg>
                 <div className="card-bg   bg-[url('./img/ml.png')]  rounded-r-4xl rounded-bl-4xl">
-                <div className="card-gradient bg-gradient-to-b from-top2/80 via-mid/30 to-black/70 "></div>
+                <div className="card-gradient bg-gradient-to-b from-top2/80 via-mid/30 to-black/70   rounded-r-4xl rounded-bl-4xl"></div>
                 <div className="card-content">
                         <h1 className="text-2xl font-bold tracking-wider font-sora">Data Analytics</h1>
                         <p className='pText'> Key data analytics concepts include data collection, cleaning, exploratory analysis, visualization, statistical modeling, and deriving actionable insights.</p>
@@ -86,7 +86,7 @@ const About = () => {
                 <path d="M0 10C0 4.47715 4.47715 0 10 0H156.429C161.902 0 167.136 2.2433 170.911 6.2069L185 21H0V10Z" fill="#B5C0DC"/>
                 </svg>
                 <div className=" card-bg bg-[url('./img/DA.png')] rounded-r-4xl rounded-bl-4xl">
-                <div className=" bg-gradient-to-b from-top3/90 via-mid/30 to-black/40 card-gradient "></div>
+                <div className=" bg-gradient-to-b from-top3/90 via-mid/30 to-black/40 card-gradient  rounded-r-4xl rounded-bl-4xl "></div>
                 <div className="card-content">
                         <h1 className="text-2xl font-bold tracking-wider font-sora">Machine Learning</h1>
                         <p className='pText'> Key machine learning concepts include data preprocessing, feature engineering, model selection, training, evaluation, and tuning for accurate predictions.</p>

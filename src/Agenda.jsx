@@ -1,8 +1,8 @@
 import about from './img/agenda.png'
 const Agenda = () => {
     return ( 
-      <div className='bg-black border border-white p-20 py-40 flex flex-col gap-70 '>
-            <div className='flex justify-center items-center border-white h-max relative border'>
+      <div className='bg-black  p-20 py-40 flex flex-col gap-70 '>
+            <div className='flex justify-center items-center h-max relative'>
             <div className="w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px] xl:w-[630px] xl:h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                 <div className="w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px] xl:w-[818px] xl:h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
                     <div className="w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[990px] xl:h-[989px] flex-shrink-0 rounded-[990px] border-[3px] border-dashed border-[#0D0F2B] opacity-70 bg-[#060714] flex justify-center items-center">
@@ -45,7 +45,7 @@ const Agenda = () => {
                     </div>
             </div>
 
-            <div className='flex justify-center items-center  border-white h-max border relative inset-x-0 -top-0 '>
+            <div className='flex justify-center items-center h-max border relative inset-x-0 -top-0 '>
             <div className="w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px] xl:w-[630px] xl:h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                 <div className="w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px] xl:w-[818px] xl:h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
                     <div className="w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[990px] xl:h-[989px] flex-shrink-0 rounded-[990px] border-[3px] border-dashed border-[#0D0F2B] opacity-70 bg-[#060714] flex justify-center items-center">
@@ -54,14 +54,14 @@ const Agenda = () => {
                     </div>
                 </div>
             </div>
-             <div className='flex flex-col w-full h-auto text-white gap-x-10 absolute p-1 border -top-0'>
+                    <div className='flex flex-col w-full h-auto text-white gap-x-10 absolute p-1 -top-10 gap-y-5'>
                         <div className='w-full p-2 flex gap-x-3  '> 
-                            <div className='border'>
+                            <div className=''>
                                 <h3 className='w-full font-link font-bold text-6xl/20'>
                                 Unlock your PDM mastery—join the waitlist today!
                                 </h3>
                             </div>
-                            <div className='flex flex-col gap-y-2 border'>
+                            <div className='flex flex-col gap-y-2'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
                             <path d="M25.0059 50.1495C38.8097 50.1495 50 39.0236 50 25.2991C50 11.5746 38.8097 0.44873 25.0059 0.44873C11.202 0.44873 0.0117188 11.5746 0.0117188 25.2991C0.0117188 39.0236 11.202 50.1495 25.0059 50.1495Z" fill="#D9D9D9"/>
                             <path d="M23.7062 32.6462L23.6858 26.387H21.0078V23.7044H23.6858V21.9161C23.6858 19.5025 25.1778 18.3394 27.3272 18.3394C28.3568 18.3394 29.2417 18.4161 29.4995 18.4505V20.9728L28.0088 20.9735C26.8399 20.9735 26.6135 21.5299 26.6135 22.3464V23.7044H29.9343L29.0416 26.387H26.6135V32.6462H23.7062Z" fill="#2A27C9"/>
@@ -75,9 +75,49 @@ const Agenda = () => {
                             </svg>
                             </div>
                         </div>
-                        <form action="">
-                            jbis biebwio r
+                        <form action="" className=' p-2 flex flex-col gap-5'>
+                            <div className="flex flex-col  gap-0 pb-2 px-2.5 pt-2 border-b border-[#CACACA] flex-1">
+                                <label htmlFor="" className='mx-2'>Your Name</label>
+                                <input
+                                    type="text"
+                                    className="w-full outline-none bg-transparent "
+                                    placeholder=""
+                                />
+                            </div>
+                            <div className="flex flex-col mt-3  gap-0 pb-2 px-2.5 pt-2 border-b border-[#CACACA] flex-1">
+                                <label htmlFor="" className='mx-2'>Email Address</label>
+                                <input
+                                    type='email'
+                                    className="w-full outline-none bg-transparent "
+                                    placeholder=""
+                                />
+                            </div>
+                            <div className="flex flex-col  gap-0 pb-2 px-2.5 pt-2 border-b border-[#CACACA] flex-1">
+                                <label htmlFor="" className='mx-2'>Phone Number</label>
+                                <input
+                                    type="Number"
+                                    className="w-full outline-none bg-transparent "
+                                    placeholder=""
+                                />
+                            </div>
+                            <div className="flex flex-col  gap-0 pb-2 px-2.5 pt-2 border-b border-[#CACACA] flex-1">
+                                <label htmlFor="" className='mx-2'>Message</label>
+                                <input
+                                    type="text"
+                                    className="w-full outline-none bg-transparent h-10"
+                                    placeholder=""
+                                />
+                            </div>
                         </form>
+                        <button type="button" className='flex gap-x-0 bg-[#2A27C9] w-max items-center p-3 rounded-2xl mt-15'>
+                            <p className='items-center font-logo text-lg font-semibold '>
+                            Leave us a Message
+                            </p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M5 12.5H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 5.5L19 12.5L12 19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
             </div>
       </div>
