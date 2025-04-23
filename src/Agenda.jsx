@@ -109,8 +109,8 @@ const Agenda = () => {
                                 />
                             </div>
                         </form>
-                        <button type="button" className='flex gap-x-0 bg-[#2A27C9] w-max items-center p-3 rounded-2xl mt-15'>
-                            <p className='items-center font-logo text-lg font-semibold '>
+                        <button type="button" className='input-btn '>
+                            <p className='input-text '>
                             Leave us a Message
                             </p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
