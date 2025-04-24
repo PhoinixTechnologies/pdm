@@ -2,7 +2,7 @@ import about from './img/about.png'
 
 const About = () => {
     return (
-    <div className='flex bg-black flex-col'>
+    <div className='flex bg-black flex-col' id='about'>
          <div className='flex p-20 justify-around text-white items-center gap-x-10 '>
             <div className='flex flex-col gap-y-6 h-max max-w-full '>
                 <div className='flex flex-col gap-y-5' >

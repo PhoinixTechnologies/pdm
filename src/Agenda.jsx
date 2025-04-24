@@ -1,7 +1,7 @@
 import about from './img/agenda.png'
 const Agenda = () => {
     return ( 
-      <div className='bg-black  p-20 py-40 flex flex-col gap-70 '>
+      <div className='bg-black  p-20 py-40 flex flex-col gap-70 ' id='Agenda'>
             <div className='flex justify-center items-center h-max relative'>
             <div className="w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px] xl:w-[630px] xl:h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                 <div className="w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px] xl:w-[818px] xl:h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
@@ -17,15 +17,15 @@ const Agenda = () => {
                                 <span className='flex gap-x-3'>
                                     <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <g opacity="0.9">
-                                        <g opacity="0.9">
-                                        <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
-                                        </g>
-                                        <g opacity="0.9">
-                                        <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
-                                        </g>
-                                    </g>
-                                    </svg>
+                                            <g opacity="0.9">
+                                                <g opacity="0.9">
+                                                <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#7D1AFF" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                                                </g>
+                                                <g opacity="0.9">
+                                                <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#7D1AFF" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                                                </g>
+                                            </g>
+                                            </svg>
                                     </div>
                                     <h3 className='flex justify-center font-link font-semibold uppercase tracking-wide'>My pdm tutor</h3>
                                 </span>
