@@ -36,8 +36,8 @@ const About = () => {
             </div>
         </div>
         <div className='text-white p-20 pt-0'>
-        <div className= 'flex flex-col p-2 h-150 gap-y-5'>
-        <span className='flex flex-col gap-y-2'>
+        <div className= 'flex flex-col p-2 h-max gap-y-5 w-full'>
+        <span className='flex flex-col gap-y-2 '>
             <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <g opacity="0.9">
@@ -53,7 +53,7 @@ const About = () => {
             <h3 className='Headings '>Our Courses</h3>
         </span>
         
-            <div className='h-full flex flex-row justify-between gap-x-10 '> 
+            <div className='h-full flex flex-row justify-between gap-x-10 w-full '> 
                 <div className=' w-100 flex flex-col'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="185" height="21" viewBox="0 0 185 21" fill="none">
                 <path d="M0 10C0 4.47715 4.47715 0 10 0H156.429C161.902 0 167.136 2.2433 170.911 6.2069L185 21H0V10Z" fill="#504E52"/>
