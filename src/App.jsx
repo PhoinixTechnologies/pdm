@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
+
 import Home from './Home';
 import About from './aboutus';
 import Agenda from './Agenda';
@@ -9,9 +9,9 @@ function App() {
   // const likes =  50;
   // const link = "https://www.google.com";
   return (
-    <div className="App">
-     <Navbar />
-        <div className='content'>
+    <div className="w-100vw">
+    
+        <div className='content w-100vw'>
         <Home />
         <About/>
         <Agenda/>

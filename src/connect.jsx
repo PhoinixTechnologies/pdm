@@ -35,7 +35,7 @@ const Connect = () => {
                     </span>
                 </div>
             </div>
-            <div className='flex w-full gap-x-6 justify-center text-white h-max p-20 py-7  bg-[#2A27C9] items-center'>
+            <div className='flex w-full gap-x-6 justify-center text-white h-max p-20 py-7  bg-[#2A27C9] items-center flex-col md:flex-row'>
                 <div className=' w-[50%] pr-10 font-link h-max p-2 gap-y-5 flex flex-col'>
                     <p className='font-semibold text-3xl/10 w-max'>
                     Subscribe to our Newsletter
