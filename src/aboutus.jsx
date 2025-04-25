@@ -26,12 +26,12 @@ const About = () => {
                         <p className='flex md:max-w-160 font-link text-md leading-6 font-medium h-max md:row-start-2 md:text-sm text-justify md:text-left'>
                             As a dedicated tutor, I am passionate about helping students and professionals unlock their true potential in Python programming, data science, and machine learning. With a hands-on, personalized approach, I strive to make complex concepts accessible and engaging for learners at all levels. My goal is to empower you with the knowledge and practical skills needed to thrive in the fast-growing fields of data analytics and AI. Whether you’re starting from scratch or looking to advance your expertise, I am here to guide you every step of the way, ensuring your learning journey is both fulfilling and impactful.
                         </p>
-                        <div className='w-100 h-full rounded-4xl md:row-span-3 h-max'>
+                        <div className=' w-80 md:w-100 h-full rounded-4xl md:row-span-3 h-max'>
                                 <img src={about} alt="" className='rounded-4xl h-auto w-full max-w-full'/>
                         </div>
-                        <div className='flex gap-x-4 items-center col-start-1 md:row-start-3 md:justify-self-start w-full justify-center md:justify-start'>
-                                <a href="/" className='flex items-center px-1 py-3 rounded-2xl bg-white text-black justify-center tracking-wide w-30 font-medium inset-shadow-sm inset-shadow-black-500'>Get started</a>
-                                <a href="/" className='flex items-center px-1 py-3 rounded-2xl text-link border border-link w-30 justify-center'>Learn more</a>
+                        <div className='flex gap-x-4 items-center col-start-1 md:row-start-3 md:justify-self-start w-full justify-evenly md:justify-center md:justify-start'>
+                                <a href="/" className='flex items-center px-4 py-4 w-max md:px-1 md:py-3 rounded-2xl bg-white text-black justify-center tracking-wide md:w-30 font-medium inset-shadow-sm inset-shadow-black-500'>Get started</a>
+                                <a href="/" className='flex items-center px-4 py-4 w-max md:px-1 md:py-3 rounded-2xl text-link border border-link w-30 justify-center'>Learn more</a>
                         </div>
                     </div>
            
@@ -54,7 +54,7 @@ const About = () => {
             <h3 className='Headings '>Our Courses</h3>
         </span>
         
-            <div className='h-full flex md:flex-row md:justify-between md:gap-x-10 w-full flex-col items-center justify-center border border-white gap-y-10 '> 
+            <div className='h-full flex md:flex-row md:justify-between md:gap-x-10 w-full flex-col items-center justify-center gap-y-10 '> 
                 <div className=' w-full flex flex-col'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="185" height="21" viewBox="0 0 185 21" fill="none">
                 <path d="M0 10C0 4.47715 4.47715 0 10 0H156.429C161.902 0 167.136 2.2433 170.911 6.2069L185 21H0V10Z" fill="#504E52"/>

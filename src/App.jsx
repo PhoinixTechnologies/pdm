@@ -9,9 +9,8 @@ function App() {
   // const likes =  50;
   // const link = "https://www.google.com";
   return (
-    <div className="w-100vw">
-    
-        <div className='content w-100vw'>
+   
+    <div className='content w-100vw'>
         <Home />
         <About/>
         <Agenda/>
@@ -19,8 +18,6 @@ function App() {
         <Foot/>
          
         </div>
-  
-    </div>
   );
 }
 
