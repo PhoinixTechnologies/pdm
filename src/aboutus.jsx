@@ -30,8 +30,8 @@ const About = () => {
                                 <img src={about} alt="" className='rounded-4xl h-auto w-full max-w-full'/>
                         </div>
                         <div className='flex gap-x-4 items-center col-start-1 md:row-start-3 md:justify-self-start w-full justify-evenly md:justify-center md:justify-start'>
-                                <a href="/" className='flex items-center px-4 py-4 w-max md:px-1 md:py-3 rounded-2xl bg-white text-black justify-center tracking-wide md:w-30 font-medium inset-shadow-sm inset-shadow-black-500'>Get started</a>
-                                <a href="/" className='flex items-center px-4 py-4 w-max md:px-1 md:py-3 rounded-2xl text-link border border-link w-30 justify-center'>Learn more</a>
+                                <a href="/" className='flex items-center px-4 py-4 w-max  rounded-2xl bg-white text-black justify-center tracking-wide font-medium inset-shadow-sm inset-shadow-black-500'>Get started</a>
+                                <a href="/" className='flex items-center px-4 py-4 w-max md:px-4 md:py-4 rounded-2xl text-link border border-link w-max justify-center'>Learn more</a>
                         </div>
                     </div>
            
