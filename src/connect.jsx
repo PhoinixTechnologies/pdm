@@ -2,8 +2,8 @@
 import Plogo from './img/Plogo.png'
 const Connect = () => {
     return (
-        <div className=' w-full bg-black pt-10 flex flex-col gap-y-5' id='connect'>
-             <button type="button" className='input-btn place-self-center'>
+        <div className=' w-full bg-black pt-10 flex flex-col gap-y-5 border border-white h-max' id='connect'>
+             <button type="button" className='input-btn place-self-center border border-white'>
                 <p className='input-text text-white'>
                     Connect with us Today
                 </p>
@@ -51,10 +51,11 @@ const Connect = () => {
             </div>
             <div className='flex w-full gap-x-10 justify-center text-white h-max p-20 py-10 items-center'>
                <div className='flex flex-col gap-y-10 font-link'>
-                <div className='flex items-end '>
-                <img src={Plogo} alt="" className='w-10' />
-                <h1 className=' font-bold text-xl'>My PDM Tutor</h1></div>
-                <div className='text-sm font-light flex flex-col gap-y-2'>
+                <div className='flex items-end gap-x-2'>
+                    <img src={Plogo} alt="" className='w-10' />
+                    <h1 className=' font-bold text-3xl md:text-xl '>My PDM Tutor</h1>
+                </div>
+                <div className='text-sm font-light flex flex-col gap-y-5 md:gap-y-2'>
                     <p>Phone: <b> +234 803 986 7195</b></p>
                     <p>Email: <a href="mypdmtutor@gmail.com">mypdmtutor@gmail.com</a></p>
                 </div>
@@ -77,17 +78,17 @@ const Connect = () => {
                     </svg></a>
                 </div>
                </div>
-               <div className='flex flex-col gap-y-5 place-self-start p-3'>
-                <h3 className='input-text'> Company</h3>
-                <ul className='font-light text-sm flex flex-col gap-y-2'>
-                    <li>About us</li>
-                    <li>Contact us</li>
-                    <li>Agenda</li>
-                    <li>Connect with us</li>
-                </ul>
+               <div className='md:flex flex-col gap-y-5 place-self-start p-3 hidden'>
+                    <h3 className='input-text'> Company</h3>
+                    <ul className='font-light text-sm flex flex-col gap-y-2'>
+                        <li>About us</li>
+                        <li>Contact us</li>
+                        <li>Agenda</li>
+                        <li>Connect with us</li>
+                    </ul>
                 
                </div>
-               <div className='flex flex-col gap-y-5 place-self-start p-3'>
+               <div className='md:flex flex-col gap-y-5 place-self-start p-3 hidden'>
                 <h3 className='input-text'>Education</h3>
                 <ul className='font-light text-sm flex flex-col gap-y-2'>
                     <li>Data Analytics</li>

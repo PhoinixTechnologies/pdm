@@ -39,7 +39,7 @@
     @apply text-white font-logo text-sm font-medium tracking-wider;
 }
 .input-btn{
-    @apply flex gap-x-0 bg-[#2A27C9] w-max items-center p-3 py-4 rounded-2xl mt-15;
+    @apply hidden md:flex gap-x-0 bg-[#2A27C9] w-max items-center p-3 py-4 rounded-2xl mt-15 z-1;
 }
 .input-text{
     @apply items-center font-logo  font-semibold;
