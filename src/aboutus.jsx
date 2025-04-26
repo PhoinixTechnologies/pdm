@@ -19,7 +19,7 @@ const About = () => {
                                     </g>
                                     </svg>
                                 </div>
-                                <h3 className='flex justify-center font-link font-semibold uppercase tracking-wide'>Outline</h3>
+                                <h3 className='flex justify-center font-link font-semibold uppercase tracking-wide hidden md:flex'>Outline</h3>
                             </span>
                             <h3 className='Headings'>About Us</h3>
                         </div>

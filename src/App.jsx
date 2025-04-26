@@ -10,7 +10,7 @@ function App() {
   // const link = "https://www.google.com";
   return (
    
-    <div className='content w-100vw'>
+    <div className='content w-100vw bg-black overflow-hidden'>
         <Home />
         <About/>
         <Agenda/>

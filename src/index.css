@@ -21,7 +21,7 @@
 }
 
 .Headings{
-    @apply font-link text-5xl  tracking-wider font-medium;
+    @apply font-link text-6xl md:text-5xl  tracking-wider;
 }
 .card-bg{
     @apply relative  bg-size-[fit_auto] bg-center bg-no-repeat h-120 max-w-full  content-end absolute -top-0.5 ;
