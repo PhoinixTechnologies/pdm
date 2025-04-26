@@ -9,8 +9,7 @@ function App() {
   // const likes =  50;
   // const link = "https://www.google.com";
   return (
-   
-    <div className='content w-100vw bg-black overflow-hidden'>
+    <div className='content w-100vw bg-black overflow-hidden scroll-smooth'>
         <Home />
         <About/>
         <Agenda/>
