@@ -1,7 +1,7 @@
 import about from './img/agenda.png'
 const Agenda = () => {
     return ( 
-      <div className='bg-black  p-20 px-10  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-10' id='Agenda'>
+      <div className='bg-black  p-20 px-10  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-10 ' id='Agenda'>
             <div className='flex justify-center items-center h-max relative'>
                 <div className="w-[630px] h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                     <div className="w-[818px] h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
@@ -53,13 +53,13 @@ const Agenda = () => {
                         </div>
                     </div>
             </div>
-                    <div className='grid grid-rows-auto grid-cols-auto w-fit h-fit text-white relative md:absolute p-1 -top-60 md:top-10 gap-10 md:gap-x-10 justify-start inset-x-0'>
-                            <div className=' w-fit'>
-                                <h3 className='w-fit font-link font-bold text-5xl/20 md:w-230 md:text-6xl/20 '>
+                    <div className='grid grid-rows-auto grid-cols-auto w-fit h-fit text-white relative md:absolute p-1 -top-60 md:top-10 gap-10 md:gap-x-10 justify-center inset-x-0 place-self-center'>
+                            <div className=' '>
+                                <h3 className='w-fit font-link font-bold text-5xl/20 md:w-[95%] md:max-lg:text-5xl lg:text-6xl/20'>
                                 Unlock your PDM mastery <span className = "hidden md:inline-flex"> - </span> join the waitlist today!
                                 </h3>
                             </div>
-                            <div className='flex md:flex-col gap-y-2 row-start-4 w-50 justify-between md:col-start-2 md:row-start-1  md:w-fit '>
+                            <div className='flex md:flex-col gap-y-2 row-start-4 w-50 justify-between md:col-start-2 md:row-start-1  md:w-fit'>
                                 <a href="https://web.facebook.com/mypdmtutor">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
                                     <path d="M25.0059 50.1495C38.8097 50.1495 50 39.0236 50 25.2991C50 11.5746 38.8097 0.44873 25.0059 0.44873C11.202 0.44873 0.0117188 11.5746 0.0117188 25.2991C0.0117188 39.0236 11.202 50.1495 25.0059 50.1495Z" fill="#D9D9D9"/>
