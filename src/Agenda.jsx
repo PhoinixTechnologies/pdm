@@ -1,7 +1,7 @@
 import about from './img/agenda.png'
 const Agenda = () => {
     return ( 
-      <div className='bg-black  p-20 px-10 md:px-20 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-10 ' id='Agenda'>
+      <div className='bg-black  p-20 px-10  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-10' id='Agenda'>
             <div className='flex justify-center items-center h-max relative'>
                 <div className="w-[630px] h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                     <div className="w-[818px] h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
@@ -53,7 +53,7 @@ const Agenda = () => {
                         </div>
                     </div>
             </div>
-                    <div className='grid grid-rows-auto grid-cols-auto w-fit h-fit text-white relative md:absolute p-1 -top-60 md:top-10 gap-10 md:gap-x-10 justify-start inset-x-0 '>
+                    <div className='grid grid-rows-auto grid-cols-auto w-fit h-fit text-white relative md:absolute p-1 -top-60 md:top-10 gap-10 md:gap-x-10 justify-start inset-x-0'>
                             <div className=' w-fit'>
                                 <h3 className='w-fit font-link font-bold text-5xl/20 md:w-230 md:text-6xl/20 '>
                                 Unlock your PDM mastery <span className = "hidden md:inline-flex"> - </span> join the waitlist today!

@@ -8,9 +8,9 @@ const Connect = () => {
                     Connect with us Today
                 </p>
             </button>
-            <div className='flex w-full gap-x-6 gap-y-10 justify-center text-white h-max md:px-20 py-0 md:py-10 pb-2 flex-col md:flex-row items-center '>
-                <div className=' w-max pr-10 font-link h-max p-0'>
-                    <p className='font-semibold text-6xl md:text-4xl/10 w-90'>
+            <div className='flex w-full gap-x-6 gap-y-10 justify-center text-white h-max lg:px-20 py-0 md:py-10 pb-2 flex-col md:flex-row items-center md:max-lg:px-0'>
+                <div className='w-fit md:max-lg:pr-0 pr-10 font-link h-max p-0  md:max-lg:w-80'>
+                    <p className='font-semibold text-6xl md:text-4xl/10 w-90 md:max-lg:w-fit'>
                         We are always  happy to assist you
                     </p>
                 </div>
@@ -35,25 +35,25 @@ const Connect = () => {
                     </span>
                 </div>
             </div>
-            <div className='flex w-full gap-x-6 gap-y-5 justify-center text-white h-max p-20 py-7  bg-[#2A27C9] items-center flex-col md:flex-row'>
-                <div className='w-100 md:w-[50%] pr-10 font-link h-max p-2 gap-y-5 flex flex-col md:items-start items-center'>
-                    <p className='font-semibold text-4xl/15 md:text-3xl/10 w-80 md:w-max'>
+            <div className='flex w-full gap-x-6 gap-y-5 justify-center  text-white h-max p-20 py-7  bg-[#2A27C9] items-center flex-col sm:flex-row'>
+                <div className='w-fit sm:max-md:w-[45%] md:w-[50%] pr-10 font-link h-max p-2 gap-y-5 flex flex-col md:items-start items-center'>
+                    <p className='font-semibold text-4xl/15 md:text-3xl/10 w-80 md:w-[100%]'>
                     Subscribe to our Newsletter
                     </p>
-                    <p className='w-80 md:w-125 text-xl'>
+                    <p className='w-80 md:w-[100%] text-xl'>
                     Subscribe for Updates: Stay informed about the python programming, Data Analytics, Machine Learning by subscribing to our newsletter. 
                     </p>
                 </div>
-                <div className='flex p-2 font-logo w-100 md:w-[50%] h-max items-center'>
-                   <input type="email" name="" id="" placeholder='Enter your email address' className='outline-none bg-white/10 pl-5 pr-10 py-5 rounded-l-2xl w-full' />
-                   <button className=' px-5 py-5 bg-white text-[#2A27C9] rounded-r-2xl font-semibold shadow-lg shadow-black/10'>Suscribe</button>
+                <div className='flex p-2 font-logo w-100 sm:max-md:w-[60%] md:w-[50%] h-max items-center sm:max-md:flex-col sm:max-md:gap-y-3'>
+                   <input type="email" name="" id="" placeholder='Enter your email address' className='outline-none bg-white/10 pl-5 pr-10 py-5 rounded-l-2xl w-full sm:max-md:py-2 sm:max-md:px-2 sm:max-md:rounded-2xl' />
+                   <button className=' px-5 py-5 bg-white text-[#2A27C9] rounded-r-2xl font-semibold shadow-lg shadow-black/10 cursor-pointer sm:max-md:py-3 sm:max-md:rounded-2xl'>Suscribe</button>
                 </div>
             </div>
             <div className='flex w-full gap-x-10 justify-center text-white h-max p-20 py-10 items-center'>
                <div className='flex flex-col gap-y-10 font-link'>
                 <div className='flex items-end gap-x-2'>
                     <img src={Plogo} alt="" className='w-10' />
-                    <h1 className=' font-bold text-3xl md:text-xl '>My PDM Tutor</h1>
+                    <h1 className=' font-bold text-3xl sm:text-xl '>My PDM Tutor</h1>
                 </div>
                 <div className='text-sm font-light flex flex-col gap-y-5 md:gap-y-2'>
                     <p>Phone: <b> +234 803 986 7195</b></p>
@@ -78,7 +78,7 @@ const Connect = () => {
                     </svg></a>
                 </div>
                </div>
-               <div className='md:flex flex-col gap-y-5 place-self-start p-3 hidden'>
+               <div className='sm:flex flex-col gap-y-5 place-self-start p-3 hidden'>
                     <h3 className='input-text'> Company</h3>
                     <ul className='font-light text-sm flex flex-col gap-y-2'>
                         <li>About us</li>
@@ -88,7 +88,7 @@ const Connect = () => {
                     </ul>
                 
                </div>
-               <div className='md:flex flex-col gap-y-5 place-self-start p-3 hidden'>
+               <div className='sm:flex flex-col gap-y-5 place-self-start p-3 hidden'>
                 <h3 className='input-text'>Education</h3>
                 <ul className='font-light text-sm flex flex-col gap-y-2'>
                     <li>Data Analytics</li>
