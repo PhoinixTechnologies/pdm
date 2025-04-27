@@ -7,10 +7,10 @@ const Home = () => {
        bg-center" style={{backgroundImage:`url(${back}) `}} >
          <div className='bg-black/70 w-full h-full p-20 pt-50 flex flex-col items-center justify-start gap-y-5 box-border'>
          <Navbar/>
-           <h1  className='text-white text-5xl md:text-6xl/16 font-semibold p-1 pb-5 text-center font-link w-124 md:w-5xl'>Empowering Learners in Python,
+           <h1  className='text-white text-[40px] sm:max-md:text-4xl md:text-6xl/16 font-semibold pb-5 text-center font-link w-100 md:max-lg:w-fit lg:w-5xl'>Empowering Learners in Python,
            Data Analytics & Machine Learning</h1>
 
-           <p className='text-[#BDBCBC] w-70 md:w-120 p-2 text-center text-md/6 font-link'>As a dedicated tutor, I am passionate about helping
+           <p className='text-[#BDBCBC] w-70 md:w-120 p-2 text-center sm:max-md:w-100 sm:max-md:text-xl text-md/6 font-link'>As a dedicated tutor, I am passionate about helping
               students and professionals unlock their true potential <br />
               in Python programming, data science and machine learning.
             </p>

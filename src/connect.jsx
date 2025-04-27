@@ -8,13 +8,13 @@ const Connect = () => {
                     Connect with us Today
                 </p>
             </button>
-            <div className='flex w-full gap-x-6 gap-y-10 justify-center text-white h-max lg:px-20 py-0 md:py-10 pb-2 flex-col md:flex-row items-center md:max-lg:px-0'>
+            <div className='flex w-full gap-x-6 gap-y-10 justify-center text-white h-max lg:px-20 py-0 md:py-10 pb-2 flex-col sm:flex-row md:items-center px-10 md:max-lg:px-0 sm:max-md:justify-between'>
                 <div className='w-fit md:max-lg:pr-0 pr-10 font-link h-max p-0  md:max-lg:w-80'>
                     <p className='font-semibold text-6xl md:text-4xl/10 w-90 md:max-lg:w-fit'>
                         We are always  happy to assist you
                     </p>
                 </div>
-                <div className='flex flex-col md:flex-row gap-x-[50px]  p-2 font-logo md:w-[50%] w-100 text-xl md:text-sm gap-y-10'>
+                <div className='flex flex-col md:flex-row gap-x-20 sm:max-lg:gap-x-6 p-2 font-logo md:w-[50%] w-100 text-xl md:text-sm gap-y-10'>
                     <span className='flex flex-col gap-y-3'>
                         <h1 className='input-text'>Email Address</h1>
                         <div className='border border-white w-5'> </div>

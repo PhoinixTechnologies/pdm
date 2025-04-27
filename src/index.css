@@ -31,10 +31,10 @@
     @apply relative  bg-cover bg-center bg-no-repeat h-120 max-w-100  content-end absolute -top-0.5 sm:max-md:w-100 ;
 }
 .card-gradient{
-    @apply absolute inset-0 w-100 sm:w-full ;
+    @apply absolute inset-0 w-full ;
 }
 .card-content{
-    @apply flex flex-col gap-y-3 relative z-10 p-4 w-100 lg:w-fit text-white inset-x-0 bottom-0;
+    @apply flex flex-col gap-y-3 relative z-10 p-4 w-full lg:w-fit text-white inset-x-0 bottom-0;
 }
 .getStartedButton{
     @apply w-full flex items-center px-6 py-3 rounded-xl bg-get justify-center shadow-[inset_-4px_-4px_4px_0_rgba(0,0,0,0.1),inset_4px_4px_4px_0_rgba(255,255,255,0.1)] font-bold tracking-wider font-sora;
