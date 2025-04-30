@@ -1,8 +1,8 @@
 import about from './img/agenda.png'
 const Agenda = () => {
     return ( 
-      <div className='bg-black  p-20 px-10  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-10 ' id='Agenda'>
-            <div className='flex justify-center items-center h-max relative'>
+      <div className='bg-black  p-20 px-10  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-0 ' id='Agenda'>
+            <div className='flex justify-center items-center h-max relative border md:pt-10'>
                 <div className="w-[630px] h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                     <div className="w-[818px] h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
                         <div className="w-[990px] h-[989px] flex-shrink-0 rounded-[990px] border-[3px] border-dashed border-[#0D0F2B] opacity-70 bg-[#060714] flex justify-center items-center">
