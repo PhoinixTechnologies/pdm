@@ -21,7 +21,7 @@ function App() {
             <Connect/>
             <Foot/>
           </Route>
-          <div className='bg-[#EDEFFE] h-auto flex justify-center border border-red-500 items-center'>
+          <div className='bg-[#EDEFFE] h-auto flex justify-center items-center'>
           <Route path ="/join">
               <Join/>
           </Route>

@@ -1,4 +1,5 @@
 import logo from './img/My_PDM_Tutor_1-removebg-preview.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const Vid = () => {if (document.getElementById('main').classList.contains('hidden')){
@@ -40,7 +41,7 @@ const Navbar = () => {
         <a href="#Agenda">Agenda</a>
         <a href="#connect">Connect with us</a>
       </div>
-     <a href="" className=" font- flex justify-center bg-white rounded-full px-6 py-3 max-w-40 items-center">Join Waitlist</a>
+     <Link to="/join" className=" font- flex justify-center bg-white rounded-full px-6 py-3 max-w-40 items-center">Join Waitlist</Link>
   
      </div>
     </nav>

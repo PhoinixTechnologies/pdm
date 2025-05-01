@@ -1,7 +1,7 @@
 import logo from '../img/My_PDM_Tutor_1-removebg-preview.png';
 const Join = () => {
     return ( 
-     <div className=' w-[40%] h-[100%] flex flex-col gap-y-10 items-center py-10'>
+     <div className='sm:max-md:w-[60%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center py-10'>
           <div className='flex gap-x-2 items-center'>
                <img src={logo} alt="" className='w-10' />
                <h1 className='font-bold font-logo text-xl'>My PDM Tutor</h1>
