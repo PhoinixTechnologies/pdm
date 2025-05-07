@@ -2,14 +2,14 @@
 import Plogo from './img/Plogo.png'
 const Connect = () => {
     return (
-        <div className=' w-full bg-black pt-10 flex flex-col gap-y-5 h-max' id='connect'>
+        <div className=' w-full bg-black pt-10 flex flex-col gap-y-5 h-max ' id='connect'>
              <button type="button" className='input-btn place-self-center'>
                 <p className='input-text text-white'>
                     Connect with us Today
                 </p>
             </button>
-            <div className='flex w-full gap-x-6 gap-y-10 justify-center text-white h-max lg:px-20 py-0 md:py-10 pb-2 flex-col sm:flex-row md:items-center px-10 md:max-lg:px-0 sm:max-md:justify-between'>
-                <div className='w-fit md:max-lg:pr-0 pr-10 font-link h-max p-0  md:max-lg:w-80'>
+            <div className='flex w-[90%] mx-auto md:gap-x-5 gap-y-10 justify-center text-white h-max lg:px-20 py-0 md:py-10 pb-2 flex-col sm:flex-row md:items-center md:max-lg:px-0 sm:max-md:justify-evenly'>
+                <div className='w-[50%] md:max-lg:pr-0 pr-10 font-link h-max p-0  md:max-lg:w-80'>
                     <p className='font-semibold text-6xl md:text-4xl/10 w-90 md:max-lg:w-fit'>
                         We are always  happy to assist you
                     </p>
@@ -35,16 +35,16 @@ const Connect = () => {
                     </span>
                 </div>
             </div>
-            <div className='flex w-full gap-x-6 gap-y-5 justify-center  text-white h-max p-20 py-7  bg-[#2A27C9] items-center flex-col sm:flex-row'>
-                <div className='w-fit sm:max-md:w-[45%] md:w-[50%] pr-10 font-link h-max p-2 gap-y-5 flex flex-col md:items-start items-center'>
-                    <p className='font-semibold text-4xl/15 md:text-3xl/10 w-80 md:w-[100%]'>
+            <div className='flex w-full gap-x-6 gap-y-5 justify-center   text-white h-max  py-7  bg-[#2A27C9] items-center flex-col sm:flex-row'>
+                <div className='w-[80%] sm:max-md:w-[45%] md:w-[50%]  font-link h-max p-2 gap-y-5 flex flex-col md:items-start items-center'>
+                    <p className='font-semibold text-4xl/15 md:text-3xl/10 w-fit md:w-[100%]'>
                     Subscribe to our Newsletter
                     </p>
-                    <p className='w-80 md:w-[100%] text-xl'>
+                    <p className='w-fit md:w-[100%] text-xl'>
                     Subscribe for Updates: Stay informed about the python programming, Data Analytics, Machine Learning by subscribing to our newsletter. 
                     </p>
                 </div>
-                <div className='flex p-2 font-logo w-100 sm:max-md:w-[60%] md:w-[50%] h-max items-center sm:max-md:flex-col sm:max-md:gap-y-3'>
+                <div className='flex p-2 font-logo w-[90%] sm:max-md:w-[40%] md:w-[50%] h-max items-center sm:max-md:flex-col sm:max-md:gap-y-'>
                    <input type="email" name="" id="" placeholder='Enter your email address' className='outline-none bg-white/10 pl-5 pr-10 py-5 rounded-l-2xl w-full sm:max-md:py-2 sm:max-md:px-2 sm:max-md:rounded-2xl' />
                    <button className=' px-5 py-5 bg-white text-[#2A27C9] rounded-r-2xl font-semibold shadow-lg shadow-black/10 cursor-pointer sm:max-md:py-3 sm:max-md:rounded-2xl'>Suscribe</button>
                 </div>

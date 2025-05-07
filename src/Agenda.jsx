@@ -1,8 +1,8 @@
 import about from './img/agenda.png'
 const Agenda = () => {
     return ( 
-      <div className='bg-black  p-20 px-10  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-0 ' id='Agenda'>
-            <div className='flex justify-center items-center h-max relative border md:pt-10'>
+      <div className='bg-black  py-20 px-0  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-0 ' id='Agenda'>
+            <div className='flex justify-center items-center h-max relative border md:pt-10 '>
                 <div className="w-[630px] h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                     <div className="w-[818px] h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
                         <div className="w-[990px] h-[989px] flex-shrink-0 rounded-[990px] border-[3px] border-dashed border-[#0D0F2B] opacity-70 bg-[#060714] flex justify-center items-center">
@@ -11,8 +11,8 @@ const Agenda = () => {
                         </div>
                     </div>
                 </div>
-                <div className='absolute grid md:grid-cols-2 md:grid-rows-auto w-fit p-1 justify-items-center gap-x-10 gap-y-10 p-2 text-white inset-x-0 -top-50 md:top-30'>
-                            <div className='flex flex-col gap-y-5 h-max justify-self-start' >
+                <div className='absolute grid md:grid-cols-2 md:grid-rows-auto w-[90%] p-1 justify-items-center mx-auto  gap-x-10 gap-y-10 p-2 text-white inset-x-0 -top-50 md:top-30 '>
+                            <div className='flex flex-col gap-y-5 h-max justify-self-start ' >
                                 <span className='flex gap-x-3'>
                                     <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -33,8 +33,8 @@ const Agenda = () => {
                             <p className='flex md:max-w-160 font-link text-md leading-6 font-medium h-max md:row-start-2 md:text-sm text-justify md:text-left '>
                                 I am an experienced tutor with strong foundation in Python programming, data analysis and machine learning. I specialize in guiding students and professionals through complex topics like data manipulation, visualization and machine learning development. My hands-on approach and tailored lessons help master practical skills in tools such as pandas, Numpy, Matplotlib and Scikit-learn.
                             </p>
-                            <div className=' w-80 md:w-100 h-full rounded-4xl md:row-span-3 h-max '>
-                                <img src={about} alt="" className='rounded-4xl h-auto w-full max-w-full'/>
+                            <div className=' w-fit md:w-100 h-full rounded-4xl md:row-span-3 h-max'>
+                                <img src={about} alt="" className='rounded-4xl h-auto w-fit '/>
                             </div>
                             <div className='flex gap-x-4 items-center col-start-1 md:row-start-3 md:justify-self-start w-full justify-evenly md:justify-center md:justify-start'>
                                 <a href="/" className='flex items-center px-4 py-4 w-max rounded-2xl bg-white text-black justify-center tracking-wider font-medium shadow-[inset_-4px_-4px_4px_rgba(0,0,0,0.1),_inset_4px_4px_4px_rgba(255,255,255,0.1)]'>Get started</a>
@@ -53,7 +53,7 @@ const Agenda = () => {
                         </div>
                     </div>
             </div>
-                    <div className='grid grid-rows-auto grid-cols-auto w-fit h-fit text-white relative md:absolute p-1 -top-60 md:top-10 gap-10 md:gap-x-10 justify-center inset-x-0 place-self-center'>
+                    <div className='grid grid-rows-auto grid-cols-auto w-[90%] h-fit text-white relative md:absolute p-1 -top-40 md:top-10 gap-10 md:gap-x-10 justify-center inset-x-0 place-self-center'>
                             <div className=' '>
                                 <h3 className='w-fit font-link font-bold text-5xl/20 md:w-[95%] md:max-lg:text-5xl lg:text-6xl/20'>
                                 Unlock your PDM mastery <span className = "hidden md:inline-flex"> - </span> join the waitlist today!

@@ -12,7 +12,7 @@ function App() {
   // const link = "https://www.google.com";
   return (
     <Router>
-      <div className='content w-100vw  overflow-hidden scroll-smooth'>
+      <div className='content w-100vw bg-black overflow-hidden scroll-smooth'>
        <Switch>
           <Route exact path ="/">
             <Home />
