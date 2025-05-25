@@ -1,0 +1,168 @@
+main.course-overview {
+    padding: 20px 60px;
+    display: flex;
+    color: #1D2026;
+    h3 {
+        font: 700 24px 'Space Grotesk';
+        color: #1D2026;
+    }
+
+    div.left {
+        flex: 0 0 70%;
+        .all {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h4 {
+                font: 700 24px 'Space Grotesk';
+                color: #1D2026;
+            }
+            .head {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .upper {
+                    ul {
+                        margin-bottom: 5px;
+                        padding: unset;
+                        display: flex;
+                        gap: 15px;
+                        li {
+                            cursor: pointer;
+                            a {
+                                display: flex;
+                                align-items: center;
+                                color: #6E7485;
+                                text-decoration: none;
+                                font: 400 14px 'Space Grotesk';
+                                svg {
+                                    width: 14px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+                    div.l, div.r {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50px;
+                        }
+                        div {
+                            p {
+                                margin: unset;
+                                color: #1D2026;
+                                font: 500 16px 'Space Grotesk';
+                                &:first-child {
+                                    color: #6E7485;
+                                    font: 400 14px 'Space Grotesk';
+
+                                }
+                            }
+                        }
+                    }
+                    div.r {
+                        gap: 5px;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: #3935FF;
+                        }
+                        p {
+                            margin: unset;
+                            color: #1D2026;
+                            font: 500 16px 'Space Grotesk';
+                            &:last-child {
+                                color: #6E7485;
+                                font: 400 14px 'Space Grotesk';
+
+                            }
+                        }
+                    }
+                }
+            }
+            .describe {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .video {
+                img {
+                    width: 100%;
+                    height: 492px;
+                }
+            }
+            .what-you-learn {
+                padding: 40px;
+                background-color: rgba(57, 53, 255, 0.1);
+                div {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                    p {
+                        display: flex;
+                        gap: 11px;
+                        align-items: center;
+                        font: 400 14px 'inter';
+                        svg {
+                            color: #3935FF;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+            .who-the-course-is-for {
+                div {
+                    p {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        font: 400 14px 'inter';
+                        color: #4E5566;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: #3935FF;
+                        }
+                    }
+                }
+            }
+            .course-reqs {
+                ul {
+                    padding-inline-start: 20px;
+                    li {list-style-type: disc;}
+                }
+            }
+        }
+        .curriculum {
+            h4 {
+                font: 700 24px 'Space Grotesk';
+                color: #1D2026;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 1.5rem 0rem;
+                div {
+                    span {  
+                        margin-right: 1rem;
+                        font: 400 14px 'Inter';
+                        color: #4E5566;
+                        svg {
+                            color: #3935FF;
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }   
+        }
+    }    
+}
