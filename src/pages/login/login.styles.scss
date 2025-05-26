@@ -35,7 +35,7 @@ html{
 }
 
 .top{
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 30px;
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@ html{
 
 .logo img{
     font-size: 30px;
-    height: 80px;
+    height: 75px;
 }
 
 
@@ -64,7 +64,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
 }
 
@@ -101,15 +101,15 @@ html{
 
 
 .icon{
-    padding: 8px;
+    padding: 25px 8px;
     max-width: 100%;
     text-align: center;
-    height: 70px;
+    // height: auto;
 }
 
 .icon i{
     font-size: 20px;
-    padding: 25px;
+    padding: 22px;
     text-align: center;
     border-color: 2px #7780A1;
     border: 1px solid;
@@ -125,9 +125,9 @@ html{
 }
 
 #container{
-    margin-top: 65px;
+    margin-top: 85px;
     width: 500px;
-    height: 850px;
+    height: auto;
     position: relative;
     z-index: 1;
 }
@@ -386,6 +386,93 @@ span{
         font-size: 2rem;
     }
 }
+
+@media (max-width: 600px) {
+    .logo img{
+        height: 40px;
+    }
+    .images{
+        display: none;
+    }
+    .text-overlay{
+        display: none;
+    }
+    .icon{
+        padding: 0;
+        // height: auto;
+    }
+    #container{
+        margin-top: 100px;
+        width: 300px;
+    }
+    .pdm-login {
+        align-items: center;
+        justify-content: center;
+    }
+    .login-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .login-right{
+        display: none;
+    }
+    .signup-box{
+        padding: 0;
+        max-width: 400px;
+    }
+    .signup-box h2{
+        font-size: 20px;
+    }
+    .signup-box h3{
+        font-size: 15px;
+    }
+    #form{
+        margin-top: 20px;
+        gap: 1rem;
+    }
+    label{
+    font-size: 15px;
+    }
+    input{
+        padding: 8px;
+    }
+    .loginbutton{
+        margin-top: 12px;
+    }
+    .loginbutton button{
+        width: 300px;
+    }
+    .checkbox{
+        align-items: end;
+        justify-content: center;
+    }
+    .checkbox h4{
+        font-size: 12px;
+    }
+    .forgot-pw {
+        font-size: 12px;
+    }
+    .div-info{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .signup-acc{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #horizontal-line{
+        margin-top: 5px;
+    }
+    .signup-info{
+        margin-top: 8px;
+    }
+    .signup-info h2{
+        font-size: 12px;
+    }
+}
+
+
+
 
 
     /* Scrollbar Styling */

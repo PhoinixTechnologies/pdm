@@ -107,7 +107,7 @@ html{
 #container-reg{
     // margin-top: 25px;
     background-color: #fff;
-    width: 850px;
+    width: auto;
     height: 760px;
     position: relative;
     z-index: 1;
@@ -341,6 +341,22 @@ html{
 @media (width >= 1200px) {
     .h2, h2 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .reg-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .reg-right{
+        display: none;
+    }
+    #container-reg{
+        margin-top: 20px;
+    }
+    .contbutton button{
+        width: 330px;
     }
 }
 

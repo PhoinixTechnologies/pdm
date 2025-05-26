@@ -151,7 +151,7 @@ export const Login = ({ title }) => {
               </div>
             </div>
             <div className="signup-info">
-            <h2> Not registered yet ? <a href='#'>Create an account</a></h2>
+            <h2> Not registered yet ? <a href={'register'}>Create an account</a></h2>
             </div>
             </div>
           </form>
