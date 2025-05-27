@@ -21,11 +21,8 @@ export const Login = ({ title }) => {
   const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   const [isChecked, setIsChecked] = useState(false);
   const handleCheckChnage = () => {
-    setIsChecked(!isChecked);
     };
 
-  
-  const submitLogin = async () => {
     if (!email || !password) { 
         return setErrorMessage("All fields must be filled.");
     }
