@@ -14,6 +14,8 @@ import python_image from '../../assets/images/python.png';
 
 export const Login = ({ title }) => {
   const auth = useAuth();
+
+  // Hooks
   const [errorMessage, setErrorMessage] = useState("");
   const [responseState, setResponseState] = useState(RESPONSE_STATES.none);
   const [email, setEmail] = useState("");
@@ -21,9 +23,11 @@ export const Login = ({ title }) => {
   const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   const [isChecked, setIsChecked] = useState(false);
   const handleCheckChnage = () => {
+    setIsChecked(!isChecked);
     };
 
-    if (!email || !password) { 
+    const submitLogin = async () => {
+      if (!email || !password) {
         return setErrorMessage("All fields must be filled.");
     }
 
@@ -52,17 +56,15 @@ export const Login = ({ title }) => {
         
         Swal.fire({ icon: 'error', title: 'Error', text: errorMessage, });
     }
-  };
-
-    useEffect(() => {
-      document.title = title;
-      window.scrollTo(0, 0);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
+    }
+  useEffect(() => {
+  document.title = title;
+  window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [title]);
 
 
-  return (
+  return(
     <div className='login-grid'>
       {/* left gridded side */}
       <div className='login-left'>
@@ -101,7 +103,7 @@ export const Login = ({ title }) => {
                   <h4>Keep me logged in</h4>
                 </div>
                 <div className='forgot-pw'>
-                  <a href=''>Forgot Password ?</a>
+                  <a href='/forgot-password'>Forgot Password ?</a>
                 </div>
               </div>
 
@@ -184,4 +186,4 @@ export const Login = ({ title }) => {
       </div>
     </div>
   );
-}
+};
