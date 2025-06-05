@@ -1,6 +1,7 @@
 import logo from '../img/My_PDM_Tutor_1-removebg-preview.png';
+
 const Join = () => {
-    return ( 
+    return (
 <>     <div>
           <p>biy</p>
      </div>

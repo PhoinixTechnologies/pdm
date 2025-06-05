@@ -3,30 +3,39 @@ import About from './aboutus';
 import Agenda from './Agenda';
 import Connect from './connect';
 import Foot from './footer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Join from './pages/JoinWait';
-
+import VerifyFailed from './verifyFailed';
+import VerifySuccess from './verifySuccess';
+// import VerifyHandler from './verifyHandler';
 
 function App() {
-  // const likes =  50;
-  // const link = "https://www.google.com";
   return (
     <Router>
-      <div className='content w-100vw bg-black overflow-hidden scroll-smooth'>
-       <Switch>
-          <Route exact path ="/">
-            <Home />
-            <About/>
-            <Agenda/>
-            <Connect/>
-            <Foot/>
-          </Route>
-          <div className='bg-[#EDEFFE] h-auto flex justify-center items-center'>
-          <Route path ="/join">
-              <Join/>
-          </Route>
-          </div>
-        </Switch>
+      <div className='content w-100vw overflow-hidden scroll-smooth'>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Home />
+              <About />
+              <Agenda />
+              <Connect />
+              <Foot />
+            </>
+          } />
+
+          <Route path="/join" element={
+            <div className='bg-[#EDEFFE] h-auto flex justify-center items-center'>
+              <Join />
+            </div>
+          } />
+
+          {/* Uncomment this when your handler is ready */}
+          {/* <Route path="/verify" element={<VerifyHandler />} /> */}
+
+          <Route path="/verifySuccess" element={<VerifySuccess />} />
+          <Route path="/verifyFail" element={<VerifyFailed />} />
+        </Routes>
       </div>
     </Router>
   );
