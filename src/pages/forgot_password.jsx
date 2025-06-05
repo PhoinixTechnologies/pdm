@@ -1,6 +1,6 @@
 import forgot_pw_img from '../img/forgot_pw_img';
 import logo from '../img/My_PDM_Tutor_1-removebg-preview.png';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+// import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 const forgotPassword = () => {
@@ -33,7 +33,7 @@ const forgotPassword = () => {
             </div>
 
             <div className="login-link-back">
-            <h2><i class="bi bi-arrow-left"></i><a href={'login'}> Return to Login</a></h2>
+            <h2><a href={'login'}> Return to Login</a></h2>
             </div>
         </div>
     )
