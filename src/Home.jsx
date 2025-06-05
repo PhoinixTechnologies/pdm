@@ -1,11 +1,11 @@
 import back from './img/BG1.png'
 import Navbar from './Navbar';
 const Home = () => {
-    return (  
+    return (
        <div className=' max-w-full '>
-         <div className=" h-max w-full bg-cover bg-no-repeat 
+         <div className=" h-max w-full bg-cover bg-no-repeat
        bg-center" style={{backgroundImage:`url(${back}) `}} >
-         <div className='bg-black/70 w-full h-full p-20 pt-50 flex flex-col items-center justify-start gap-y-5 box-border'>
+         <div className='bg-black/70 w-full h-full p-20 pt-50 flex flex-col items-center justify-start gap-y-15 box-border'>
          <Navbar/>
            <h1  className='text-white text-[35px] sm:max-md:text-4xl md:text-6xl/16 font-semibold pb-5 text-center font-link w-90 md:max-lg:w-fit lg:w-5xl'>Empowering Learners in Python,
            Data Analytics & Machine Learning</h1>
