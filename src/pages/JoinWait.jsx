@@ -1,7 +1,10 @@
 import logo from '../img/My_PDM_Tutor_1-removebg-preview.png';
 const Join = () => {
     return ( 
-     <div className='sm:max-md:w-[60%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center py-10'>
+<>     <div>
+          <p>biy</p>
+     </div>
+     <div className='sm:max-md:w-[60%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center '>
           <div className='flex gap-x-2 items-center'>
                <img src={logo} alt="" className='w-10' />
                <h1 className='font-bold font-logo text-xl'>My PDM Tutor</h1>
@@ -32,12 +35,25 @@ const Join = () => {
                          <option value="3">Artificial Intelligence</option>
                         </select>
                    </div>
+                    <div className='flex px-1 gap-5 '>
+                        <label htmlFor="" className='font-link text-lg font-medium'>Are you a Student?</label>
+                        <div className='flex gap-6'>
+                         <span className='flex gap-2 items-center'>
+                              <label htmlFor="" className='font-link text-lg font-medium'>Yes</label>
+                         <input type="checkbox" name="" id="" className='w-5 h-5 outline-none bg-transparent  border-2 rounded-xl py-3 px-3 border-[#9EA2AE]'/>
+                         </span>
+                           <span className='flex gap-2 items-center'>
+                              <label htmlFor="" className='font-link text-lg font-medium'>No</label>
+                         <input type="checkbox" name="" id="" className='w-5 h-5 outline-none bg-transparent  border-2 rounded-xl py-3 px-3 border-[#9EA2AE]'/>
+                         </span>
+                        </div>
+                   </div>
                    
                 </form>
                 <div></div>
           </div>
 
-     </div>
+     </div></>
      );
 }
  
