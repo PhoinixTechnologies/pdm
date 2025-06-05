@@ -1,5 +1,6 @@
 import logo from './img/My_PDM_Tutor_1-removebg-preview.png';
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 const Navbar = () => {
   const Vid = () => {if (document.getElementById('main').classList.contains('hidden')){
@@ -16,7 +17,14 @@ const Navbar = () => {
   
     
   return (
-    <nav className="bg-black/60 flex flex-col md:flex-row  md:justify-between md:items-center py-3 px-10 absolute inset-x-0 top-0 h-max">
+    <motion.nav
+    initial ={{y:-70, opacity:0}}
+    animate={{y:-0, opacity:1}}
+    transition={{ 
+    duration: 0.8,       // Animation duration in seconds
+    ease: "easeOut"      // Easing function
+  }}
+    className="bg-black/60 flex flex-col md:flex-row  md:justify-between md:items-center py-3 px-10 absolute inset-x-0 top-0 h-max">
       <div className='flex justify-between  items-center'>
       <div className="text-white flex items-center gap-3 h-max text-lg font-semibold max-w-50">
           <img src={logo} alt="" className='w-12' />
@@ -35,7 +43,9 @@ const Navbar = () => {
         </svg>
         </div>
      </div>
-    <div className='flex flex-col md:flex-row items-end md:items-center gap-y-3 gap-x-3 md:min-w-[70%] md:justify-between hidden md:flex' id='main'>
+    <motion.div 
+  
+    className='flex flex-col md:flex-row items-end md:items-center gap-y-3 gap-x-3 md:min-w-[70%] md:justify-between hidden md:flex' id='main'>
      <div className=" flex text-white gap-x-10 items-end md:items-center md:justify-center font-normal font-link max-w-80 flex-col md:flex-row gap-y-3 " >
         <a href="#about">About</a>
         <a href="#Agenda">Agenda</a>
@@ -43,8 +53,8 @@ const Navbar = () => {
       </div>
      <Link to="/join" className=" font- flex justify-center bg-white rounded-full px-6 py-3 max-w-40 items-center">Join Waitlist</Link>
   
-     </div>
-    </nav>
+     </motion.div>
+    </motion.nav>
   );
 };
 
