@@ -2,7 +2,6 @@ import back from './img/BG1.png'
 import Navbar from './Navbar';
 import {motion} from 'framer-motion';
 const Home = () => {
-<<<<<<< HEAD
     return (  
       <div className=' max-w-full '>
         <div className=" h-max w-full bg-cover bg-no-repeat 
@@ -17,16 +16,6 @@ const Home = () => {
               ease: "easeOut"}}
             className='text-white text-[35px] sm:max-md:text-4xl md:text-6xl/16 font-semibold pb-5 text-center font-link w-90 md:max-lg:w-fit lg:w-5xl'>Empowering Learners in Python,
           Data Analytics & Machine Learning</motion.h1>
-=======
-    return (
-       <div className=' max-w-full '>
-         <div className=" h-max w-full bg-cover bg-no-repeat
-       bg-center" style={{backgroundImage:`url(${back}) `}} >
-         <div className='bg-black/70 w-full h-full p-20 pt-50 flex flex-col items-center justify-start gap-y-15 box-border'>
-         <Navbar/>
-           <h1  className='text-white text-[35px] sm:max-md:text-4xl md:text-6xl/16 font-semibold pb-5 text-center font-link w-90 md:max-lg:w-fit lg:w-5xl'>Empowering Learners in Python,
-           Data Analytics & Machine Learning</h1>
->>>>>>> c375c445e317e1b7674f4a98f89204b360f882ca
 
           <p className='text-[#BDBCBC] w-70 md:w-120 p-2 text-center sm:max-md:w-100 sm:max-md:text-xl text-md/6 font-link'>As a dedicated tutor, I am passionate about helping
               students and professionals unlock their true potential <br />
