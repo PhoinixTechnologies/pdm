@@ -5,6 +5,9 @@ import Connect from './connect';
 import Foot from './footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Join from './pages/JoinWait';
+import VerifyFailed from './verifyFailed';
+import VerifySuccess from './verifySuccess';
+// import VerifyHandler from './verifyHandler';
 
 function App() {
   return (
@@ -26,6 +29,12 @@ function App() {
               <Join />
             </div>
           } />
+
+          {/* Uncomment this when your handler is ready */}
+          {/* <Route path="/verify" element={<VerifyHandler />} /> */}
+
+          <Route path="/verifySuccess" element={<VerifySuccess />} />
+          <Route path="/verifyFail" element={<VerifyFailed />} />
         </Routes>
       </div>
     </Router>
