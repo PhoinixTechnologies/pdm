@@ -1,4 +1,7 @@
 import logo from './img/My_PDM_Tutor_1-removebg-preview.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+
 
 const VerifyFailed = () => {
     return (

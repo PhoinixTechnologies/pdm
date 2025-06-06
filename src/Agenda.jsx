@@ -1,4 +1,7 @@
 import about from './img/agenda.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+
 const Agenda = () => {
     return ( 
       <div className='bg-black  py-20 px-0  md:max-lg:px-10 pb-0 md:pb-20 md:py-40 flex flex-col h-fit gap-70 mt-30 md:mt-0 ' id='Agenda'>
@@ -6,7 +9,7 @@ const Agenda = () => {
                 <div className="w-[630px] h-[629px] flex-shrink-0 rounded-[630px] border-[3px] border-dashed border-[#0D0F2B] opacity-90 bg-[#060714] flex justify-center items-center">
                     <div className="w-[818px] h-[817px] flex-shrink-0 rounded-[818px] border-[3px] border-solid border-[#0D0F2B] opacity-80 bg-[#060714] flex justify-center items-center">
                         <div className="w-[990px] h-[989px] flex-shrink-0 rounded-[990px] border-[3px] border-dashed border-[#0D0F2B] opacity-70 bg-[#060714] flex justify-center items-center">
-                            <div class="w-[1144px] h-[1143px] flex-shrink-0 rounded-[1144px] border-[3px] border-solid border-[#0D0F2B] opacity-60 bg-[#060714]">
+                            <div className="w-[1144px] h-[1143px] flex-shrink-0 rounded-[1144px] border-[3px] border-solid border-[#0D0F2B] opacity-60 bg-[#060714]">
                             </div>
                         </div>
                     </div>
@@ -18,23 +21,23 @@ const Agenda = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <g opacity="0.9">
                                                 <g opacity="0.9">
-                                                <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#7D1AFF" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                                                <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#7D1AFF" strokeWidth="3.48327" strokeMiterlimit="20" strokeLinecap="square"/>
                                                 </g>
                                                 <g opacity="0.9">
-                                                <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#7D1AFF" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                                                <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#7D1AFF" strokeWidth="3.48327" strokeMiterlimit="20" strokeLinecap="square"/>
                                                 </g>
                                             </g>
                                             </svg>
                                     </div>
                                     <h3 className='flex justify-center font-link font-semibold uppercase tracking-wide hidden md:flex'>My pdm tutor</h3>
                                 </span>
-                                <h3 className='Headings w-50 md:w-max'>My Agenda</h3>
+                                <h3 className='Headings w-50 md:w-max'>Our Agenda</h3>
                             </div>
                             <p className='flex md:max-w-160 font-link text-md leading-6 font-medium h-max md:row-start-2 md:text-sm text-justify md:text-left '>
-                                I am an experienced tutor with strong foundation in Python programming, data analysis and machine learning. I specialize in guiding students and professionals through complex topics like data manipulation, visualization and machine learning development. My hands-on approach and tailored lessons help master practical skills in tools such as pandas, Numpy, Matplotlib and Scikit-learn.
+                                We are experienced tutors with strong foundation in Python Programming, Data Analysis and Machine Learning. We specialize in guiding students and professionals through complex topics like data manipulation, visualization and machine learning development. Our hands-on approach and tailored lessons help master practical skills in tools such as pandas, Numpy, Matplotlib and Scikit-learn.
                             </p>
                             <div className=' w-fit md:w-100 h-full rounded-4xl md:row-span-3 h-max'>
-                                <img src={about} alt="" className='rounded-4xl h-auto w-fit '/>
+                                <LazyLoadImage src={about} alt="" className='rounded-4xl h-auto w-fit '/>
                             </div>
                             <div className='flex gap-x-4 items-center col-start-1 md:row-start-3 md:justify-self-start w-full justify-evenly md:justify-center md:justify-start'>
                                 <a href="/" className='flex items-center px-4 py-4 w-max rounded-2xl bg-white text-black justify-center tracking-wider font-medium shadow-[inset_-4px_-4px_4px_rgba(0,0,0,0.1),_inset_4px_4px_4px_rgba(255,255,255,0.1)]'>Get started</a>
@@ -55,9 +58,8 @@ const Agenda = () => {
             </div>
                     <div className='grid grid-rows-auto grid-cols-auto w-[90%] h-fit text-white relative md:absolute p-1 -top-40 md:top-10 gap-10 md:gap-x-10 justify-center inset-x-0 place-self-center'>
                             <div className=' '>
-                                <h3 className='w-fit font-link font-bold text-5xl/20 md:w-[95%] md:max-lg:text-5xl lg:text-6xl/20'>
-                                Unlock your PDM mastery <span className = "hidden md:inline-flex"> - </span> join the waitlist today!
-                                </h3>
+                                  <h3 className="w-fit font-link font-bold text-5xl/20 md:w-[95%] md:max-lg:text-5xl lg:text-6xl/20">
+                                     Have questions, ideas ? We’d love to hear from you.</h3>
                             </div>
                             <div className='flex md:flex-col gap-y-2 row-start-4 w-50 justify-between md:col-start-2 md:row-start-1  md:w-fit'>
                                 <a href="https://web.facebook.com/mypdmtutor">
@@ -104,7 +106,7 @@ const Agenda = () => {
                                 />
                             </div>
                             <div className="flex flex-col  gap-0 pb-2 px-2.5 pt-2 border-b border-[#CACACA] flex-1">
-                                <label htmlFor="" className='mx-2'>Message</label>
+                                <label htmlFor="" className='mx-2'>Write us a short message</label>
                                 <input
                                     type="text"
                                     className="w-full outline-none bg-transparent h-10"
@@ -117,14 +119,13 @@ const Agenda = () => {
                                 Leave us a Message
                                 </p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                                <path d="M5 12.5H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12 5.5L19 12.5L12 19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 12.5H19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M12 5.5L19 12.5L12 19.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </button>
                     </div>
             </div>
       </div>
-        
      );
 }
  

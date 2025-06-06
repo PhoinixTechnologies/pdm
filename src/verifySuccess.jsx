@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import logo from './img/My_PDM_Tutor_1-removebg-preview.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+
 
 const VerifySuccess = () => {
     return (

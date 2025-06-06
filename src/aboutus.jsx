@@ -1,20 +1,21 @@
 import about from './img/about.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const About = () => {
     return (
-    <div className='flex bg-black flex-col w-full border items-center' id='about'>
+    <div className='flex bg-black flex-col w-full items-center' id='about'>
          <div className='flex p-20 px-10 md:px-20 justify-around text-white items-center gap-x-10 w-fit '>
-        <div className='grid md:grid-cols-2 md:grid-rows-auto w-full p-1 justify-items-center gap-x-10 gap-y-10'>
+         <div className='grid md:grid-cols-2 md:grid-rows-auto w-full p-1 justify-items-center gap-x-10 gap-y-10'>
                         <div className='flex flex-col gap-y-5 h-max justify-self-start' >
                             <span className='flex gap-x-3 '>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <g opacity="0.9">
                                         <g opacity="0.9">
-                                        <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                                        <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#2A27C9" strokeWidth="3.48327" strokeMiterlimit="20" strokeLinecap="square"/>
                                         </g>
                                         <g opacity="0.9">
-                                        <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                                        <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#2A27C9" strokeWidth="3.48327" strokeMiterlimit="20" strokeLinecap="square"/>
                                         </g>
                                     </g>
                                     </svg>
@@ -24,10 +25,10 @@ const About = () => {
                             <h3 className='Headings'>About Us</h3>
                         </div>
                         <p className='flex md:max-w-160 font-link text-md leading-6 font-medium h-max md:row-start-2 md:text-sm text-justify md:text-left'>
-                            As a dedicated tutor, I am passionate about helping students and professionals unlock their true potential in Python programming, data science, and machine learning. With a hands-on, personalized approach, I strive to make complex concepts accessible and engaging for learners at all levels. My goal is to empower you with the knowledge and practical skills needed to thrive in the fast-growing fields of data analytics and AI. Whether you’re starting from scratch or looking to advance your expertise, I am here to guide you every step of the way, ensuring your learning journey is both fulfilling and impactful.
+                            At My PDM Tutor, we are passionate about helping students and professionals unlock their full potential in Python Programming, Data Analysis, and Machine Learning. Through hands-on, personalized instruction, we make complex concepts clear, practical, and engaging—empowering learners at every stage to excel in today’s data-driven world.
                         </p>
                         <div className=' w-80 md:w-100 h-full rounded-4xl md:row-span-3 h-max'>
-                                <img src={about} alt="" className='rounded-4xl h-auto w-full max-w-full'/>
+                                <LazyLoadImage src={about} alt="" className='rounded-4xl h-auto w-full max-w-full'/>
                         </div>
                         <div className='flex gap-x-4 items-center col-start-1 md:row-start-3 md:justify-self-start w-full justify-evenly md:justify-center md:justify-start'>
                                 <a href="/" className='flex items-center px-4 py-4 w-max  rounded-2xl bg-white text-black justify-center tracking-wide font-medium inset-shadow-sm inset-shadow-black-500'>Get started</a>
@@ -43,10 +44,10 @@ const About = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <g opacity="0.9">
                             <g opacity="0.9">
-                            <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                            <path d="M4.11768 16.7821H16.7828V4.11694" stroke="#2A27C9" strokeWidth="3.48327" strokeMiterlimit="20" strokeLinecap="square"/>
                             </g>
                             <g opacity="0.9">
-                            <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#2A27C9" stroke-width="3.48327" stroke-miterlimit="20" stroke-linecap="square"/>
+                            <path d="M4.11768 4.11694L15.5167 15.5159" stroke="#2A27C9" strokeWidth="3.48327" strokeMiterlimit="20" strokeLinecap="square"/>
                             </g>
                         </g>
                         </svg>

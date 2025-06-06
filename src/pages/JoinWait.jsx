@@ -4,6 +4,7 @@ import da from '../img/Polygon2.png';
 import ml from '../img/Polygon3.png';
 import bg_waitlist from '../img/bg_waitlist.png';
 import logo_enlarge from '../img/logo_enlarge.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Join = () => {
     return (
@@ -14,7 +15,7 @@ const Join = () => {
       }}
     >
      {/* Blurry logo of mypdm */}
-     <img
+     <LazyLoadImage
         src={logo_enlarge}
         alt="Blurry logo background"
          className="pointer-events-none absolute top-4 left-8 select-none"
