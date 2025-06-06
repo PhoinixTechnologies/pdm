@@ -5,18 +5,18 @@ import ml from '../img/Polygon3.png';
 
 const Join = () => {
     return (
-<div className='flex items-center justify-evenly py-20'>     
+<div className='md:flex items-center justify-center lg:justify-evenly py-20'>     
      
-   <div className=' h-fit  grid grid-cols-1 items-center mt-20 justify-center relative '>
-          <div className='flex justify-center  -my-20'> {/* Center the first image */}
+   <div className='hidden h-fit  lg:grid grid-cols-1 items-center mt-20 justify-center relative '>
+          <div className='flex justify-center  -my-16'> {/* Center the first image */}
                <img src={py} alt="" className='w-70'/>
           </div>
           <div className='row-start-2 grid grid-cols-2 items-center'> {/* Container for the bottom two images */}
-               <img src={da} alt="" className='w-70' />
-               <img src={ml} alt="" className='w-70' />
+               <img src={da} alt="" className='w-70 ml-2' />
+               <img src={ml} alt="" className='w-70 mr-2' />
           </div>
 </div>
-     <div className='sm:max-md:w-[60%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center '>
+     <div className='sm:max-md:w-[60%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center mx-auto lg:mx-0'>
           <div className='flex gap-x-2 items-center'>
                <img src={logo} alt="" className='w-10' />
                <h1 className='font-bold font-logo text-xl'>My PDM Tutor</h1>
