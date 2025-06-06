@@ -1,29 +1,40 @@
 import logo from '../img/My_PDM_Tutor_1-removebg-preview.png';
+import py from '../img/Polygon1.png';
+import da from '../img/Polygon2.png';
+import ml from '../img/Polygon3.png';
 
 const Join = () => {
     return (
-<>     <div>
-          <p>biy</p>
-     </div>
+<div className='flex items-center justify-evenly py-20'>     
+     
+   <div className=' h-fit  grid grid-cols-1 items-center mt-20 justify-center relative '>
+          <div className='flex justify-center  -my-20'> {/* Center the first image */}
+               <img src={py} alt="" className='w-70'/>
+          </div>
+          <div className='row-start-2 grid grid-cols-2 items-center'> {/* Container for the bottom two images */}
+               <img src={da} alt="" className='w-70' />
+               <img src={ml} alt="" className='w-70' />
+          </div>
+</div>
      <div className='sm:max-md:w-[60%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center '>
           <div className='flex gap-x-2 items-center'>
                <img src={logo} alt="" className='w-10' />
                <h1 className='font-bold font-logo text-xl'>My PDM Tutor</h1>
           </div>
-            
+          
           <div className=' bg-white w-full  flex flex-col gap-y-10 rounded-xl border-1 border-[#E2E8F0] py-5 shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.10),0px_4px_6px_-1px_rgba(0,0,0,0.10)]'>
-                <h1 className='font-semibold font-logo text-2xl self-center'>Create an account</h1>
-                <form action="" className='px-10 gap-y-7 flex flex-col '>
-                   <div className='flex flex-col px-1 gap-2'>
-                        <label htmlFor="" className='font-link text-lg font-medium'>Full Name</label>
-                        <input type="text" className="w-full outline-none bg-transparent  border-2 py-3 px-3 rounded-xl  border-[#9EA2AE]"placeholder="Enter your full name"/>
-                   </div>
-                   <div className='flex flex-col px-1 gap-1'>
-                        <label htmlFor=" " className='font-link text-lg font-medium'>Email Address</label>
-                        <input type="text" className="w-full outline-none bg-transparent  border-2 py-3 px-3 rounded-xl  border-[#9EA2AE]"placeholder="Enter your email address"/>
-                   </div>
-                   <div className='flex flex-col px-1 gap-1'>
-                        <label htmlFor="" className='font-link text-lg font-medium'>Password</label>
+               <h1 className='font-semibold font-logo text-2xl self-center'>Create an account</h1>
+               <form action="" className='px-10 gap-y-7 flex flex-col '>
+               <div className='flex flex-col px-1 gap-2'>
+                    <label htmlFor="" className='font-link text-lg font-medium'>Full Name</label>
+                    <input type="text" className="w-full outline-none bg-transparent  border-2 py-3 px-3 rounded-xl  border-[#9EA2AE]"placeholder="Enter your full name"/>
+               </div>
+               <div className='flex flex-col px-1 gap-1'>
+                    <label htmlFor=" " className='font-link text-lg font-medium'>Email Address</label>
+                    <input type="text" className="w-full outline-none bg-transparent  border-2 py-3 px-3 rounded-xl  border-[#9EA2AE]"placeholder="Enter your email address"/>
+               </div>
+               <div className='flex flex-col px-1 gap-1'>
+                    <label htmlFor="" className='font-link text-lg font-medium'>Password</label>
                         <input type='password' className="w-full outline-none bg-transparent  border-2 py-3 px-3 rounded-xl  border-[#9EA2AE]"placeholder="Enter your password"/>
                    </div>
                    <div className='flex flex-col px-1 gap-1'>
@@ -54,7 +65,8 @@ const Join = () => {
                 <div></div>
           </div>
 
-     </div></>
+     </div>
+     </div>
      );
 }
  

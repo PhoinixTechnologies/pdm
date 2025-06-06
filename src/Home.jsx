@@ -41,7 +41,7 @@ const Home = () => {
               </defs>
             </svg>
             <motion.p
-            initial={{x:'100vw'}}
+            initial={{x:'-100vw'}}
             animate={{x:0}}
             className='text-white font-light self-center text-center w-30 text-lg/5 transform rotate-[10.943deg] self-start absolute -top-7 -right-17 font-dog'>All research start from here</motion.p>
 
