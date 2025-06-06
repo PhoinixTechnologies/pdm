@@ -21,7 +21,10 @@ const Navbar = () => {
     initial ={{y:-70, opacity:0}}
     animate={{y:-0, opacity:1}}
     transition={{ 
-    duration: 0.8,       // Animation duration in seconds
+    delay:1.5,
+    duration: 0.5,
+    type:'sprirng',
+        // Animation duration in seconds
     ease: "easeOut"      // Easing function
   }}
     className="bg-black/60 flex flex-col md:flex-row  md:justify-between md:items-center py-3 px-10 absolute inset-x-0 top-0 h-max">
