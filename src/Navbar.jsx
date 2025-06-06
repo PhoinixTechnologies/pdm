@@ -1,6 +1,9 @@
 import logo from './img/My_PDM_Tutor_1-removebg-preview.png';
 import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+
 
 const Navbar = () => {
   const Vid = () => {if (document.getElementById('main').classList.contains('hidden')){
@@ -30,17 +33,17 @@ const Navbar = () => {
     className="bg-black/60 flex flex-col md:flex-row  md:justify-between md:items-center py-3 px-10 absolute inset-x-0 top-0 h-max">
       <div className='flex justify-between  items-center'>
       <div className="text-white flex items-center gap-3 h-max text-lg font-semibold max-w-50">
-          <img src={logo} alt="" className='w-12' />
+          <LazyLoadImage src={logo} alt="" className='w-12' />
           <a href=""><h3 className='font-logo tracking-wide hidden md:block'>My PDM Tutor</h3></a>
         </div>
         <div className='flex' id='btn'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id='btn1' onClick={Vid} className='md:hidden'>
-          <rect width="24" height="24" fill="black" fill-opacity="0.32"/>
+          <rect width="24" height="24" fill="black" fillOpacity="0.32"/>
           <path d="M3 17H21V15H3V17Z" fill="white"/>
           <path d="M3 9H21V7H3V9Z" fill="white"/>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" className='hidden' id='btn2' onClick={Vid}>
-          <rect width="24" height="24" fill="white" fill-opacity="0.32"/>
+          <rect width="24" height="24" fill="white" fillOpacity="0.32"/>
           <path d="M3 17H21V15H3V17Z" fill="black"/>
           <path d="M3 9H21V7H3V9Z" fill="black"/>
         </svg>

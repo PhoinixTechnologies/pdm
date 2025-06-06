@@ -1,0 +1,71 @@
+.pdm-course {
+    section.both {
+        display: flex;
+        div.main {
+            padding: 40px 60px;
+            border-right: 1px solid #e9eaf0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70px;
+            flex: 0 0 65%;
+            .each {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                border: 1px solid #E9EAF0;
+                img {
+                    // width: 312px;
+                    width: 100%;
+                    height: 234px;
+                }
+                .title {
+                    padding: 0px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    border-bottom: 1px solid #E0E0E0;
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        p {
+                            font: 500 10px 'Inter';
+                            color: #222222;
+                            margin: unset;
+                            padding: 4px 6px;
+                            background-color: #E0E0E0;
+                            &:last-child {
+                                padding: unset;
+                                background-color: unset;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    h5 {margin-bottom: 1rem;}
+                }
+                .add-ons {
+                    padding: 15px 20px;
+                    padding-top: unset;
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        margin: unset;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        font: 500 14px 'Inter';
+                        color: #4E5566;
+                        span {
+                            font: 500 14px 'Inter';
+                            color: #8C94A3;
+                        }
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: #564FFD;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

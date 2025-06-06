@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+html{
+    height: 100vh;
+}
+
+.login-grid{
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.login-left{
+    // padding: 0.5rem;
+    justify-content: center;
+}
+
+.top{
+    margin-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.logo img{
+    font-size: 30px;
+    height: 75px;
+}
+
+
+.pdm-login {
+    overflow-y: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 100vh;
+    overflow: hidden;
+}
+
+// login-right
+.images{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    position: relative;
+    // max-width: 800px;
+    // width: 100%;
+}
+
+.img{
+    height: 280px;
+    margin-left: 20px;
+    // width: 800px;
+    display: block;
+    // width: 100%;
+}
+
+.text-overlay{
+    position: absolute;
+    text-align: left;
+    transform: translateY(-280%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    right: 20px;
+}
+
+
+.icon{
+    padding: 25px 8px;
+    max-width: 100%;
+    text-align: center;
+    // height: auto;
+}
+
+.icon i{
+    font-size: 20px;
+    padding: 22px;
+    text-align: center;
+    border-color: 2px #7780A1;
+    border: 1px solid;
+    border-radius: 10px;
+    border-top: 0;
+    border-bottom: 0;
+    border-color: #9EA2AE;
+}
+
+
+.d-none {
+    display: none;
+}
+
+#container{
+    margin-top: 85px;
+    width: 500px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+.signup-box{
+    padding: 1%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.signup-box h2{
+    font-weight: 600;
+    text-align: center;
+}
+
+.signup-box h3{
+    font-weight: 300;
+    text-align: center;
+    font-size: 20px;
+    color:#9EA2AE;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 1.5rem;
+    color: #000;
+}
+
+label{
+    font-weight: 500;
+}
+
+.sel{
+    display: flex;
+}
+
+input{
+    padding: 10px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-size: 12px;
+    border: 1px solid #000;
+}
+
+input:focus{
+    outline: none;
+}
+
+span{
+    text-align: center;
+}
+
+
+.loginbutton{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.loginbutton button{
+    background-color: #3935FF;
+    padding: 10px;
+    width: 440px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.continue-button{
+    text-align: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.continue-button button{
+    background-color: #3935FF;
+    padding: 10px;
+    width: 400px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.continue-button button:hover{
+    background-color: #020071;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.div-info{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin-top: -17px;
+}
+
+.checkbox h4{
+    font-weight: 600;
+}
+
+.forgot-pw a{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+#horizontal-line{
+    margin-top: 8px;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2px 0;
+}
+
+.line::before, .line::after{
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+
+.line:not(:empty)::before{
+    margin-right: 10px;
+}
+
+.line:not(:empty)::after{
+    margin-left: 10px;
+}
+
+.signup-acc{
+    display: flex;
+    padding: 5px;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    // width: 400px;
+
+}
+
+#google-link{
+    border: 0.5px solid #000;
+    width: 150px;
+    border-radius: 12px;
+    padding: 10px;
+    border-color: #9EA2AE;
+}
+
+#google-link a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+#google-link a:hover{
+    color: #020071;
+}
+
+#apple-link{
+    border: 1px solid #000;
+    padding: 6px;
+    width: 150px;
+    border-radius: 12px;
+    border-color: #9EA2AE;
+}
+
+#apple-link a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+#apple-link a:hover{
+    color: #020071;
+}
+
+#facebook-link{
+    border: 1px solid #000;
+    padding: 5px;
+    width: 150px;
+    border-radius: 12px;
+    border-color: #9EA2AE;
+}
+
+#facebook-link a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+#facebook-link a:hover{
+    color: #020071;
+}
+
+
+#signup-acc a, #google-link a, #apple-link a, #facebook-link a {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-info{
+    margin-top: 15px;
+    color: #9EA2AE;
+}
+
+.signup-info h2{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.signup-info a{
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.signup-info a:hover{
+    color:#000;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+
+@media (min-width: 1200px) {
+    .h2, h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo img{
+        height: 40px;
+    }
+    .images{
+        display: none;
+    }
+    .text-overlay{
+        display: none;
+    }
+    .icon{
+        padding: 0;
+        // height: auto;
+    }
+    #container{
+        margin-top: 100px;
+        width: 300px;
+    }
+    .pdm-login {
+        align-items: center;
+        justify-content: center;
+    }
+    .login-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .login-right{
+        display: none;
+    }
+    .signup-box{
+        padding: 0;
+        max-width: 400px;
+    }
+    .signup-box h2{
+        font-size: 20px;
+    }
+    .signup-box h3{
+        font-size: 15px;
+    }
+    #form{
+        margin-top: 20px;
+        gap: 1rem;
+    }
+    label{
+    font-size: 15px;
+    }
+    input{
+        padding: 8px;
+    }
+    .loginbutton{
+        margin-top: 12px;
+    }
+    .loginbutton button{
+        width: 300px;
+    }
+    .checkbox{
+        align-items: end;
+        justify-content: center;
+    }
+    .checkbox h4{
+        font-size: 12px;
+    }
+    .forgot-pw {
+        font-size: 12px;
+    }
+    .div-info{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .signup-acc{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #horizontal-line{
+        margin-top: 5px;
+    }
+    .signup-info{
+        margin-top: 8px;
+    }
+    .signup-info h2{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+    /* Scrollbar Styling */
+/* Custom scrollbar for webkit browsers(Chrome, Safari, etc)*/
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+/* Track(background for scrollbar */
+::-webkit-scrollbar-track{
+    background-color: #7780A1;
+    border-radius: 1.5rem;
+}
+
+/* Handle for scrollbar thumb */
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg, #0d0f2b, #0d0f2b);
+    border-radius: 1.5rem;
+    border: 3px solid #7780A1;
+}
+
+/* Handle hover effect */
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(180deg, #0d0f2b, #0d0f2b);
+}
+
+/* Custom scrollbar for Firefox */
+html {
+    scrollbar-width: thin; /* Thin scrollbar in Firefox */
+    scrollbar-color: #0d0f2b #e4e1f7; /* Thumb and track color */
+}

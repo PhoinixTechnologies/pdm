@@ -1,8 +1,10 @@
 import back from './img/BG1.png'
 import Navbar from './Navbar';
 import {motion} from 'framer-motion';
+
+
 const Home = () => {
-    return (  
+    return (
       <div className=' max-w-full '>
         <motion.div
         initial={{opacity:0}}

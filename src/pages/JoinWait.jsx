@@ -2,11 +2,26 @@ import logo from '../img/My_PDM_Tutor_1-removebg-preview.png';
 import py from '../img/Polygon1.png';
 import da from '../img/Polygon2.png';
 import ml from '../img/Polygon3.png';
+import bg_waitlist from '../img/bg_waitlist.png';
+import logo_enlarge from '../img/logo_enlarge.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Join = () => {
     return (
-<div className='md:flex items-center justify-center lg:justify-evenly py-20'>     
-     
+     <div
+      className="min-h-screen w-full bg-no-repeat bg-center bg-cover"
+      style={{
+        backgroundImage: `url(${bg_waitlist})`
+      }}
+    >
+     {/* Blurry logo of mypdm */}
+     <LazyLoadImage
+        src={logo_enlarge}
+        alt="Blurry logo background"
+         className="pointer-events-none absolute top-4 left-8 select-none"
+        style={{ maxWidth: '40vw', minWidth: '100px', zIndex: 0 }}
+      />
+     <div className='md:flex items-center justify-center lg:justify-evenly py-20'>
    <div className='hidden h-fit  lg:grid grid-cols-1 items-center mt-20 justify-center relative '>
           <div className='flex justify-center  -my-16'> {/* Center the first image */}
                <img src={py} alt="" className='w-70'/>
@@ -60,13 +75,19 @@ const Join = () => {
                          </span>
                         </div>
                    </div>
-                   
+                    {/* Join Waitlist button */}
+                    <button
+                         type="submit"
+                         className="bg-[#2A27C9] text-white font-sora font-bold py-3 rounded-xl mt-4 hover:bg-[#1f1b99] transition-colors duration-300 cursor-pointer"
+                    >Join Waitlist</button>
                 </form>
                 <div></div>
           </div>
 
      </div>
      </div>
+
+    </div>
      );
 }
  
