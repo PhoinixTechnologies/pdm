@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 const Home = () => {
     return (  
       <div className=' max-w-full '>
-        <div className=" h-max w-full bg-cover bg-no-repeat 
+        <div className=" h-max w-full bg-cover bg-no-repeat
       bg-center" style={{backgroundImage:`url(${back}) `}} >
         <div className='bg-black/70 w-full h-full p-20 pt-50 flex flex-col items-center justify-start gap-y-5 box-border'>
         <Navbar/>
@@ -45,7 +45,7 @@ const Home = () => {
             <motion.p
             initial={{x:'-100vw'}}
             animate={{x:0}}
-            className='text-white font-light self-center text-center w-30 text-lg/5 transform rotate-[10.943deg] self-start absolute -top-7 -right-17 font-dog'>All research start from here</motion.p>
+            className='text-white font-light self-center text-center w-30 text-lg/5 transform rotate-[10.943deg] self-start absolute -top-7 -right-17 font-dog '>All research start from here</motion.p>
 
            </div>
          </div>

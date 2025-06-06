@@ -77,7 +77,7 @@ const Join = () => {
                     {/* Join Waitlist button */}
                     <button
                          type="submit"
-                         className="bg-[#2A27C9] text-white font-sora font-bold py-3 rounded-xl mt-4 hover:bg-[#1f1b99] transition-colors duration-300"
+                         className="bg-[#2A27C9] text-white font-sora font-bold py-3 rounded-xl mt-4 hover:bg-[#1f1b99] transition-colors duration-300 cursor-pointer"
                     >Join Waitlist</button>
                 </form>
                 <div></div>
